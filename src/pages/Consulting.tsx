@@ -31,8 +31,8 @@ const Consulting = () => {
     setTimeout(() => {
       console.log('Form submitted:', formData);
       toast({
-        title: "Consultation Request Received",
-        description: "Thank you for your interest. We'll contact you within 24 hours to schedule your consultation.",
+        title: "Beratungsanfrage erhalten",
+        description: "Vielen Dank für Ihr Interesse. Wir werden Sie innerhalb von 24 Stunden kontaktieren, um Ihre Beratung zu planen.",
         duration: 5000,
       });
       setFormData({
@@ -49,53 +49,53 @@ const Consulting = () => {
 
   const services = [
     {
-      title: "Visa & Relocation Consultation",
-      description: "Get expert guidance on visa types, application procedures, and all aspects of relocating from Germany to Dubai.",
+      title: "Visum & Umzug Beratung",
+      description: "Erhalten Sie Expertenberatung zu Visumtypen, Antragsverfahren und allen Aspekten des Umzugs von Deutschland nach Dubai.",
       features: [
-        "Personal visa eligibility assessment",
-        "Document preparation guidance",
-        "Timeline planning for smooth transition",
-        "Post-arrival support and orientation"
+        "Persönliche Einschätzung der Visumseignung",
+        "Anleitung zur Dokumentenvorbereitung",
+        "Zeitplanung für einen reibungslosen Übergang",
+        "Unterstützung nach der Ankunft und Orientierung"
       ],
       price: "149€",
-      duration: "60 minutes"
+      duration: "60 Minuten"
     },
     {
-      title: "Property & Housing Assistance",
-      description: "Find your perfect home in Dubai with personalized property search assistance and rental/buying guidance.",
+      title: "Immobilien & Wohnungssuche",
+      description: "Finden Sie Ihr perfektes Zuhause in Dubai mit persönlicher Immobiliensuche und Beratung zum Mieten/Kaufen.",
       features: [
-        "Neighborhood recommendations based on your needs",
-        "Property viewing coordination",
-        "Rental contract review and negotiation support",
-        "Housing budget optimization"
+        "Empfehlungen für Wohngegenden basierend auf Ihren Bedürfnissen",
+        "Koordination von Immobilienbesichtigungen",
+        "Prüfung und Verhandlungsunterstützung bei Mietverträgen",
+        "Optimierung des Wohnungsbudgets"
       ],
       price: "199€",
-      duration: "90 minutes"
+      duration: "90 Minuten"
     },
     {
-      title: "Business Setup Consultation",
-      description: "Learn how to establish and operate a business in Dubai's dynamic economy with our expert business consultants.",
+      title: "Unternehmensaufbau Beratung",
+      description: "Erfahren Sie, wie Sie ein Unternehmen in Dubais dynamischer Wirtschaft gründen und betreiben können, mit unseren erfahrenen Unternehmensberatern.",
       features: [
-        "Business structure and free zone recommendations",
-        "Licensing requirements explanation",
-        "Cost analysis and budget planning",
-        "Introduction to local business networks"
+        "Empfehlungen zur Unternehmensstruktur und Freizonen",
+        "Erklärung der Lizenzanforderungen",
+        "Kostenanalyse und Budgetplanung",
+        "Einführung in lokale Geschäftsnetzwerke"
       ],
       price: "249€",
-      duration: "120 minutes"
+      duration: "120 Minuten"
     },
     {
-      title: "Comprehensive Relocation Package",
-      description: "All-inclusive support for every aspect of your move to Dubai, from visa to housing, schools, and settling in.",
+      title: "Umfassendes Umzugspaket",
+      description: "Rundum-Unterstützung für jeden Aspekt Ihres Umzugs nach Dubai, vom Visum bis zur Wohnungssuche, Schulen und Eingewöhnung.",
       features: [
-        "Full visa and immigration support",
-        "Personalized housing search",
-        "School and education guidance",
-        "Banking setup and financial advice",
-        "Cultural orientation and integration support"
+        "Vollständige Visum- und Einwanderungsunterstützung",
+        "Personalisierte Wohnungssuche",
+        "Beratung zu Schulen und Bildung",
+        "Einrichtung von Bankkonten und Finanzberatung",
+        "Kulturelle Orientierung und Integrationsunterstützung"
       ],
       price: "599€",
-      duration: "Multiple sessions"
+      duration: "Mehrere Sitzungen"
     }
   ];
 
@@ -106,7 +106,7 @@ const Consulting = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai consultation" 
+            alt="Dubai Beratung" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -114,9 +114,9 @@ const Consulting = () => {
         
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">Expert Consulting Services</h1>
+            <h1 className="mb-6 animate-fade-in">Experten-Beratungsservice</h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Get personalized guidance from our team of relocation experts to make your move to Dubai smooth and successful.
+              Erhalten Sie persönliche Beratung von unserem Team aus Umzugsexperten, um Ihren Umzug nach Dubai reibungslos und erfolgreich zu gestalten.
             </p>
           </div>
         </div>
@@ -126,9 +126,9 @@ const Consulting = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6">Our Consulting Services</h2>
+            <h2 className="text-3xl font-bold mb-6">Unsere Beratungsleistungen</h2>
             <p className="text-gray-600">
-              Choose from our range of specialized consulting services designed to address every aspect of relocating to Dubai.
+              Wählen Sie aus unserer Palette spezialisierter Beratungsleistungen, die für jeden Aspekt eines Umzugs nach Dubai konzipiert sind.
             </p>
           </div>
           
@@ -154,17 +154,17 @@ const Consulting = () => {
                 
                 <div className="p-6 bg-white border-t border-dubai-dark-sand/20">
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-sm text-gray-600">Starting at</span>
+                    <span className="text-sm text-gray-600">Ab</span>
                     <span className="text-2xl font-bold text-dubai-gold">{service.price}</span>
                   </div>
                   <div className="text-sm text-gray-600 mb-6">
-                    Duration: {service.duration}
+                    Dauer: {service.duration}
                   </div>
                   <a 
                     href="#booking-form" 
                     className="block w-full py-2 text-center rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium"
                   >
-                    Book Consultation
+                    Beratung buchen
                   </a>
                 </div>
               </div>
@@ -177,9 +177,9 @@ const Consulting = () => {
       <section className="py-20 bg-dubai-dark-sand/10">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6">How Our Consultation Process Works</h2>
+            <h2 className="text-3xl font-bold mb-6">So funktioniert unser Beratungsprozess</h2>
             <p className="text-gray-600">
-              We've designed a simple, efficient process to provide you with the guidance you need for your Dubai relocation.
+              Wir haben einen einfachen, effizienten Prozess entwickelt, um Ihnen die benötigte Beratung für Ihren Umzug nach Dubai zu bieten.
             </p>
           </div>
           
@@ -187,20 +187,20 @@ const Consulting = () => {
             {[
               {
                 step: "1",
-                title: "Submit Your Request",
-                description: "Fill out our consultation request form with details about your situation and needs.",
+                title: "Anfrage einreichen",
+                description: "Füllen Sie unser Beratungsanfrageformular mit Details zu Ihrer Situation und Ihren Bedürfnissen aus.",
                 icon: "📝"
               },
               {
                 step: "2",
-                title: "Schedule Your Session",
-                description: "Our team will contact you within 24 hours to schedule your consultation at a convenient time.",
+                title: "Termin vereinbaren",
+                description: "Unser Team wird Sie innerhalb von 24 Stunden kontaktieren, um Ihre Beratung zu einem für Sie passenden Zeitpunkt zu planen.",
                 icon: "📅"
               },
               {
                 step: "3",
-                title: "Get Expert Guidance",
-                description: "Meet with our specialists via video call to discuss your specific needs and receive personalized advice.",
+                title: "Expertenberatung erhalten",
+                description: "Treffen Sie unsere Spezialisten per Videoanruf, um Ihre spezifischen Bedürfnisse zu besprechen und persönliche Beratung zu erhalten.",
                 icon: "💬"
               }
             ].map((step, index) => (
@@ -221,33 +221,33 @@ const Consulting = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6">What Our Clients Say</h2>
+            <h2 className="text-3xl font-bold mb-6">Was unsere Kunden sagen</h2>
             <p className="text-gray-600">
-              Hear directly from Germans who have used our consulting services for their Dubai relocation.
+              Hören Sie direkt von Deutschen, die unsere Beratungsdienste für ihren Umzug nach Dubai genutzt haben.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "The visa consultation saved me countless hours of research and potential mistakes. My Golden Visa was approved in record time thanks to the expert guidance.",
+                quote: "Die Visum-Beratung hat mir unzählige Stunden Recherche und potenzielle Fehler erspart. Mein Golden Visa wurde dank der Expertenberatung in Rekordzeit genehmigt.",
                 name: "Dr. Frank Weber",
-                title: "Physician from Munich"
+                title: "Arzt aus München"
               },
               {
-                quote: "The comprehensive package was worth every euro. From finding schools for our children to navigating the housing market, every aspect of our move was handled expertly.",
-                name: "The Schneider Family",
-                title: "Relocated from Frankfurt"
+                quote: "Das umfassende Paket war jeden Euro wert. Von der Suche nach Schulen für unsere Kinder bis zur Navigation auf dem Wohnungsmarkt - jeder Aspekt unseres Umzugs wurde professionell begleitet.",
+                name: "Familie Schneider",
+                title: "Umgezogen aus Frankfurt"
               },
               {
-                quote: "Setting up my business in Dubai seemed daunting until I had my consultation. The clear step-by-step guidance made the process straightforward and efficient.",
+                quote: "Die Gründung meines Unternehmens in Dubai schien entmutigend, bis ich meine Beratung hatte. Die klare Schritt-für-Schritt-Anleitung machte den Prozess unkompliziert und effizient.",
                 name: "Martina Bauer",
-                title: "Entrepreneur from Berlin"
+                title: "Unternehmerin aus Berlin"
               }
             ].map((testimonial, index) => (
               <div key={index} className="p-6 bg-dubai-sand/20 rounded-lg border border-dubai-dark-sand/20">
                 <div className="h-40 flex items-center mb-6">
-                  <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 italic">„{testimonial.quote}"</p>
                 </div>
                 <div className="border-t border-dubai-dark-sand/20 pt-4">
                   <h4 className="font-semibold">{testimonial.name}</h4>
@@ -263,9 +263,9 @@ const Consulting = () => {
       <section id="booking-form" className="py-20 bg-dubai-dark-sand/10">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6">Book Your Consultation</h2>
+            <h2 className="text-3xl font-bold mb-6">Buchen Sie Ihre Beratung</h2>
             <p className="text-gray-600">
-              Fill out the form below to request your personalized consultation. Our team will contact you within 24 hours to schedule your session.
+              Füllen Sie das untenstehende Formular aus, um Ihre persönliche Beratung anzufragen. Unser Team wird Sie innerhalb von 24 Stunden kontaktieren, um Ihren Termin zu planen.
             </p>
           </div>
           
@@ -274,7 +274,7 @@ const Consulting = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                    First Name *
+                    Vorname *
                   </label>
                   <input
                     id="firstName"
@@ -289,7 +289,7 @@ const Consulting = () => {
                 
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                    Last Name *
+                    Nachname *
                   </label>
                   <input
                     id="lastName"
@@ -304,7 +304,7 @@ const Consulting = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
+                    E-Mail-Adresse *
                   </label>
                   <input
                     id="email"
@@ -319,7 +319,7 @@ const Consulting = () => {
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
+                    Telefonnummer
                   </label>
                   <input
                     id="phone"
@@ -334,7 +334,7 @@ const Consulting = () => {
               
               <div className="mb-6">
                 <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-1">
-                  Consultation Type *
+                  Beratungstyp *
                 </label>
                 <select
                   id="serviceType"
@@ -344,17 +344,17 @@ const Consulting = () => {
                   onChange={handleInputChange}
                   className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
                 >
-                  <option value="">Select a consultation type</option>
-                  <option value="visa">Visa & Relocation Consultation</option>
-                  <option value="housing">Property & Housing Assistance</option>
-                  <option value="business">Business Setup Consultation</option>
-                  <option value="comprehensive">Comprehensive Relocation Package</option>
+                  <option value="">Beratungstyp auswählen</option>
+                  <option value="visa">Visum & Umzug Beratung</option>
+                  <option value="housing">Immobilien & Wohnungssuche</option>
+                  <option value="business">Unternehmensaufbau Beratung</option>
+                  <option value="comprehensive">Umfassendes Umzugspaket</option>
                 </select>
               </div>
               
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Situation & Questions
+                  Ihre Situation & Fragen
                 </label>
                 <textarea
                   id="message"
@@ -363,7 +363,7 @@ const Consulting = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                  placeholder="Please briefly describe your situation and any specific questions you have."
+                  placeholder="Bitte beschreiben Sie kurz Ihre Situation und spezifische Fragen, die Sie haben."
                 ></textarea>
               </div>
               
@@ -377,7 +377,7 @@ const Consulting = () => {
                     className="h-4 w-4 text-dubai-gold border-dubai-dark-sand rounded mt-1"
                   />
                   <label htmlFor="privacy" className="ml-2 block text-sm text-gray-600">
-                    I agree to the <a href="/privacy-policy" className="text-dubai-gold hover:underline">Privacy Policy</a> and consent to being contacted regarding my consultation request.
+                    Ich stimme der <a href="/datenschutz" className="text-dubai-gold hover:underline">Datenschutzerklärung</a> zu und bin damit einverstanden, bezüglich meiner Beratungsanfrage kontaktiert zu werden.
                   </label>
                 </div>
               </div>
@@ -390,11 +390,11 @@ const Consulting = () => {
                 {loading ? (
                   <>
                     <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                    Submitting...
+                    Wird gesendet...
                   </>
                 ) : (
                   <>
-                    Book Your Consultation <ArrowRight className="ml-2 h-5 w-5" />
+                    Beratung buchen <ArrowRight className="ml-2 h-5 w-5" />
                   </>
                 )}
               </button>
@@ -407,37 +407,37 @@ const Consulting = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-6">Häufig gestellte Fragen</h2>
             <p className="text-gray-600">
-              Get answers to common questions about our consulting services.
+              Erhalten Sie Antworten auf häufige Fragen zu unseren Beratungsleistungen.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                question: "How are consultations conducted?",
-                answer: "Consultations are primarily conducted via video call (Zoom, Teams, or similar). For clients already in Dubai, in-person meetings may be arranged."
+                question: "Wie werden Beratungen durchgeführt?",
+                answer: "Beratungen finden hauptsächlich per Videoanruf statt (Zoom, Teams oder ähnliches). Für Kunden, die bereits in Dubai sind, können persönliche Treffen arrangiert werden."
               },
               {
-                question: "What languages do you offer consultations in?",
-                answer: "Our consultants are fluent in German and English. Consultations can be conducted in either language according to your preference."
+                question: "In welchen Sprachen bieten Sie Beratungen an?",
+                answer: "Unsere Berater sprechen fließend Deutsch und Englisch. Beratungen können je nach Ihrer Präferenz in einer der beiden Sprachen durchgeführt werden."
               },
               {
-                question: "How soon can I schedule a consultation?",
-                answer: "Typically, consultations can be scheduled within 2-5 business days after your request, depending on our consultants' availability."
+                question: "Wie schnell kann ich einen Beratungstermin vereinbaren?",
+                answer: "In der Regel können Beratungen innerhalb von 2-5 Werktagen nach Ihrer Anfrage je nach Verfügbarkeit unserer Berater geplant werden."
               },
               {
-                question: "Can I upgrade my consultation package later?",
-                answer: "Yes, you can upgrade to a more comprehensive package at any time. We'll simply credit the cost of your initial consultation toward the new package."
+                question: "Kann ich mein Beratungspaket später upgraden?",
+                answer: "Ja, Sie können jederzeit auf ein umfassenderes Paket upgraden. Wir verrechnen einfach die Kosten Ihrer ersten Beratung mit dem neuen Paket."
               },
               {
-                question: "Is there a refund policy if I'm not satisfied?",
-                answer: "Yes, we offer a satisfaction guarantee. If you don't find our consultation valuable, we'll offer a follow-up session at no charge or a partial refund."
+                question: "Gibt es eine Rückerstattungspolitik, wenn ich nicht zufrieden bin?",
+                answer: "Ja, wir bieten eine Zufriedenheitsgarantie. Wenn Sie unsere Beratung nicht als wertvoll empfinden, bieten wir eine kostenlose Folgesitzung oder eine teilweise Rückerstattung an."
               },
               {
-                question: "Do you offer ongoing support after the consultation?",
-                answer: "The Comprehensive Relocation Package includes ongoing support. For other packages, follow-up questions via email are included for 30 days. Additional support can be arranged at preferential rates."
+                question: "Bieten Sie fortlaufende Unterstützung nach der Beratung an?",
+                answer: "Das umfassende Umzugspaket beinhaltet fortlaufende Unterstützung. Für andere Pakete sind Folgefragen per E-Mail für 30 Tage inbegriffen. Zusätzliche Unterstützung kann zu Vorzugskonditionen vereinbart werden."
               }
             ].map((faq, index) => (
               <div key={index} className="p-6 bg-dubai-sand/20 rounded-lg border border-dubai-dark-sand/20">

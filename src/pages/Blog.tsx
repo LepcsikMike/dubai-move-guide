@@ -9,100 +9,100 @@ const Blog = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Articles' },
-    { id: 'visa', name: 'Visa & Legal' },
+    { id: 'all', name: 'Alle Artikel' },
+    { id: 'visa', name: 'Visum & Rechtliches' },
     { id: 'lifestyle', name: 'Lifestyle' },
-    { id: 'housing', name: 'Housing' },
+    { id: 'housing', name: 'Wohnen' },
     { id: 'business', name: 'Business' },
-    { id: 'education', name: 'Education' }
+    { id: 'education', name: 'Bildung' }
   ];
 
   const blogPosts = [
     {
       id: 1,
-      title: "Complete Guide to Dubai's Golden Visa for Germans",
-      excerpt: "Learn how Germans can qualify for Dubai's prestigious Golden Visa, offering 5-10 years of residency with significant benefits for investors, entrepreneurs, and specialists.",
+      title: "Kompletter Leitfaden zum Golden Visa in Dubai für Deutsche",
+      excerpt: "Erfahren Sie, wie Deutsche sich für Dubais prestigeträchtiges Golden Visa qualifizieren können, das 5-10 Jahre Aufenthalt mit erheblichen Vorteilen für Investoren, Unternehmer und Spezialisten bietet.",
       image: "https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "April 10, 2025",
+      date: "10. April 2025",
       author: "Michael Weber",
-      readTime: "8 min read",
+      readTime: "8 Min. Lesezeit",
       category: "visa",
       featured: true
     },
     {
       id: 2,
-      title: "Top 10 Neighborhoods for German Expats in Dubai",
-      excerpt: "Discover the most popular residential areas for German expatriates in Dubai, considering factors like community, amenities, schools, and lifestyle preferences.",
+      title: "Top 10 Wohngegenden für deutsche Expats in Dubai",
+      excerpt: "Entdecken Sie die beliebtesten Wohngegenden für deutsche Auswanderer in Dubai unter Berücksichtigung von Faktoren wie Community, Annehmlichkeiten, Schulen und Lifestyle-Präferenzen.",
       image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "April 5, 2025",
+      date: "5. April 2025",
       author: "Julia Schmidt",
-      readTime: "10 min read",
+      readTime: "10 Min. Lesezeit",
       category: "housing",
       featured: true
     },
     {
       id: 3,
-      title: "Tax Implications for Germans Living in Dubai",
-      excerpt: "A comprehensive guide to navigating taxes as a German citizen living in Dubai, including residency status, German tax obligations, and maximizing tax benefits.",
+      title: "Steuerliche Auswirkungen für Deutsche, die in Dubai leben",
+      excerpt: "Ein umfassender Leitfaden zur Bewältigung von Steuerfragen als deutscher Staatsbürger in Dubai, einschließlich Aufenthaltstatus, deutscher Steuerpflichten und Maximierung steuerlicher Vorteile.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "March 28, 2025",
+      date: "28. März 2025",
       author: "Thomas Müller",
-      readTime: "12 min read",
+      readTime: "12 Min. Lesezeit",
       category: "business",
       featured: false
     },
     {
       id: 4,
-      title: "Navigating Dubai's Education System for Your Children",
-      excerpt: "Everything German parents need to know about schooling options in Dubai, from German curriculum schools to international education pathways.",
+      title: "Das Bildungssystem in Dubai für Ihre Kinder",
+      excerpt: "Alles, was deutsche Eltern über Schulmöglichkeiten in Dubai wissen müssen, von deutschen Lehrplanschulen bis hin zu internationalen Bildungswegen.",
       image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "March 22, 2025",
+      date: "22. März 2025",
       author: "Anna Becker",
-      readTime: "9 min read",
+      readTime: "9 Min. Lesezeit",
       category: "education",
       featured: false
     },
     {
       id: 5,
-      title: "German Entrepreneurs: Starting Your Business in Dubai",
-      excerpt: "Step-by-step guide for German entrepreneurs looking to establish a business in Dubai, from free zones to mainland options and everything in between.",
+      title: "Deutsche Unternehmer: Gründung Ihres Unternehmens in Dubai",
+      excerpt: "Schritt-für-Schritt-Anleitung für deutsche Unternehmer, die ein Unternehmen in Dubai gründen möchten, von Freizonen bis zu Mainland-Optionen.",
       image: "https://images.unsplash.com/photo-1664575599736-c5197c684153?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "March 15, 2025",
+      date: "15. März 2025",
       author: "Markus Schneider",
-      readTime: "14 min read",
+      readTime: "14 Min. Lesezeit",
       category: "business",
       featured: false
     },
     {
       id: 6,
-      title: "Cultural Adaptation: From Germany to Dubai",
-      excerpt: "Insights and advice on navigating cultural differences and building a fulfilling social life as a German expatriate in Dubai.",
+      title: "Kulturelle Anpassung: Von Deutschland nach Dubai",
+      excerpt: "Einblicke und Ratschläge zur Bewältigung kultureller Unterschiede und zum Aufbau eines erfüllenden sozialen Lebens als deutscher Auswanderer in Dubai.",
       image: "https://images.unsplash.com/photo-1583103559464-61c3abbf600f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "March 8, 2025",
+      date: "8. März 2025",
       author: "Sophie Wagner",
-      readTime: "7 min read",
+      readTime: "7 Min. Lesezeit",
       category: "lifestyle",
       featured: false
     },
     {
       id: 7,
-      title: "Health Insurance Options for Germans in Dubai",
-      excerpt: "Compare health insurance plans and understand the UAE healthcare system to ensure you and your family have the right medical coverage in Dubai.",
+      title: "Krankenversicherungsoptionen für Deutsche in Dubai",
+      excerpt: "Vergleichen Sie Krankenversicherungspläne und verstehen Sie das Gesundheitssystem der VAE, um sicherzustellen, dass Sie und Ihre Familie in Dubai die richtige medizinische Versorgung haben.",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "March 1, 2025",
+      date: "1. März 2025",
       author: "Dr. Klaus Fischer",
-      readTime: "11 min read",
+      readTime: "11 Min. Lesezeit",
       category: "lifestyle",
       featured: false
     },
     {
       id: 8,
-      title: "Bringing Your Pet to Dubai: A German Guide",
-      excerpt: "Everything you need to know about relocating with your pets from Germany to Dubai, including requirements, procedures, and finding pet-friendly accommodations.",
+      title: "Mit Haustieren nach Dubai: Ein deutscher Leitfaden",
+      excerpt: "Alles, was Sie über den Umzug mit Ihren Haustieren von Deutschland nach Dubai wissen müssen, einschließlich Anforderungen, Verfahren und haustierfreundlicher Unterkünfte.",
       image: "https://images.unsplash.com/photo-1583511655826-05700442b0b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
-      date: "February 22, 2025",
+      date: "22. Februar 2025",
       author: "Lisa Hoffmann",
-      readTime: "9 min read",
+      readTime: "9 Min. Lesezeit",
       category: "lifestyle",
       featured: false
     }
@@ -123,7 +123,7 @@ const Blog = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1572446149317-703a57b5254c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai cityscape" 
+            alt="Dubai Stadtbild" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -131,9 +131,9 @@ const Blog = () => {
         
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">The Dubai Relocation Blog</h1>
+            <h1 className="mb-6 animate-fade-in">Der Dubai Auswanderungs-Blog</h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Expert insights, practical tips, and success stories to guide your journey from Germany to Dubai.
+              Experten-Einblicke, praktische Tipps und Erfolgsgeschichten, die Ihre Reise von Deutschland nach Dubai begleiten.
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ const Blog = () => {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder="Artikel durchsuchen..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full md:w-80 pl-10 pr-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
@@ -179,7 +179,7 @@ const Blog = () => {
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-white">
           <div className="section-container">
-            <h2 className="text-3xl font-bold mb-12">Featured Articles</h2>
+            <h2 className="text-3xl font-bold mb-12">Empfohlene Artikel</h2>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredPosts.map((post) => (
@@ -191,7 +191,7 @@ const Blog = () => {
                       className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                     />
                     <div className="absolute top-4 right-4 bg-dubai-gold text-white px-3 py-1 rounded-full text-xs font-medium">
-                      Featured
+                      Empfohlen
                     </div>
                   </div>
                   
@@ -211,13 +211,20 @@ const Blog = () => {
                     <div className="flex justify-between items-center">
                       <div className="flex items-center">
                         <Tag size={14} className="text-dubai-gold mr-2" />
-                        <span className="text-sm text-gray-500 capitalize">{post.category}</span>
+                        <span className="text-sm text-gray-500 capitalize">
+                          {post.category === 'visa' ? 'Visum & Rechtliches' : 
+                           post.category === 'housing' ? 'Wohnen' : 
+                           post.category === 'business' ? 'Business' : 
+                           post.category === 'education' ? 'Bildung' : 
+                           post.category === 'lifestyle' ? 'Lifestyle' : 
+                           post.category}
+                        </span>
                       </div>
                       <Link 
                         to={`/blog/${post.id}`} 
                         className="text-dubai-gold font-medium flex items-center hover:underline"
                       >
-                        Read More <ArrowRight size={16} className="ml-1" />
+                        Weiterlesen <ArrowRight size={16} className="ml-1" />
                       </Link>
                     </div>
                   </div>
@@ -231,7 +238,7 @@ const Blog = () => {
       {/* Regular Posts */}
       <section className="py-16 bg-dubai-dark-sand/10">
         <div className="section-container">
-          <h2 className="text-3xl font-bold mb-12">Latest Articles</h2>
+          <h2 className="text-3xl font-bold mb-12">Neueste Artikel</h2>
           
           {regularPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -248,7 +255,12 @@ const Blog = () => {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-white px-3 py-1 rounded-full bg-dubai-gold capitalize">
-                        {post.category}
+                        {post.category === 'visa' ? 'Visum & Rechtliches' : 
+                         post.category === 'housing' ? 'Wohnen' : 
+                         post.category === 'business' ? 'Business' : 
+                         post.category === 'education' ? 'Bildung' : 
+                         post.category === 'lifestyle' ? 'Lifestyle' : 
+                         post.category}
                       </span>
                       <span className="text-xs text-gray-500 flex items-center">
                         <Clock size={12} className="mr-1" />
@@ -268,7 +280,7 @@ const Blog = () => {
                         to={`/blog/${post.id}`} 
                         className="text-dubai-gold font-medium flex items-center hover:underline"
                       >
-                        Read More <ArrowRight size={14} className="ml-1" />
+                        Weiterlesen <ArrowRight size={14} className="ml-1" />
                       </Link>
                     </div>
                   </div>
@@ -277,12 +289,12 @@ const Blog = () => {
             </div>
           ) : (
             <div className="text-center py-16">
-              <p className="text-gray-600 text-lg">No articles found matching your search criteria.</p>
+              <p className="text-gray-600 text-lg">Keine Artikel gefunden, die Ihren Suchkriterien entsprechen.</p>
               <button 
                 onClick={() => {setSearchTerm(''); setActiveCategory('all');}} 
                 className="mt-4 text-dubai-gold hover:underline"
               >
-                Clear filters
+                Filter zurücksetzen
               </button>
             </div>
           )}
@@ -293,9 +305,9 @@ const Blog = () => {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Never Miss an Article</h2>
+            <h2 className="text-3xl font-bold mb-4">Verpassen Sie keinen Artikel</h2>
             <p className="text-gray-600">
-              Subscribe to our newsletter to get the latest insights and tips about relocating to Dubai delivered to your inbox.
+              Abonnieren Sie unseren Newsletter, um die neuesten Einblicke und Tipps zur Auswanderung nach Dubai direkt in Ihren Posteingang zu erhalten.
             </p>
           </div>
           <NewsletterSignup className="max-w-xl mx-auto" />

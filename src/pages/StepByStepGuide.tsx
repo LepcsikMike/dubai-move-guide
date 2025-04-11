@@ -7,526 +7,526 @@ const StepByStepGuide = () => {
   const [activeTab, setActiveTab] = useState("visas");
   
   const tabs = [
-    { id: "visas", label: "Visas & Legal", icon: "📝" },
-    { id: "housing", label: "Housing", icon: "🏠" },
-    { id: "jobs", label: "Finding Work", icon: "💼" },
-    { id: "healthcare", label: "Healthcare", icon: "🏥" },
-    { id: "education", label: "Education", icon: "🎓" },
-    { id: "banking", label: "Banking & Finance", icon: "💰" },
-    { id: "culture", label: "Culture & Lifestyle", icon: "🌴" }
+    { id: "visas", label: "Visum & Rechtliches", icon: "📝" },
+    { id: "housing", label: "Wohnen", icon: "🏠" },
+    { id: "jobs", label: "Arbeit finden", icon: "💼" },
+    { id: "healthcare", label: "Gesundheit", icon: "🏥" },
+    { id: "education", label: "Bildung", icon: "🎓" },
+    { id: "banking", label: "Banking & Finanzen", icon: "💰" },
+    { id: "culture", label: "Kultur & Lifestyle", icon: "🌴" }
   ];
 
   const tabContent = {
     visas: {
-      title: "Navigating Visas & Legal Requirements",
-      intro: "Obtaining the right visa is the first and most crucial step of your Dubai relocation journey. There are several visa options available for Germans moving to Dubai, each with specific requirements and benefits.",
+      title: "Visa & rechtliche Anforderungen navigieren",
+      intro: "Die Beschaffung des richtigen Visums ist der erste und wichtigste Schritt Ihrer Dubai-Umzugsreise. Es gibt verschiedene Visumoptionen für Deutsche, die nach Dubai ziehen, jede mit spezifischen Anforderungen und Vorteilen.",
       steps: [
         {
-          title: "Choose the Right Visa Type",
-          content: "As a German citizen, you have several visa options for Dubai:",
+          title: "Wählen Sie den richtigen Visumtyp",
+          content: "Als deutscher Staatsbürger haben Sie mehrere Visumoptionen für Dubai:",
           list: [
-            "Employment Visa: Sponsored by your employer in Dubai",
-            "Investor Visa: For those starting or investing in a business",
-            "Property Owner Visa: Available when purchasing property worth AED 1 million+",
-            "Retirement Visa: For those aged 55+ with specific financial requirements",
-            "Remote Work Visa: For digital nomads and remote workers",
-            "Golden Visa: Long-term residence (5-10 years) for investors, entrepreneurs, and specialists"
+            "Arbeitsvisum: Gesponsert von Ihrem Arbeitgeber in Dubai",
+            "Investorenvisum: Für diejenigen, die ein Unternehmen gründen oder in ein Unternehmen investieren",
+            "Immobilieneigentümervisum: Verfügbar beim Kauf einer Immobilie im Wert von mehr als 1 Million AED",
+            "Rentenvisum: Für Personen ab 55 Jahren mit bestimmten finanziellen Anforderungen",
+            "Remote-Work-Visum: Für digitale Nomaden und Remote-Arbeiter",
+            "Golden Visa: Langzeitaufenthalt (5-10 Jahre) für Investoren, Unternehmer und Spezialisten"
           ]
         },
         {
-          title: "Gather Required Documents",
-          content: "Regardless of the visa type, you'll typically need:",
+          title: "Sammeln Sie die erforderlichen Dokumente",
+          content: "Unabhängig vom Visumtyp benötigen Sie in der Regel:",
           list: [
-            "Valid German passport with at least 6 months validity",
-            "Passport-sized photographs with white background",
-            "Completed visa application form",
-            "Health insurance certificate valid in the UAE",
-            "Additional documents specific to your visa type (employment contract, property deed, etc.)",
-            "Criminal record clearance from Germany (for some visa types)"
+            "Gültiger deutscher Reisepass mit mindestens 6 Monaten Gültigkeit",
+            "Passfotos mit weißem Hintergrund",
+            "Ausgefülltes Visumantragsformular",
+            "Krankenversicherungsbescheinigung gültig in den VAE",
+            "Zusätzliche Dokumente je nach Visumtyp (Arbeitsvertrag, Immobilienurkunde usw.)",
+            "Polizeiliches Führungszeugnis aus Deutschland (für einige Visumtypen)"
           ]
         },
         {
-          title: "Complete Medical Examination",
-          content: "Most residency visas require a medical fitness test in Dubai that includes:",
+          title: "Medizinische Untersuchung durchführen",
+          content: "Die meisten Aufenthaltsvisa erfordern einen medizinischen Eignungstest in Dubai, der Folgendes umfasst:",
           list: [
-            "Blood tests for infectious diseases",
-            "Chest X-ray",
-            "General health examination"
+            "Bluttests auf Infektionskrankheiten",
+            "Röntgenaufnahme der Brust",
+            "Allgemeine Gesundheitsuntersuchung"
           ]
         },
         {
-          title: "Obtain Emirates ID",
-          content: "After visa approval, you'll need to apply for an Emirates ID card, which is mandatory for all UAE residents. The process involves:",
+          title: "Emirates ID beantragen",
+          content: "Nach Genehmigung des Visums müssen Sie eine Emirates ID-Karte beantragen, die für alle Einwohner der VAE obligatorisch ist. Der Prozess umfasst:",
           list: [
-            "Completing an application form",
-            "Providing biometric data (fingerprints and photograph)",
-            "Paying the applicable fee",
-            "Collecting your ID card once processed"
+            "Ausfüllen eines Antragsformulars",
+            "Bereitstellung biometrischer Daten (Fingerabdrücke und Foto)",
+            "Zahlung der entsprechenden Gebühr",
+            "Abholung Ihrer ID-Karte nach der Bearbeitung"
           ]
         }
       ],
       tips: [
-        "Start the visa process at least 2-3 months before your planned move",
-        "Consider using a reputable legal service to navigate the visa process",
-        "Keep digital copies of all your documents in a secure location",
-        "Check for the latest visa regulations as they can change"
+        "Beginnen Sie den Visumsprozess mindestens 2-3 Monate vor Ihrem geplanten Umzug",
+        "Erwägen Sie die Nutzung eines seriösen Rechtsdienstes zur Navigation durch den Visumsprozess",
+        "Bewahren Sie digitale Kopien aller Ihrer Dokumente an einem sicheren Ort auf",
+        "Prüfen Sie die neuesten Visabestimmungen, da sich diese ändern können"
       ],
       resources: [
         {
-          title: "Visa Application Checklist",
-          link: "/resources#visa-checklist",
+          title: "Visum-Antrags-Checkliste",
+          link: "/ressourcen#visa-checklist",
           type: "checklist"
         },
         {
-          title: "Official UAE Government Portal",
+          title: "Offizielles VAE-Regierungsportal",
           link: "https://u.ae/en/information-and-services/visa-and-emirates-id",
           type: "external"
         }
       ]
     },
     housing: {
-      title: "Finding Your Ideal Home in Dubai",
-      intro: "Dubai offers diverse housing options, from luxurious waterfront apartments to family-friendly villa communities. Understanding the real estate market and neighborhoods will help you find the perfect home for your needs and budget.",
+      title: "Ihr ideales Zuhause in Dubai finden",
+      intro: "Dubai bietet vielfältige Wohnmöglichkeiten, von luxuriösen Apartments am Wasser bis hin zu familienfreundlichen Villenanlagen. Das Verständnis des Immobilienmarktes und der Nachbarschaften wird Ihnen helfen, das perfekte Zuhause für Ihre Bedürfnisse und Ihr Budget zu finden.",
       steps: [
         {
-          title: "Understand Dubai's Neighborhoods",
-          content: "Dubai's neighborhoods vary widely in character, amenities, and price:",
+          title: "Verstehen Sie Dubais Nachbarschaften",
+          content: "Dubais Viertel variieren stark in Charakter, Annehmlichkeiten und Preis:",
           list: [
-            "Downtown Dubai: Central location, luxury apartments, close to Burj Khalifa",
-            "Dubai Marina: Waterfront living with a European feel, popular with expats",
-            "Palm Jumeirah: Iconic location, luxury villas and apartments",
-            "Jumeirah: Traditional upscale area with villas and beaches",
-            "Arabian Ranches: Family-friendly villa community with green spaces",
-            "Dubai Hills: Newer development with modern villas and apartments",
-            "JLT/JVC: More affordable apartment options popular with young professionals"
+            "Downtown Dubai: Zentrale Lage, Luxusapartments, in der Nähe des Burj Khalifa",
+            "Dubai Marina: Wohnen am Wasser mit europäischem Flair, beliebt bei Expats",
+            "Palm Jumeirah: Ikonischer Standort, Luxusvillen und Apartments",
+            "Jumeirah: Traditionelles gehobenes Viertel mit Villen und Stränden",
+            "Arabian Ranches: Familienfreundliche Villengemeinschaft mit Grünflächen",
+            "Dubai Hills: Neuere Entwicklung mit modernen Villen und Apartments",
+            "JLT/JVC: Erschwinglichere Apartmentoptionen, beliebt bei jungen Berufstätigen"
           ]
         },
         {
-          title: "Decide Between Renting and Buying",
-          content: "Both options have advantages in Dubai:",
+          title: "Entscheiden Sie zwischen Mieten und Kaufen",
+          content: "Beide Optionen haben Vorteile in Dubai:",
           list: [
-            "Renting: More flexibility, no maintenance responsibility, lower initial costs",
-            "Buying: Long-term investment, potential for capital appreciation, eligibility for property owner visa",
-            "Most rentals require payment in 1-4 cheques annually (fewer cheques typically means lower rent)",
-            "5% down payment required for first-time home buyers (25% for non-residents)",
-            "4% property registration fee plus agent fees (typically 2%) when buying"
+            "Mieten: Mehr Flexibilität, keine Wartungsverantwortung, geringere Anfangskosten",
+            "Kaufen: Langfristige Investition, Potenzial für Kapitalwachstum, Berechtigung für das Immobilieneigentümervisum",
+            "Die meisten Mietverträge erfordern Zahlung in 1-4 Schecks jährlich (weniger Schecks bedeuten typischerweise niedrigere Miete)",
+            "5% Anzahlung für Erstkäufer (25% für Nicht-Einwohner)",
+            "4% Immobilienregistrierungsgebühr plus Maklergebühren (typischerweise 2%) beim Kauf"
           ]
         },
         {
-          title: "Work with a Reputable Agent",
-          content: "A good real estate agent in Dubai is essential:",
+          title: "Arbeiten Sie mit einem seriösen Makler",
+          content: "Ein guter Immobilienmakler in Dubai ist unerlässlich:",
           list: [
-            "Verify the agent has a RERA (Real Estate Regulatory Agency) number",
-            "Ask for recommendations from other expats",
-            "Interview multiple agents to find one who understands your needs",
-            "Clarify fee structure upfront (typically 5% of annual rent or 2% of purchase price)"
+            "Überprüfen Sie, ob der Makler eine RERA-Nummer (Real Estate Regulatory Agency) hat",
+            "Bitten Sie andere Auswanderer um Empfehlungen",
+            "Führen Sie Gespräche mit mehreren Maklern, um einen zu finden, der Ihre Bedürfnisse versteht",
+            "Klären Sie die Gebührenstruktur im Voraus (typischerweise 5% der Jahresmiete oder 2% des Kaufpreises)"
           ]
         },
         {
-          title: "Understand the Rental/Buying Process",
-          content: "Be prepared for Dubai's unique property processes:",
+          title: "Verstehen Sie den Miet-/Kaufprozess",
+          content: "Seien Sie auf Dubais einzigartige Immobilienprozesse vorbereitet:",
           list: [
-            "For rentals: Sign tenancy contract, provide security deposit (5-10%), pay agent fee",
-            "For buying: Make offer, sign MOU, pay deposit, complete property registration",
-            "Set up DEWA (Dubai Electricity and Water Authority) account",
-            "Register with your building management for access cards and amenities",
-            "Consider hiring professional cleaning services before moving in"
+            "Für Mieten: Mietvertrag unterschreiben, Kaution hinterlegen (5-10%), Maklergebühr zahlen",
+            "Für den Kauf: Angebot abgeben, MOU unterzeichnen, Anzahlung leisten, Immobilienregistrierung abschließen",
+            "DEWA-Konto (Dubai Electricity and Water Authority) einrichten",
+            "Bei Ihrer Gebäudeverwaltung für Zugangskarten und Annehmlichkeiten registrieren",
+            "Erwägen Sie die Beauftragung professioneller Reinigungsdienste vor dem Einzug"
           ]
         }
       ],
       tips: [
-        "Visit multiple properties and neighborhoods before deciding",
-        "Factor in commute times to work or schools",
-        "Check building amenities (pool, gym, parking) and maintenance quality",
-        "Negotiate! Prices are often negotiable in Dubai's competitive market",
-        "Read reviews of buildings and communities online before committing"
+        "Besichtigen Sie mehrere Immobilien und Nachbarschaften, bevor Sie sich entscheiden",
+        "Berücksichtigen Sie die Pendelzeiten zur Arbeit oder zu Schulen",
+        "Überprüfen Sie die Annehmlichkeiten des Gebäudes (Pool, Fitnessstudio, Parkplatz) und die Wartungsqualität",
+        "Verhandeln Sie! Preise sind oft verhandelbar in Dubais wettbewerbsintensivem Markt",
+        "Lesen Sie Online-Bewertungen von Gebäuden und Gemeinschaften, bevor Sie sich festlegen"
       ],
       resources: [
         {
-          title: "Dubai Neighborhood Guide",
-          link: "/resources#neighborhood-guide",
+          title: "Dubai Nachbarschaftsführer",
+          link: "/ressourcen#neighborhood-guide",
           type: "checklist"
         },
         {
-          title: "Rental Process Explainer",
-          link: "/resources#rental-guide",
+          title: "Mietprozess-Erklärer",
+          link: "/ressourcen#rental-guide",
           type: "checklist"
         }
       ]
     },
     jobs: {
-      title: "Finding Employment Opportunities in Dubai",
-      intro: "Dubai offers excellent career prospects for skilled Germans across various industries. Understanding the job market and application process will help you secure a rewarding position with competitive compensation.",
+      title: "Beschäftigungsmöglichkeiten in Dubai finden",
+      intro: "Dubai bietet hervorragende Karriereaussichten für qualifizierte Deutsche in verschiedenen Branchen. Das Verständnis des Arbeitsmarktes und des Bewerbungsprozesses wird Ihnen helfen, eine lohnende Position mit wettbewerbsfähiger Vergütung zu sichern.",
       steps: [
         {
-          title: "Understand the Job Market for Germans",
-          content: "German professionals are highly valued in Dubai, particularly in these sectors:",
+          title: "Verstehen Sie den Arbeitsmarkt für Deutsche",
+          content: "Deutsche Fachkräfte sind in Dubai besonders in diesen Sektoren sehr geschätzt:",
           list: [
-            "Engineering and manufacturing (especially automotive and construction)",
-            "Finance and banking",
-            "Information technology and digital transformation",
-            "Renewable energy and sustainability",
-            "Healthcare and medical technology",
-            "Hospitality and tourism",
-            "Education (particularly for German language specialists)"
+            "Ingenieurwesen und Fertigung (besonders Automobil und Bau)",
+            "Finanzen und Bankwesen",
+            "Informationstechnologie und digitale Transformation",
+            "Erneuerbare Energien und Nachhaltigkeit",
+            "Gesundheitswesen und Medizintechnik",
+            "Gastgewerbe und Tourismus",
+            "Bildung (besonders für Deutschsprachspezialisten)"
           ]
         },
         {
-          title: "Prepare Your Application Materials",
-          content: "Tailor your application for the Dubai market:",
+          title: "Bereiten Sie Ihre Bewerbungsunterlagen vor",
+          content: "Passen Sie Ihre Bewerbung an den Dubai-Markt an:",
           list: [
-            "Update your CV in English, highlighting international experience",
-            "Include a professional photo on your CV (common practice in UAE)",
-            "Obtain translated and attested copies of your qualifications",
-            "Prepare a compelling cover letter emphasizing your unique skills",
-            "Build a strong LinkedIn profile as many recruiters use the platform",
-            "Collect reference letters from previous employers"
+            "Aktualisieren Sie Ihren Lebenslauf auf Englisch und heben Sie internationale Erfahrungen hervor",
+            "Fügen Sie ein professionelles Foto auf Ihrem Lebenslauf hinzu (übliche Praxis in den VAE)",
+            "Beschaffen Sie übersetzte und beglaubigte Kopien Ihrer Qualifikationen",
+            "Bereiten Sie ein überzeugendes Anschreiben vor, das Ihre einzigartigen Fähigkeiten hervorhebt",
+            "Erstellen Sie ein starkes LinkedIn-Profil, da viele Personalvermittler die Plattform nutzen",
+            "Sammeln Sie Referenzschreiben von früheren Arbeitgebern"
           ]
         },
         {
-          title: "Explore Job Hunting Channels",
-          content: "Use multiple channels to maximize your opportunities:",
+          title: "Erkunden Sie Jobsuchkanäle",
+          content: "Nutzen Sie mehrere Kanäle, um Ihre Möglichkeiten zu maximieren:",
           list: [
-            "Specialized job portals like GulfTalent, Bayt, and Indeed UAE",
-            "LinkedIn jobs section with Dubai location filter",
-            "German Business Council and German Emirati Joint Council for Industry and Commerce",
-            "Industry-specific networking events and exhibitions",
-            "Direct applications to company career pages",
-            "Reputable recruitment agencies specializing in your field"
+            "Spezialisierte Jobportale wie GulfTalent, Bayt und Indeed UAE",
+            "LinkedIn-Jobs-Bereich mit Dubai-Standortfilter",
+            "Deutscher Wirtschaftsrat und Deutsch-Emiratischer Gemeinsamer Rat für Industrie und Handel",
+            "Branchenspezifische Networking-Events und Ausstellungen",
+            "Direktbewerbungen auf Unternehmenskarrieresseiten",
+            "Seriöse Personalvermittlungen, die auf Ihr Fachgebiet spezialisiert sind"
           ]
         },
         {
-          title: "Understand Employment Packages",
-          content: "Dubai compensation packages often include:",
+          title: "Verstehen Sie Beschäftigungspakete",
+          content: "Dubai-Vergütungspakete beinhalten oft:",
           list: [
-            "Base salary (tax-free in UAE)",
-            "Housing allowance or provided accommodation",
-            "Transportation allowance or company car",
-            "Health insurance (mandatory for all employees)",
-            "Annual flight tickets to your home country",
-            "Education allowance for children (in more senior positions)",
-            "End-of-service benefits (gratuity payment based on years of service)"
+            "Grundgehalt (steuerfrei in den VAE)",
+            "Wohnzulage oder bereitgestellte Unterkunft",
+            "Transportzulage oder Firmenwagen",
+            "Krankenversicherung (obligatorisch für alle Mitarbeiter)",
+            "Jährliche Flugtickets in Ihr Heimatland",
+            "Bildungszulage für Kinder (in höheren Positionen)",
+            "Dienstzeitabschlussvergütung (Abfindungszahlung basierend auf Dienstjahren)"
           ]
         }
       ],
       tips: [
-        "Network extensively—many positions are filled through connections",
-        "Consider arriving on a visit visa for in-person interviews if possible",
-        "Be prepared for video interviews due to the distance",
-        "Research typical salary ranges for your position to negotiate effectively",
-        "Understand that employment contracts are binding legal documents in UAE"
+        "Networking ist entscheidend—viele Positionen werden über Kontakte besetzt",
+        "Erwägen Sie die Anreise mit einem Besuchsvisum für persönliche Vorstellungsgespräche, wenn möglich",
+        "Seien Sie auf Videointerviews vorbereitet aufgrund der Entfernung",
+        "Recherchieren Sie typische Gehaltsspannen für Ihre Position, um effektiv zu verhandeln",
+        "Bedenken Sie, dass Arbeitsverträge in den VAE rechtlich bindende Dokumente sind"
       ],
       resources: [
         {
-          title: "Dubai Salary Guide",
-          link: "/resources#salary-guide",
+          title: "Dubai Gehaltsführer",
+          link: "/ressourcen#salary-guide",
           type: "checklist"
         },
         {
-          title: "Job Interview Preparation",
-          link: "/resources#interview-prep",
+          title: "Vorstellungsgespräch-Vorbereitung",
+          link: "/ressourcen#interview-prep",
           type: "checklist"
         }
       ]
     },
     healthcare: {
-      title: "Navigating Healthcare in Dubai",
-      intro: "Dubai offers world-class healthcare facilities with many international and German-speaking medical professionals. Understanding the healthcare system and insurance options is essential for maintaining your wellbeing in your new home.",
+      title: "Das Gesundheitssystem in Dubai navigieren",
+      intro: "Dubai bietet erstklassige Gesundheitseinrichtungen mit vielen internationalen und deutschsprachigen medizinischen Fachkräften. Das Verständnis des Gesundheitssystems und der Versicherungsoptionen ist wesentlich für die Erhaltung Ihres Wohlbefindens in Ihrer neuen Heimat.",
       steps: [
         {
-          title: "Understand the Healthcare System",
-          content: "Dubai's healthcare system combines public and private facilities:",
+          title: "Verstehen Sie das Gesundheitssystem",
+          content: "Dubais Gesundheitssystem kombiniert öffentliche und private Einrichtungen:",
           list: [
-            "Public healthcare through Dubai Health Authority (DHA) facilities",
-            "Numerous private hospitals and clinics, many with international accreditation",
-            "Health insurance is mandatory for all residents",
-            "Emergency services are available by calling 998 or 999",
-            "Pharmacies are widely available, with many open 24/7",
-            "Electronic medical records system connects many facilities"
+            "Öffentliche Gesundheitsversorgung durch Dubai Health Authority (DHA) Einrichtungen",
+            "Zahlreiche private Krankenhäuser und Kliniken, viele mit internationaler Akkreditierung",
+            "Krankenversicherung ist für alle Einwohner obligatorisch",
+            "Notdienste sind unter 998 oder 999 erreichbar",
+            "Apotheken sind weit verbreitet, viele haben rund um die Uhr geöffnet",
+            "Elektronisches Patientenaktensystem verbindet viele Einrichtungen"
           ]
         },
         {
-          title: "Obtain Health Insurance",
-          content: "Health insurance requirements in Dubai:",
+          title: "Krankenversicherung abschließen",
+          content: "Krankenversicherungsanforderungen in Dubai:",
           list: [
-            "Employers must provide basic health insurance for employees",
-            "Sponsors must provide insurance for dependents",
-            "Basic plans cover essential treatments and emergency care",
-            "Premium plans offer wider coverage and lower co-payments",
-            "Consider additional coverage for specific needs (dental, maternity, etc.)",
-            "Check if your plan includes medical evacuation or treatment abroad"
+            "Arbeitgeber müssen eine Grundversicherung für Mitarbeiter bereitstellen",
+            "Sponsoren müssen Versicherung für Abhängige bereitstellen",
+            "Basispläne decken wesentliche Behandlungen und Notfallversorgung ab",
+            "Premium-Pläne bieten umfassendere Deckung und niedrigere Zuzahlungen",
+            "Erwägen Sie zusätzliche Deckung für spezifische Bedürfnisse (Zahnbehandlung, Mutterschaft, etc.)",
+            "Prüfen Sie, ob Ihr Plan medizinische Evakuierung oder Behandlung im Ausland einschließt"
           ]
         },
         {
-          title: "Find Healthcare Providers",
-          content: "Resources for finding the right healthcare providers:",
+          title: "Finden Sie Gesundheitsdienstleister",
+          content: "Ressourcen zum Finden der richtigen Gesundheitsdienstleister:",
           list: [
-            "Ask your insurance company for their network of providers",
-            "Seek recommendations from fellow Germans in Dubai",
-            "Research hospitals with German-speaking staff",
-            "Consider medical facilities near your home or workplace",
-            "Check provider ratings and accreditations",
-            "Schedule introductory appointments with potential primary care doctors"
+            "Fragen Sie Ihre Versicherungsgesellschaft nach ihrem Netzwerk von Anbietern",
+            "Suchen Sie Empfehlungen von anderen Deutschen in Dubai",
+            "Recherchieren Sie Krankenhäuser mit deutschsprachigem Personal",
+            "Berücksichtigen Sie medizinische Einrichtungen in der Nähe Ihres Wohnorts oder Arbeitsplatzes",
+            "Überprüfen Sie Bewertungen und Akkreditierungen von Anbietern",
+            "Vereinbaren Sie Kennenlerngespräche mit potenziellen Hausärzten"
           ]
         },
         {
-          title: "Bring Medical Records and Medication",
-          content: "Prepare your medical information:",
+          title: "Bringen Sie medizinische Unterlagen und Medikamente mit",
+          content: "Bereiten Sie Ihre medizinischen Informationen vor:",
           list: [
-            "Obtain copies of important medical records translated to English",
-            "Bring a sufficient supply of current medications",
-            "Check if your medications are available in UAE (some medications containing narcotics may be restricted)",
-            "Get prescriptions for chronic conditions from your German doctor",
-            "Bring vaccination records, especially for children",
-            "Consider a pre-departure medical check-up in Germany"
+            "Besorgen Sie Kopien wichtiger medizinischer Unterlagen, übersetzt ins Englische",
+            "Bringen Sie einen ausreichenden Vorrat Ihrer aktuellen Medikamente mit",
+            "Überprüfen Sie, ob Ihre Medikamente in den VAE erhältlich sind (einige Medikamente mit Betäubungsmitteln könnten eingeschränkt sein)",
+            "Holen Sie Rezepte für chronische Erkrankungen von Ihrem deutschen Arzt",
+            "Bringen Sie Impfnachweise mit, besonders für Kinder",
+            "Erwägen Sie eine medizinische Vorabreise-Untersuchung in Deutschland"
           ]
         }
       ],
       tips: [
-        "Register with a primary healthcare provider soon after arrival",
-        "Keep digital copies of your insurance card and important medical documents",
-        "Learn basic medical terms in English if you're not fluent",
-        "Understand your insurance policy's co-payment and claim procedures",
-        "Consider telemedicine options for connecting with German doctors"
+        "Registrieren Sie sich kurz nach der Ankunft bei einem Hausarzt",
+        "Bewahren Sie digitale Kopien Ihrer Versicherungskarte und wichtiger medizinischer Dokumente auf",
+        "Lernen Sie grundlegende medizinische Begriffe auf Englisch, wenn Sie nicht fließend sind",
+        "Verstehen Sie die Zuzahlungs- und Erstattungsverfahren Ihrer Versicherungspolice",
+        "Erwägen Sie Telemedizin-Optionen für die Verbindung mit deutschen Ärzten"
       ],
       resources: [
         {
-          title: "Healthcare Facilities Guide",
-          link: "/resources#healthcare-guide",
+          title: "Gesundheitseinrichtungsführer",
+          link: "/ressourcen#healthcare-guide",
           type: "checklist"
         },
         {
-          title: "Insurance Comparison Tool",
-          link: "/resources#insurance-tool",
+          title: "Versicherungsvergleichstool",
+          link: "/ressourcen#insurance-tool",
           type: "checklist"
         }
       ]
     },
     education: {
-      title: "Education Options for Families in Dubai",
-      intro: "Dubai offers a wide range of educational options for families, from international schools following various curricula to German-specific education. Finding the right school for your children is an important part of a successful relocation.",
+      title: "Bildungsoptionen für Familien in Dubai",
+      intro: "Dubai bietet eine breite Palette an Bildungsmöglichkeiten für Familien, von internationalen Schulen, die verschiedenen Lehrplänen folgen, bis hin zu deutschspezifischer Bildung. Die richtige Schule für Ihre Kinder zu finden, ist ein wichtiger Teil einer erfolgreichen Umsiedelung.",
       steps: [
         {
-          title: "Understand School Options",
-          content: "Dubai offers diverse educational choices:",
+          title: "Verstehen Sie die Schuloptionen",
+          content: "Dubai bietet vielfältige Bildungsmöglichkeiten:",
           list: [
-            "International schools following British, American, IB, and other curricula",
-            "German International School Dubai (Deutsche Internationale Schule Dubai)",
-            "Swiss International Scientific School (offers German stream)",
-            "Public schools (primarily for UAE nationals but may accept expats)",
-            "Nurseries and kindergartens for early childhood education",
-            "Special needs education facilities",
-            "Universities and higher education institutions"
+            "Internationale Schulen, die britischen, amerikanischen, IB und anderen Lehrplänen folgen",
+            "Deutsche Internationale Schule Dubai",
+            "Schweizer Internationale Wissenschaftsschule (bietet deutschen Zweig)",
+            "Öffentliche Schulen (hauptsächlich für VAE-Staatsangehörige, können aber Expats aufnehmen)",
+            "Kinderkrippen und Kindergärten für frühkindliche Bildung",
+            "Einrichtungen für sonderpädagogische Förderung",
+            "Universitäten und Hochschuleinrichtungen"
           ]
         },
         {
-          title: "Research and Select Schools",
-          content: "Finding the right school requires research:",
+          title: "Recherchieren und Schulen auswählen",
+          content: "Die richtige Schule zu finden erfordert Recherche:",
           list: [
-            "Consider your child's educational background and future plans",
-            "Research school locations in relation to your home and workplace",
-            "Check KHDA (Knowledge and Human Development Authority) ratings",
-            "Compare fee structures and additional costs",
-            "Visit schools and meet with admissions teams",
-            "Speak with current parents about their experiences",
-            "Consider waiting lists for popular schools"
+            "Berücksichtigen Sie den Bildungshintergrund und die Zukunftspläne Ihres Kindes",
+            "Recherchieren Sie Schulstandorte in Bezug auf Ihr Zuhause und Ihren Arbeitsplatz",
+            "Überprüfen Sie KHDA-Bewertungen (Knowledge and Human Development Authority)",
+            "Vergleichen Sie Gebührenstrukturen und zusätzliche Kosten",
+            "Besuchen Sie Schulen und treffen Sie sich mit Aufnahmeteams",
+            "Sprechen Sie mit aktuellen Eltern über ihre Erfahrungen",
+            "Berücksichtigen Sie Wartelisten für beliebte Schulen"
           ]
         },
         {
-          title: "Understand the Admission Process",
-          content: "School admissions in Dubai typically require:",
+          title: "Verstehen Sie den Aufnahmeprozess",
+          content: "Schulanmeldungen in Dubai erfordern typischerweise:",
           list: [
-            "Application forms and registration fees",
-            "Previous school reports and transcripts",
-            "Assessment tests for most schools",
-            "Interviews with students and sometimes parents",
-            "Medical records and immunization certificates",
-            "Passport copies and residency visa information",
-            "Enrollment deposit to secure a place"
+            "Anmeldeformulare und Registrierungsgebühren",
+            "Frühere Schulberichte und Zeugnisse",
+            "Bewertungstests für die meisten Schulen",
+            "Gespräche mit Schülern und manchmal Eltern",
+            "Medizinische Unterlagen und Impfbescheinigungen",
+            "Passkopien und Aufenthaltsvisum-Informationen",
+            "Einschreibungsdepot zur Sicherung eines Platzes"
           ]
         },
         {
-          title: "Prepare for the Transition",
-          content: "Help your child adjust to their new school:",
+          title: "Bereiten Sie sich auf den Übergang vor",
+          content: "Helfen Sie Ihrem Kind, sich an die neue Schule anzupassen:",
           list: [
-            "Discuss the move openly and positively with your children",
-            "Connect with other families from the same school",
-            "Attend orientation programs and welcome events",
-            "Prepare for a different academic calendar (typically August-June)",
-            "Be aware of uniform requirements and dress codes",
-            "Understand transportation options (school bus or private)",
-            "Set up extracurricular activities to help integration"
+            "Besprechen Sie den Umzug offen und positiv mit Ihren Kindern",
+            "Nehmen Sie Kontakt mit anderen Familien derselben Schule auf",
+            "Nehmen Sie an Orientierungsprogrammen und Willkommensveranstaltungen teil",
+            "Bereiten Sie sich auf einen anderen akademischen Kalender vor (typischerweise August-Juni)",
+            "Beachten Sie Uniformanforderungen und Kleiderordnungen",
+            "Verstehen Sie Transportmöglichkeiten (Schulbus oder privat)",
+            "Richten Sie außerschulische Aktivitäten ein, um die Integration zu unterstützen"
           ]
         }
       ],
       tips: [
-        "Apply to schools early as popular schools fill up quickly",
-        "Budget for education costs, which are significant in Dubai",
-        "Consider the language of instruction and language support available",
-        "Check if the curriculum allows for easy transition back to German schools if needed",
-        "Look into after-school activities and community involvement"
+        "Bewerben Sie sich frühzeitig an Schulen, da beliebte Schulen schnell ausgebucht sind",
+        "Planen Sie für Bildungskosten, die in Dubai erheblich sind",
+        "Berücksichtigen Sie die Unterrichtssprache und verfügbare Sprachunterstützung",
+        "Prüfen Sie, ob der Lehrplan einen einfachen Übergang zurück zu deutschen Schulen ermöglicht, falls nötig",
+        "Informieren Sie sich über außerschulische Aktivitäten und Gemeinschaftsbeteiligung"
       ],
       resources: [
         {
-          title: "School Comparison Checklist",
-          link: "/resources#school-checklist",
+          title: "Schulvergleich-Checkliste",
+          link: "/ressourcen#school-checklist",
           type: "checklist"
         },
         {
-          title: "Education Transition Guide",
-          link: "/resources#education-transition",
+          title: "Bildungsübergangsführer",
+          link: "/ressourcen#education-transition",
           type: "checklist"
         }
       ]
     },
     banking: {
-      title: "Setting Up Your Finances in Dubai",
-      intro: "Understanding the banking system in Dubai and managing your finances efficiently is crucial for a smooth transition. From opening bank accounts to managing international transfers, here's everything you need to know.",
+      title: "Ihre Finanzen in Dubai einrichten",
+      intro: "Das Verständnis des Bankensystems in Dubai und die effiziente Verwaltung Ihrer Finanzen ist entscheidend für einen reibungslosen Übergang. Von der Eröffnung von Bankkonten bis zur Verwaltung internationaler Überweisungen - hier ist alles, was Sie wissen müssen.",
       steps: [
         {
-          title: "Choose the Right Bank",
-          content: "Dubai offers many banking options including:",
+          title: "Wählen Sie die richtige Bank",
+          content: "Dubai bietet viele Bankoptionen, darunter:",
           list: [
-            "Local banks: Emirates NBD, Dubai Islamic Bank, ADCB",
-            "International banks with German connections: Deutsche Bank, Commerzbank",
-            "Other international banks: HSBC, Citibank, Standard Chartered",
-            "Digital banks: Neo, Mashreq Neo, CBD NOW",
-            "Consider factors like branch/ATM locations, online banking quality, fees structure, and expat services"
+            "Lokale Banken: Emirates NBD, Dubai Islamic Bank, ADCB",
+            "Internationale Banken mit deutschen Verbindungen: Deutsche Bank, Commerzbank",
+            "Andere internationale Banken: HSBC, Citibank, Standard Chartered",
+            "Digitalbanken: Neo, Mashreq Neo, CBD NOW",
+            "Berücksichtigen Sie Faktoren wie Filial-/Geldautomatenstandorte, Online-Banking-Qualität, Gebührenstruktur und Expat-Services"
           ]
         },
         {
-          title: "Open Bank Accounts",
-          content: "Requirements for opening accounts typically include:",
+          title: "Bankkonten eröffnen",
+          content: "Anforderungen für die Kontoeröffnung umfassen typischerweise:",
           list: [
-            "Emirates ID and residence visa",
-            "Passport with residence visa page",
-            "Proof of address (rental contract or utility bill)",
-            "Salary certificate or employment contract",
-            "Consider both current (checking) and savings accounts",
-            "Obtain debit cards and checkbooks as needed",
-            "Set up online and mobile banking access"
+            "Emirates ID und Aufenthaltsvisum",
+            "Reisepass mit Aufenthaltsvisumseite",
+            "Adressnachweis (Mietvertrag oder Stromrechnung)",
+            "Gehaltsbestätigung oder Arbeitsvertrag",
+            "Erwägen Sie sowohl Giro- als auch Sparkonten",
+            "Besorgen Sie Debitkarten und Scheckbücher nach Bedarf",
+            "Richten Sie Online- und Mobile-Banking-Zugang ein"
           ]
         },
         {
-          title: "Manage International Finances",
-          content: "Strategies for handling finances across countries:",
+          title: "Internationale Finanzen verwalten",
+          content: "Strategien für die Handhabung von Finanzen über Länder hinweg:",
           list: [
-            "Maintain your German bank account for ongoing commitments",
-            "Set up international transfer methods (bank wire, TransferWise, etc.)",
-            "Understand exchange rates and transfer fees",
-            "Consider tax implications for investments in both countries",
-            "Explore multi-currency accounts if needed",
-            "Update address details with German financial institutions",
-            "Set up direct debits for regular payments in both countries"
+            "Behalten Sie Ihr deutsches Bankkonto für laufende Verpflichtungen",
+            "Richten Sie internationale Transfermethoden ein (Banküberweisung, TransferWise, etc.)",
+            "Verstehen Sie Wechselkurse und Überweisungsgebühren",
+            "Berücksichtigen Sie steuerliche Auswirkungen für Investitionen in beiden Ländern",
+            "Erkunden Sie bei Bedarf Multiwährungskonten",
+            "Aktualisieren Sie Adressdetails bei deutschen Finanzinstituten",
+            "Richten Sie Lastschriften für regelmäßige Zahlungen in beiden Ländern ein"
           ]
         },
         {
-          title: "Understand Local Financial Practices",
-          content: "Dubai has some unique financial customs:",
+          title: "Verstehen Sie lokale Finanzpraktiken",
+          content: "Dubai hat einige einzigartige finanzielle Gepflogenheiten:",
           list: [
-            "Post-dated cheques are commonly used for rent payments",
-            "Bounced cheques can have serious legal consequences",
-            "Credit cards are widely used and often offer significant benefits",
-            "Salary transfer is typically required for loans and credit cards",
-            "Islamic banking options are available with specific terms",
-            "VAT is currently 5% on most goods and services",
-            "No wealth or capital gains taxes in UAE"
+            "Nachterminierte Schecks werden häufig für Mietzahlungen verwendet",
+            "Ungedeckte Schecks können ernsthafte rechtliche Konsequenzen haben",
+            "Kreditkarten werden häufig verwendet und bieten oft erhebliche Vorteile",
+            "Gehaltsüberweisung ist typischerweise für Kredite und Kreditkarten erforderlich",
+            "Islamische Bankoptionen sind mit spezifischen Bedingungen verfügbar",
+            "Die Mehrwertsteuer beträgt derzeit 5% auf die meisten Waren und Dienstleistungen",
+            "Keine Vermögens- oder Kapitalertragssteuern in den VAE"
           ]
         }
       ],
       tips: [
-        "Maintain a good credit history in UAE for future financing needs",
-        "Keep funds in both currencies based on your spending needs",
-        "Use banking apps for easier management of accounts",
-        "Consider offshore banking for certain investment needs",
-        "Be aware of minimum balance requirements to avoid fees"
+        "Pflegen Sie eine gute Kredithistorie in den VAE für zukünftige Finanzierungsbedürfnisse",
+        "Halten Sie Gelder in beiden Währungen basierend auf Ihren Ausgabebedürfnissen",
+        "Nutzen Sie Banking-Apps für eine einfachere Kontoverwaltung",
+        "Erwägen Sie Offshore-Banking für bestimmte Anlagebedürfnisse",
+        "Achten Sie auf Mindestguthabenanforderungen, um Gebühren zu vermeiden"
       ],
       resources: [
         {
-          title: "Banking Setup Checklist",
-          link: "/resources#banking-checklist",
+          title: "Banking-Einrichtungs-Checkliste",
+          link: "/ressourcen#banking-checklist",
           type: "checklist"
         },
         {
-          title: "International Money Transfer Guide",
-          link: "/resources#transfer-guide",
+          title: "Internationaler Geldtransfer-Leitfaden",
+          link: "/ressourcen#transfer-guide",
           type: "checklist"
         }
       ]
     },
     culture: {
-      title: "Adapting to Dubai's Culture and Lifestyle",
-      intro: "Understanding and respecting Dubai's cultural norms while finding your own community will help you adapt quickly and enjoy all that this dynamic city has to offer.",
+      title: "Anpassung an Dubais Kultur und Lifestyle",
+      intro: "Das Verständnis und die Respektierung der kulturellen Normen Dubais, während Sie Ihre eigene Gemeinschaft finden, wird Ihnen helfen, sich schnell anzupassen und alles zu genießen, was diese dynamische Stadt zu bieten hat.",
       steps: [
         {
-          title: "Understand Local Customs and Etiquette",
-          content: "Important cultural aspects to be aware of:",
+          title: "Verstehen Sie lokale Bräuche und Etikette",
+          content: "Wichtige kulturelle Aspekte, die zu beachten sind:",
           list: [
-            "Dress modestly in public places, especially religious and government buildings",
-            "Public displays of affection should be limited",
-            "Ramadan observances require special consideration (no eating/drinking in public during fasting hours)",
-            "Alcohol consumption is allowed in licensed venues and with a personal license",
-            "Photography restrictions exist for certain government buildings",
-            "Right hand is preferred for eating, handshakes, and giving items",
-            "Ask permission before photographing locals, especially women"
+            "Kleiden Sie sich bescheiden an öffentlichen Orten, besonders in religiösen und Regierungsgebäuden",
+            "Öffentliche Zuneigungsbekundungen sollten begrenzt sein",
+            "Ramadan-Observanzen erfordern besondere Rücksicht (kein Essen/Trinken in der Öffentlichkeit während der Fastenzeiten)",
+            "Alkoholkonsum ist in lizenzierten Lokalen und mit persönlicher Lizenz erlaubt",
+            "Fotografiebeschränkungen bestehen für bestimmte Regierungsgebäude",
+            "Die rechte Hand wird bevorzugt zum Essen, Händeschütteln und Übergeben von Gegenständen",
+            "Bitten Sie um Erlaubnis, bevor Sie Einheimische fotografieren, besonders Frauen"
           ]
         },
         {
-          title: "Find Your Community",
-          content: "Connect with others to build your social network:",
+          title: "Finden Sie Ihre Gemeinschaft",
+          content: "Knüpfen Sie Kontakte, um Ihr soziales Netzwerk aufzubauen:",
           list: [
-            "Join the German Society in the UAE and German Business Council",
-            "Attend events at the Goethe-Institut Dubai",
-            "Connect with German-speaking groups on Facebook and Meetup",
-            "Participate in expat networking events and clubs",
-            "Join sports clubs, fitness centers, or special interest groups",
-            "Become part of your residential community through neighborhood events",
-            "Volunteer with charitable organizations"
+            "Treten Sie der Deutschen Gesellschaft in den VAE und dem Deutschen Wirtschaftsrat bei",
+            "Besuchen Sie Veranstaltungen im Goethe-Institut Dubai",
+            "Vernetzen Sie sich mit deutschsprachigen Gruppen auf Facebook und Meetup",
+            "Nehmen Sie an Expat-Networking-Events und Clubs teil",
+            "Treten Sie Sportclubs, Fitnesszentren oder Interessengruppen bei",
+            "Werden Sie Teil Ihrer Wohngemeinschaft durch Nachbarschaftsveranstaltungen",
+            "Engagieren Sie sich ehrenamtlich bei karitativen Organisationen"
           ]
         },
         {
-          title: "Navigate Daily Life",
-          content: "Practical aspects of Dubai living:",
+          title: "Navigieren Sie durch den Alltag",
+          content: "Praktische Aspekte des Lebens in Dubai:",
           list: [
-            "Working hours typically Sunday-Thursday with Friday-Saturday weekend",
-            "Summer months (June-September) are extremely hot—plan indoor activities",
-            "Winter months (October-May) offer perfect weather for outdoor activities",
-            "Transportation options include Metro, taxis, ride-sharing, and buses",
-            "Food delivery is widely available and convenient",
-            "Shopping malls are social and recreational hubs beyond just shopping",
-            "Many services can be accessed through government apps"
+            "Arbeitszeiten typischerweise Sonntag-Donnerstag mit Freitag-Samstag Wochenende",
+            "Sommermonate (Juni-September) sind extrem heiß—planen Sie Aktivitäten im Innenbereich",
+            "Wintermonate (Oktober-Mai) bieten perfektes Wetter für Aktivitäten im Freien",
+            "Transportmöglichkeiten umfassen Metro, Taxis, Fahrdienste und Busse",
+            "Essenslieferung ist weit verbreitet und bequem",
+            "Einkaufszentren sind soziale und Freizeitzentren über das reine Einkaufen hinaus",
+            "Viele Dienstleistungen können über Regierungs-Apps genutzt werden"
           ]
         },
         {
-          title: "Maintain Connection with Home",
-          content: "Stay connected with Germany:",
+          title: "Verbindung zur Heimat aufrechterhalten",
+          content: "Bleiben Sie mit Deutschland verbunden:",
           list: [
-            "Set up reliable internet for video calls with family and friends",
-            "Subscribe to German TV streaming services (many work with VPN)",
-            "Join German cultural events in Dubai",
-            "Find German food products in specialized stores",
-            "Plan regular visits home, especially during extreme summer heat",
-            "Stay informed on German news and developments",
-            "Maintain important German memberships and subscriptions"
+            "Richten Sie zuverlässiges Internet für Videoanrufe mit Familie und Freunden ein",
+            "Abonnieren Sie deutsche TV-Streaming-Dienste (viele funktionieren mit VPN)",
+            "Nehmen Sie an deutschen kulturellen Veranstaltungen in Dubai teil",
+            "Finden Sie deutsche Lebensmittelprodukte in spezialisierten Geschäften",
+            "Planen Sie regelmäßige Besuche in der Heimat, besonders während der extremen Sommerhitze",
+            "Bleiben Sie über deutsche Nachrichten und Entwicklungen informiert",
+            "Behalten Sie wichtige deutsche Mitgliedschaften und Abonnements bei"
           ]
         }
       ],
       tips: [
-        "Be open to cultural differences and approach them with respect",
-        "Learn a few Arabic phrases as a sign of respect for the local culture",
-        "Avoid discussing sensitive political topics in public",
-        "Use the cooler months to explore outdoor attractions and activities",
-        "Consider a desert safari to experience traditional Bedouin culture"
+        "Seien Sie offen für kulturelle Unterschiede und begegnen Sie ihnen mit Respekt",
+        "Lernen Sie ein paar arabische Phrasen als Zeichen des Respekts für die lokale Kultur",
+        "Vermeiden Sie die Diskussion sensibler politischer Themen in der Öffentlichkeit",
+        "Nutzen Sie die kühleren Monate, um Outdoor-Attraktionen und Aktivitäten zu erkunden",
+        "Erwägen Sie eine Wüstensafari, um die traditionelle Beduinenkultur zu erleben"
       ],
       resources: [
         {
-          title: "Cultural Adaptation Guide",
-          link: "/resources#cultural-guide",
+          title: "Kultureller Anpassungsleitfaden",
+          link: "/ressourcen#cultural-guide",
           type: "checklist"
         },
         {
-          title: "German Community Directory",
-          link: "/resources#german-community",
+          title: "Deutsches Gemeinschaftsverzeichnis",
+          link: "/ressourcen#german-community",
           type: "checklist"
         }
       ]
@@ -542,7 +542,7 @@ const StepByStepGuide = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai cityscape" 
+            alt="Dubai Stadtbild" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -550,9 +550,9 @@ const StepByStepGuide = () => {
         
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">Step-by-Step Guide to Moving to Dubai</h1>
+            <h1 className="mb-6 animate-fade-in">Schritt-für-Schritt-Anleitung für den Umzug nach Dubai</h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Follow our comprehensive guide to navigate every aspect of relocating from Germany to Dubai, from visas to housing and beyond.
+              Folgen Sie unserem umfassenden Leitfaden, um jeden Aspekt der Auswanderung von Deutschland nach Dubai zu navigieren, von Visa bis hin zu Wohnen und darüber hinaus.
             </p>
           </div>
         </div>
@@ -615,7 +615,7 @@ const StepByStepGuide = () => {
                 <div className="flex items-start">
                   <Info className="h-6 w-6 text-dubai-gold mr-4 shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">Pro Tips</h3>
+                    <h3 className="text-xl font-semibold mb-4">Profi-Tipps</h3>
                     <ul className="space-y-2">
                       {currentTab.tips.map((tip, idx) => (
                         <li key={idx} className="flex items-start">
@@ -630,7 +630,7 @@ const StepByStepGuide = () => {
 
               {/* Resources Section */}
               <div>
-                <h3 className="text-xl font-semibold mb-4">Helpful Resources</h3>
+                <h3 className="text-xl font-semibold mb-4">Hilfreiche Ressourcen</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {currentTab.resources.map((resource, idx) => (
                     <a
@@ -659,23 +659,23 @@ const StepByStepGuide = () => {
       <section className="py-16 bg-dubai-dark-sand/10">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Need More Detailed Guidance?</h2>
+            <h2 className="text-3xl font-bold mb-6">Benötigen Sie detailliertere Beratung?</h2>
             <p className="text-gray-600 mb-8">
-              This guide provides an overview of the relocation process, but every situation is unique. 
-              Explore our detailed resources or get personalized assistance with your specific needs.
+              Dieser Leitfaden bietet einen Überblick über den Umzugsprozess, aber jede Situation ist einzigartig. 
+              Entdecken Sie unsere detaillierten Ressourcen oder erhalten Sie persönliche Unterstützung für Ihre spezifischen Bedürfnisse.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="/resources"
+                to="/ressourcen"
                 className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex items-center justify-center"
               >
-                Access Detailed Resources <ArrowRight className="ml-2 h-5 w-5" />
+                Zugriff auf detaillierte Ressourcen <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/consulting"
+                to="/beratung"
                 className="px-6 py-3 rounded-md border border-dubai-dark-sand text-gray-700 hover:bg-dubai-dark-sand/10 transition-colors font-medium flex items-center justify-center"
               >
-                Get Personalized Consulting
+                Persönliche Beratung erhalten
               </Link>
             </div>
           </div>

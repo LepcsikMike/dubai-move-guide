@@ -75,8 +75,8 @@ const Resources = () => {
 
   const downloadResource = (resourceName: string) => {
     toast({
-      title: "Download Started",
-      description: `${resourceName} is being downloaded to your device.`,
+      title: "Download gestartet",
+      description: `${resourceName} wird auf Ihr Gerät heruntergeladen.`,
       duration: 3000,
     });
   };
@@ -84,81 +84,81 @@ const Resources = () => {
   const resourceCategories = [
     {
       id: "checklists",
-      title: "Moving Checklists",
+      title: "Umzugs-Checklisten",
       icon: <FileText className="h-10 w-10 text-dubai-gold" />,
       resources: [
         {
-          title: "6-Month Pre-Move Checklist",
-          description: "Start your planning early with this comprehensive checklist of tasks to complete 3-6 months before your move.",
+          title: "6-Monats-Vorbereitungscheckliste",
+          description: "Beginnen Sie Ihre Planung frühzeitig mit dieser umfassenden Checkliste der Aufgaben, die 3-6 Monate vor Ihrem Umzug zu erledigen sind.",
           id: "pre-move-checklist"
         },
         {
-          title: "1-Month Final Preparations",
-          description: "Critical tasks to complete in the final month before relocating to Dubai.",
+          title: "1-Monat letzte Vorbereitungen",
+          description: "Wichtige Aufgaben, die im letzten Monat vor dem Umzug nach Dubai zu erledigen sind.",
           id: "final-prep-checklist"
         },
         {
-          title: "First Week in Dubai Checklist",
-          description: "Essential tasks to complete during your first week in Dubai to get settled quickly.",
+          title: "Erste Woche in Dubai Checkliste",
+          description: "Wesentliche Aufgaben, die in Ihrer ersten Woche in Dubai zu erledigen sind, um sich schnell einzuleben.",
           id: "first-week-checklist"
         },
         {
-          title: "Document Preparation Guide",
-          description: "Complete list of documents to gather, translate, and authenticate before moving.",
+          title: "Dokumentenvorbereitungsleitfaden",
+          description: "Vollständige Liste der Dokumente, die vor dem Umzug gesammelt, übersetzt und beglaubigt werden müssen.",
           id: "document-guide"
         }
       ]
     },
     {
       id: "guides",
-      title: "Comprehensive Guides",
+      title: "Umfassende Leitfäden",
       icon: <FileQuestion className="h-10 w-10 text-dubai-gold" />,
       resources: [
         {
-          title: "Complete Housing Guide",
-          description: "Detailed overview of Dubai's neighborhoods, rental process, and property buying options.",
+          title: "Vollständiger Wohnungsleitfaden",
+          description: "Detaillierter Überblick über Dubais Stadtteile, den Mietprozess und die Möglichkeiten zum Immobilienkauf.",
           id: "housing-guide"
         },
         {
-          title: "Visa Application Guide",
-          description: "Step-by-step instructions for applying for different types of Dubai visas from Germany.",
+          title: "Visumantragsanleitung",
+          description: "Schritt-für-Schritt-Anleitung zur Beantragung verschiedener Arten von Dubai-Visa aus Deutschland.",
           id: "visa-guide"
         },
         {
-          title: "Banking & Finance Setup",
-          description: "How to set up your financial life in Dubai, from bank accounts to investments.",
+          title: "Banking & Finanzeinrichtung",
+          description: "Wie Sie Ihr Finanzleben in Dubai einrichten, von Bankkonten bis hin zu Investitionen.",
           id: "banking-guide"
         },
         {
-          title: "German Schools & Education",
-          description: "Options for German curriculum education and international schools in Dubai.",
+          title: "Deutsche Schulen & Bildung",
+          description: "Optionen für deutsche Lehrplanbildung und internationale Schulen in Dubai.",
           id: "education-guide"
         }
       ]
     },
     {
       id: "videos",
-      title: "Video Resources",
+      title: "Video-Ressourcen",
       icon: <Video className="h-10 w-10 text-dubai-gold" />,
       resources: [
         {
-          title: "Dubai Neighborhood Tours",
-          description: "Virtual tours of popular expatriate neighborhoods in Dubai.",
+          title: "Dubai Stadtteiltouren",
+          description: "Virtuelle Touren durch beliebte Expatriate-Viertel in Dubai.",
           id: "neighborhood-videos"
         },
         {
-          title: "Visa Process Explained",
-          description: "Visual walkthrough of the visa application and approval process.",
+          title: "Visumsprozess erklärt",
+          description: "Visuelle Anleitung durch den Visumantrags- und Genehmigungsprozess.",
           id: "visa-videos"
         },
         {
-          title: "Cultural Adaptation Tips",
-          description: "Practical advice for adjusting to Dubai's cultural environment.",
+          title: "Tipps zur kulturellen Anpassung",
+          description: "Praktische Ratschläge zur Anpassung an Dubais kulturelles Umfeld.",
           id: "cultural-videos"
         },
         {
-          title: "German Success Stories",
-          description: "Interviews with Germans who have successfully relocated to Dubai.",
+          title: "Deutsche Erfolgsgeschichten",
+          description: "Interviews mit Deutschen, die erfolgreich nach Dubai umgezogen sind.",
           id: "success-videos"
         }
       ]
@@ -172,7 +172,7 @@ const Resources = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1605133659277-1b862a2e0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai resources" 
+            alt="Dubai Ressourcen" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -180,9 +180,9 @@ const Resources = () => {
         
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">Resources & Tools</h1>
+            <h1 className="mb-6 animate-fade-in">Ressourcen & Tools</h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Download guides, checklists, and use our interactive tools to help plan and execute your move to Dubai.
+              Laden Sie Anleitungen, Checklisten herunter und nutzen Sie unsere interaktiven Tools, um Ihren Umzug nach Dubai zu planen und durchzuführen.
             </p>
           </div>
         </div>
@@ -210,7 +210,7 @@ const Resources = () => {
                     className="text-dubai-gold font-medium flex items-center hover:underline"
                   >
                     <FileDown className="mr-2 h-4 w-4" />
-                    Download Resource
+                    Ressource herunterladen
                   </button>
                 </div>
               ))}
@@ -224,21 +224,21 @@ const Resources = () => {
         <div className="section-container">
           <div className="mb-12 flex items-center">
             <Calculator className="h-10 w-10 text-dubai-gold mr-4" />
-            <h2 className="text-3xl font-bold">Dubai Cost of Living Calculator</h2>
+            <h2 className="text-3xl font-bold">Dubai Lebenshaltungskosten-Rechner</h2>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-8 border border-dubai-dark-sand/20">
             <p className="text-gray-600 mb-8">
-              Estimate your monthly expenses in Dubai based on your housing budget, family size, and lifestyle preferences.
+              Schätzen Sie Ihre monatlichen Ausgaben in Dubai basierend auf Ihrem Wohnungsbudget, Ihrer Familiengröße und Ihren Lifestyle-Präferenzen.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold">Input Your Details</h3>
+                <h3 className="text-xl font-semibold">Geben Sie Ihre Details ein</h3>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Monthly Housing Budget (AED)
+                    Monatliches Wohnungsbudget (AED)
                   </label>
                   <input
                     type="range"
@@ -250,15 +250,15 @@ const Resources = () => {
                     className="w-full h-2 bg-dubai-dark-sand/30 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-sm text-gray-600 mt-1">
-                    <span>5,000</span>
+                    <span>5.000</span>
                     <span>{housingBudget.toLocaleString()} AED</span>
-                    <span>50,000</span>
+                    <span>50.000</span>
                   </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Family Size (including yourself)
+                    Familiengröße (inklusive Ihrer selbst)
                   </label>
                   <div className="flex space-x-4">
                     {[1, 2, 3, 4, 5, 6].map((size) => (
@@ -279,7 +279,7 @@ const Resources = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Number of School-Age Children
+                    Anzahl der schulpflichtigen Kinder
                   </label>
                   <div className="flex space-x-4">
                     {[0, 1, 2, 3, 4].map((num) => (
@@ -300,14 +300,14 @@ const Resources = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Lifestyle Preference
+                    Lifestyle-Präferenz
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {[
                       { id: 'budget', label: 'Budget' },
-                      { id: 'moderate', label: 'Moderate' },
+                      { id: 'moderate', label: 'Moderat' },
                       { id: 'premium', label: 'Premium' },
-                      { id: 'luxury', label: 'Luxury' }
+                      { id: 'luxury', label: 'Luxus' }
                     ].map((option) => (
                       <button
                         key={option.id}
@@ -326,18 +326,18 @@ const Resources = () => {
               </div>
               
               <div className="bg-dubai-sand/20 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Estimated Monthly Expenses</h3>
+                <h3 className="text-xl font-semibold mb-4">Geschätzte monatliche Ausgaben</h3>
                 
                 <div className="space-y-3 mb-6">
                   {[
-                    { label: 'Housing', value: costs.housing },
-                    { label: 'Utilities', value: costs.utilities },
-                    { label: 'Food & Groceries', value: costs.groceries },
-                    { label: 'Transportation', value: costs.transport },
-                    { label: 'Education', value: costs.education },
-                    { label: 'Entertainment', value: costs.entertainment },
-                    { label: 'Healthcare', value: costs.healthcare },
-                    { label: 'Miscellaneous', value: costs.misc }
+                    { label: 'Wohnen', value: costs.housing },
+                    { label: 'Nebenkosten', value: costs.utilities },
+                    { label: 'Lebensmittel', value: costs.groceries },
+                    { label: 'Transport', value: costs.transport },
+                    { label: 'Bildung', value: costs.education },
+                    { label: 'Unterhaltung', value: costs.entertainment },
+                    { label: 'Gesundheitswesen', value: costs.healthcare },
+                    { label: 'Sonstiges', value: costs.misc }
                   ].map((item, index) => (
                     <div key={index} className="flex justify-between items-center py-2 border-b border-dubai-dark-sand/20">
                       <span className="text-gray-700">{item.label}</span>
@@ -347,13 +347,13 @@ const Resources = () => {
                 </div>
                 
                 <div className="flex justify-between items-center py-3 border-t-2 border-dubai-gold">
-                  <span className="text-lg font-bold">Total Monthly</span>
+                  <span className="text-lg font-bold">Monatliche Gesamtkosten</span>
                   <span className="text-xl font-bold text-dubai-gold">{costs.total.toLocaleString()} AED</span>
                 </div>
                 
                 <div className="mt-4 text-sm text-gray-600">
-                  <p>* This is an estimate based on average costs in Dubai. Actual expenses may vary.</p>
-                  <p>* 1 Euro ≈ 4 AED (approximate conversion rate)</p>
+                  <p>* Dies ist eine Schätzung basierend auf durchschnittlichen Kosten in Dubai. Die tatsächlichen Ausgaben können variieren.</p>
+                  <p>* 1 Euro ≈ 4 AED (ungefährer Umrechnungskurs)</p>
                 </div>
               </div>
             </div>
@@ -364,24 +364,24 @@ const Resources = () => {
       {/* Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="section-container">
-          <h2 className="text-3xl font-bold mb-12 text-center">What Our Users Say</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Was unsere Nutzer sagen</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "The checklists and cost calculator were invaluable for planning our family's move. We felt much more prepared and confident.",
+                quote: "Die Checklisten und der Kostenrechner waren unbezahlbar für die Planung des Umzugs unserer Familie. Wir fühlten uns viel besser vorbereitet und zuversichtlicher.",
                 author: "Claudia & Peter Schmitz",
-                moved: "Moved from Hamburg in 2023"
+                moved: "Umgezogen aus Hamburg in 2023"
               },
               {
-                quote: "I used the neighborhood guide to find the perfect apartment in Dubai Marina. The detailed insights helped me make the right choice for my lifestyle.",
+                quote: "Ich habe den Stadtteilführer genutzt, um die perfekte Wohnung in Dubai Marina zu finden. Die detaillierten Einblicke haben mir geholfen, die richtige Wahl für meinen Lebensstil zu treffen.",
                 author: "Jan Hoffmann",
-                moved: "Moved from Munich in 2024"
+                moved: "Umgezogen aus München in 2024"
               },
               {
-                quote: "The visa guide simplified what seemed like a complex process. I followed it step by step and received my Golden Visa without any issues.",
+                quote: "Der Visa-Leitfaden hat einen scheinbar komplexen Prozess vereinfacht. Ich bin ihm Schritt für Schritt gefolgt und habe mein Golden Visa ohne Probleme erhalten.",
                 author: "Sarah Becker",
-                moved: "Moved from Berlin in 2023"
+                moved: "Umgezogen aus Berlin in 2023"
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-dubai-sand/20 p-6 rounded-lg border border-dubai-dark-sand/20">
@@ -400,17 +400,17 @@ const Resources = () => {
       <section className="py-16 blue-gradient-bg text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Need Personalized Assistance?</h2>
+            <h2 className="text-3xl font-bold mb-6">Benötigen Sie persönliche Unterstützung?</h2>
             <p className="text-white/80 mb-8">
-              Our resources provide general guidance, but everyone's situation is unique. Get personalized consulting 
-              to address your specific questions and challenges about relocating to Dubai.
+              Unsere Ressourcen bieten allgemeine Anleitungen, aber jede Situation ist einzigartig. Erhalten Sie persönliche Beratung 
+              zu Ihren spezifischen Fragen und Herausforderungen beim Umzug nach Dubai.
             </p>
             <div className="flex justify-center">
               <Link
-                to="/consulting"
+                to="/beratung"
                 className="px-8 py-3 rounded-md text-dubai-gold bg-white hover:bg-white/90 transition-colors font-medium flex items-center"
               >
-                Book a Consultation <ArrowRight className="ml-2 h-5 w-5" />
+                Beratungstermin buchen <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>

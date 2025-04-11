@@ -14,8 +14,8 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
     setTimeout(() => {
       console.log('Newsletter signup:', email);
       toast({
-        title: "Success!",
-        description: "Thank you for subscribing to our newsletter.",
+        title: "Erfolg!",
+        description: "Vielen Dank für Ihre Anmeldung zu unserem Newsletter.",
         duration: 5000,
       });
       setEmail('');
@@ -26,21 +26,21 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
       <div className="bg-white rounded-lg shadow-lg p-8 border border-dubai-dark-sand/30">
-        <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+        <h3 className="text-2xl font-bold mb-4">Bleiben Sie auf dem Laufenden</h3>
         <p className="text-gray-600 mb-6">
-          Subscribe to our newsletter for the latest guides, tips, and resources about moving to Dubai.
+          Abonnieren Sie unseren Newsletter für die neuesten Anleitungen, Tipps und Ressourcen zum Umzug nach Dubai.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              Email Address
+              E-Mail-Adresse
             </label>
             <input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="your.email@example.com"
+              placeholder="ihre.email@beispiel.de"
               required
               className="w-full px-4 py-3 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
             />
@@ -53,14 +53,14 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
             {loading ? (
               <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
             ) : null}
-            {loading ? 'Subscribing...' : 'Subscribe Now'}
+            {loading ? 'Anmeldung läuft...' : 'Jetzt abonnieren'}
           </button>
           <p className="text-xs text-gray-500 mt-2">
-            By subscribing, you agree to our{' '}
-            <a href="/privacy-policy" className="text-dubai-gold hover:underline">
-              Privacy Policy
+            Mit der Anmeldung stimmen Sie unserer{' '}
+            <a href="/datenschutz" className="text-dubai-gold hover:underline">
+              Datenschutzerklärung
             </a>
-            . You can unsubscribe at any time.
+            {' '}zu. Sie können sich jederzeit abmelden.
           </p>
         </form>
       </div>

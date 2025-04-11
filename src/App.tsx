@@ -28,11 +28,11 @@ const App = () => (
         <main>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/why-dubai" element={<WhyDubai />} />
-            <Route path="/step-by-step-guide" element={<StepByStepGuide />} />
+            <Route path="/warum-dubai" element={<WhyDubai />} />
+            <Route path="/schritt-fuer-schritt-anleitung" element={<StepByStepGuide />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/consulting" element={<Consulting />} />
+            <Route path="/ressourcen" element={<Resources />} />
+            <Route path="/beratung" element={<Consulting />} />
             <Route path="/:page" element={<Legal />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

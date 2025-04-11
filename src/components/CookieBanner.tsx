@@ -35,13 +35,13 @@ const CookieBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex-1 pr-4 mb-4 sm:mb-0">
-            <h4 className="text-lg font-semibold mb-1">We Value Your Privacy</h4>
+            <h4 className="text-lg font-semibold mb-1">Wir schätzen Ihre Privatsphäre</h4>
             <p className="text-sm text-gray-600">
-              This website uses cookies to enhance your browsing experience and provide personalized services. 
-              By clicking "Accept", you consent to our use of cookies as described in our{' '}
-              <Link to="/privacy-policy" className="text-dubai-gold hover:underline">
-                Privacy Policy
-              </Link>.
+              Diese Website verwendet Cookies, um Ihr Surferlebnis zu verbessern und personalisierte Dienste anzubieten. 
+              Mit Klick auf "Akzeptieren" stimmen Sie der Verwendung von Cookies gemäß unserer{' '}
+              <Link to="/datenschutz" className="text-dubai-gold hover:underline">
+                Datenschutzerklärung
+              </Link> zu.
             </p>
           </div>
           <div className="flex space-x-3">
@@ -49,19 +49,19 @@ const CookieBanner = () => {
               onClick={declineCookies}
               className="px-4 py-2 border border-dubai-dark-sand rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
             >
-              Decline
+              Ablehnen
             </button>
             <button
               onClick={acceptCookies}
               className="px-4 py-2 rounded-md text-sm font-medium text-white gold-gradient-bg hover:opacity-90 transition-opacity"
             >
-              Accept
+              Akzeptieren
             </button>
           </div>
           <button 
             onClick={declineCookies} 
             className="absolute top-3 right-3 sm:hidden text-gray-400 hover:text-gray-600"
-            aria-label="Close"
+            aria-label="Schließen"
           >
             <X size={20} />
           </button>

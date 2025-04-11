@@ -7,111 +7,111 @@ import NewsletterSignup from '@/components/NewsletterSignup';
 const WhyDubai = () => {
   const benefits = [
     {
-      title: 'Tax Advantages',
-      description: 'Enjoy 0% income tax, no capital gains tax, and no property tax, allowing you to maximize your earnings and investments.',
+      title: 'Steuervorteile',
+      description: 'Genießen Sie 0% Einkommensteuer, keine Kapitalertragssteuer und keine Immobiliensteuer, wodurch Sie Ihre Einkünfte und Investitionen maximieren können.',
       icon: <DollarSign className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'No personal income tax',
-        'No capital gains tax',
-        'No withholding tax',
-        'No property tax (just a 4% one-time registration fee)',
-        'Extensive network of double taxation avoidance agreements',
-        'German retirement benefits can often be received tax-free'
+        'Keine persönliche Einkommensteuer',
+        'Keine Kapitalertragssteuer',
+        'Keine Quellensteuer',
+        'Keine Immobiliensteuer (nur eine einmalige Registrierungsgebühr von 4%)',
+        'Umfangreiches Netz von Doppelbesteuerungsabkommen',
+        'Deutsche Rentenleistungen können oft steuerfrei bezogen werden'
       ]
     },
     {
-      title: 'Career Opportunities',
-      description: 'Access a thriving job market with opportunities across various industries and competitive salary packages.',
+      title: 'Karrieremöglichkeiten',
+      description: 'Zugang zu einem florierenden Arbeitsmarkt mit Möglichkeiten in verschiedenen Branchen und wettbewerbsfähigen Gehaltspaketen.',
       icon: <Briefcase className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'Strong demand for German expertise in engineering and technical fields',
-        'Growing sectors include tech, finance, tourism, and renewable energy',
-        'Higher average salaries compared to Germany',
-        'Low unemployment rate',
-        'Dynamic startup ecosystem with government support',
-        'Easy to register and operate your own business'
+        'Große Nachfrage nach deutscher Expertise in Ingenieur- und technischen Bereichen',
+        'Wachsende Sektoren umfassen Technologie, Finanzen, Tourismus und erneuerbare Energien',
+        'Höhere Durchschnittsgehälter im Vergleich zu Deutschland',
+        'Niedrige Arbeitslosenrate',
+        'Dynamisches Startup-Ökosystem mit staatlicher Unterstützung',
+        'Einfache Registrierung und Betrieb eigener Unternehmen'
       ]
     },
     {
-      title: 'Quality of Life',
-      description: 'Experience world-class amenities, healthcare, education, and a diverse, cosmopolitan lifestyle.',
+      title: 'Lebensqualität',
+      description: 'Erleben Sie erstklassige Annehmlichkeiten, Gesundheitsversorgung, Bildung und einen vielfältigen, weltoffenen Lebensstil.',
       icon: <Heart className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'Year-round sunshine with 340+ sunny days annually',
-        'World-class shopping malls and entertainment',
-        'Pristine beaches and outdoor recreational areas',
-        'Diverse international cuisine scene',
-        'Excellent private healthcare facilities',
-        'International schools offering German and other curricula',
-        'Efficient public transportation'
+        'Ganzjährig Sonnenschein mit über 340 Sonnentagen pro Jahr',
+        'Weltklasse-Einkaufszentren und Unterhaltung',
+        'Unberührte Strände und Erholungsgebiete im Freien',
+        'Vielfältige internationale Küche',
+        'Ausgezeichnete private Gesundheitseinrichtungen',
+        'Internationale Schulen mit deutschem und anderen Lehrplänen',
+        'Effiziente öffentliche Verkehrsmittel'
       ]
     },
     {
-      title: 'Safety and Security',
-      description: 'Enjoy one of the safest cities in the world with extremely low crime rates and excellent emergency services.',
+      title: 'Sicherheit',
+      description: 'Genießen Sie eine der sichersten Städte der Welt mit extrem niedrigen Kriminalitätsraten und ausgezeichneten Notfalldiensten.',
       icon: <Shield className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'Consistently ranked among the safest cities globally',
-        'Extremely low crime rate',
-        'Strict law enforcement',
-        'Political stability',
-        'Advanced security infrastructure',
-        'Excellent emergency services'
+        'Konsequent unter den sichersten Städten weltweit eingestuft',
+        'Extrem niedrige Kriminalitätsrate',
+        'Strenge Strafverfolgung',
+        'Politische Stabilität',
+        'Fortschrittliche Sicherheitsinfrastruktur',
+        'Hervorragende Notfalldienste'
       ]
     },
     {
-      title: 'Strategic Location',
-      description: 'Benefit from Dubai\'s central location between Europe, Asia, and Africa, with excellent global connectivity.',
+      title: 'Strategische Lage',
+      description: 'Profitieren Sie von Dubais zentraler Lage zwischen Europa, Asien und Afrika mit ausgezeichneter globaler Konnektivität.',
       icon: <Clock className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'Direct flights to all major German cities',
-        'Just a 6-hour flight from most European capitals',
-        'Dubai International Airport is one of the world\'s busiest',
-        'Gateway to emerging markets in the Middle East, Asia, and Africa',
-        'Same or similar time zone as Germany (UTC+4)',
-        'Weekend trips to destinations across three continents'
+        'Direktflüge zu allen großen deutschen Städten',
+        'Nur 6 Stunden Flug von den meisten europäischen Hauptstädten entfernt',
+        'Der Internationale Flughafen Dubai ist einer der verkehrsreichsten der Welt',
+        'Tor zu aufstrebenden Märkten im Nahen Osten, Asien und Afrika',
+        'Gleiche oder ähnliche Zeitzone wie Deutschland (UTC+4)',
+        'Wochenendausflüge zu Zielen auf drei Kontinenten'
       ]
     },
     {
-      title: 'Modern Infrastructure',
-      description: 'Take advantage of Dubai\'s cutting-edge infrastructure, technology, and urban planning.',
+      title: 'Moderne Infrastruktur',
+      description: 'Nutzen Sie Dubais hochmoderne Infrastruktur, Technologie und Stadtplanung.',
       icon: <Building className="h-10 w-10 text-dubai-gold" />,
       details: [
-        'Ultra-fast internet connectivity',
-        'Reliable utilities with minimal outages',
-        'Smart city initiatives for enhanced living',
-        'State-of-the-art real estate developments',
-        'Advanced healthcare facilities',
-        'Efficient transportation network'
+        'Ultraschnelle Internetverbindung',
+        'Zuverlässige Versorgungseinrichtungen mit minimalen Ausfällen',
+        'Smart City-Initiativen für verbessertes Wohnen',
+        'Hochmoderne Immobilienentwicklungen',
+        'Fortschrittliche Gesundheitseinrichtungen',
+        'Effizientes Transportnetzwerk'
       ]
     }
   ];
 
   const lifestyleComparisons = [
     {
-      category: 'Weather',
-      dubai: 'Year-round sunshine, mild winters (20-25°C), hot summers (38-42°C)',
-      germany: 'Four distinct seasons, cold winters, mild summers, frequent rainfall'
+      category: 'Wetter',
+      dubai: 'Ganzjährig Sonnenschein, milde Winter (20-25°C), heiße Sommer (38-42°C)',
+      germany: 'Vier ausgeprägte Jahreszeiten, kalte Winter, milde Sommer, häufiger Niederschlag'
     },
     {
-      category: 'Cost of Living',
-      dubai: 'No income tax, higher disposable income, higher housing costs in premium areas',
-      germany: 'High income tax (up to 45%), lower housing costs except in major cities'
+      category: 'Lebenshaltungskosten',
+      dubai: 'Keine Einkommensteuer, höheres verfügbares Einkommen, höhere Wohnkosten in Premium-Gegenden',
+      germany: 'Hohe Einkommensteuer (bis zu 45%), niedrigere Wohnkosten außer in Großstädten'
     },
     {
-      category: 'Work Culture',
-      dubai: 'Sunday-Thursday workweek, business-friendly environment, international workforce',
-      germany: 'Monday-Friday workweek, strong work-life balance, structured environment'
+      category: 'Arbeitskultur',
+      dubai: 'Sonntag-Donnerstag Arbeitswoche, wirtschaftsfreundliches Umfeld, internationale Belegschaft',
+      germany: 'Montag-Freitag Arbeitswoche, starke Work-Life-Balance, strukturiertes Umfeld'
     },
     {
-      category: 'Social Life',
-      dubai: 'Cosmopolitan environment, diverse expatriate communities, luxury lifestyle options',
-      germany: 'Strong local communities, cultural activities, outdoor lifestyle'
+      category: 'Sozialleben',
+      dubai: 'Kosmopolitisches Umfeld, vielfältige Expatriate-Gemeinschaften, Luxus-Lifestyle-Optionen',
+      germany: 'Starke lokale Gemeinschaften, kulturelle Aktivitäten, Outdoor-Lifestyle'
     },
     {
-      category: 'Family Life',
-      dubai: 'Excellent international schools, family-friendly activities, domestic help affordable',
-      germany: 'Strong public education, comprehensive family benefits, outdoor activities'
+      category: 'Familienleben',
+      dubai: 'Ausgezeichnete internationale Schulen, familienfreundliche Aktivitäten, Haushaltshilfe erschwinglich',
+      germany: 'Starke öffentliche Bildung, umfassende Familienleistungen, Outdoor-Aktivitäten'
     }
   ];
 
@@ -122,7 +122,7 @@ const WhyDubai = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai skyline" 
+            alt="Dubai Skyline" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -130,9 +130,9 @@ const WhyDubai = () => {
         
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">Why Choose Dubai?</h1>
+            <h1 className="mb-6 animate-fade-in">Warum Dubai wählen?</h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Discover the exceptional benefits and opportunities that make Dubai an ideal destination for Germans looking to relocate.
+              Entdecken Sie die außergewöhnlichen Vorteile und Möglichkeiten, die Dubai zu einem idealen Ziel für Deutsche machen, die umziehen möchten.
             </p>
           </div>
         </div>
@@ -143,31 +143,31 @@ const WhyDubai = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6 gradient-text">A Lifestyle Upgrade</h2>
+              <h2 className="mb-6 gradient-text">Ein Lifestyle-Upgrade</h2>
               <p className="text-gray-600 mb-6">
-                Dubai has transformed from a desert outpost to a global metropolis, offering residents an unparalleled 
-                combination of economic opportunity, safety, and quality of life. As a German relocating to Dubai, 
-                you'll enjoy numerous advantages that make the transition worthwhile.
+                Dubai hat sich von einem Wüstenvorposten zu einer globalen Metropole entwickelt und bietet den Bewohnern eine unvergleichliche 
+                Kombination aus wirtschaftlichen Möglichkeiten, Sicherheit und Lebensqualität. Als Deutscher, der nach Dubai umzieht, 
+                werden Sie zahlreiche Vorteile genießen, die den Übergang lohnenswert machen.
               </p>
               <p className="text-gray-600">
-                From tax benefits that allow you to maximize your income to year-round sunshine and a strategic location 
-                for global travel, Dubai offers a lifestyle upgrade that's hard to match. Let's explore why so many 
-                Germans are choosing Dubai as their new home.
+                Von Steuervorteilen, die es Ihnen ermöglichen, Ihr Einkommen zu maximieren, bis hin zu ganzjährigem Sonnenschein und einer strategischen Lage 
+                für weltweite Reisen bietet Dubai ein Lifestyle-Upgrade, das schwer zu übertreffen ist. Lassen Sie uns erkunden, warum 
+                so viele Deutsche Dubai als ihr neues Zuhause wählen.
               </p>
             </div>
             
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-                alt="Dubai lifestyle" 
+                alt="Dubai Lifestyle" 
                 className="rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg border border-dubai-dark-sand/30 w-64 hidden md:block">
                 <div className="flex items-center">
                   <Sun className="h-8 w-8 text-dubai-gold mr-3" />
                   <div>
-                    <div className="font-bold">340+ days</div>
-                    <div className="text-gray-600 text-sm">of sunshine each year</div>
+                    <div className="font-bold">340+ Tage</div>
+                    <div className="text-gray-600 text-sm">Sonnenschein jedes Jahr</div>
                   </div>
                 </div>
               </div>
@@ -180,10 +180,10 @@ const WhyDubai = () => {
       <section className="py-20 bg-dubai-dark-sand/10">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">Key Benefits of Living in Dubai</h2>
+            <h2 className="mb-6">Hauptvorteile des Lebens in Dubai</h2>
             <p className="text-gray-600">
-              Dubai offers numerous advantages over other relocation destinations, combining financial benefits with 
-              an exceptional lifestyle and infrastructure.
+              Dubai bietet zahlreiche Vorteile gegenüber anderen Umsiedlungszielen und kombiniert finanzielle Vorteile mit 
+              einem außergewöhnlichen Lebensstil und Infrastruktur.
             </p>
           </div>
           
@@ -194,7 +194,7 @@ const WhyDubai = () => {
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 mb-6">{benefit.description}</p>
                 <div>
-                  <h4 className="font-medium text-sm text-gray-700 mb-3">Key Benefits:</h4>
+                  <h4 className="font-medium text-sm text-gray-700 mb-3">Hauptvorteile:</h4>
                   <ul className="space-y-2">
                     {benefit.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start">
@@ -214,9 +214,9 @@ const WhyDubai = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">Dubai vs. Germany: Lifestyle Comparison</h2>
+            <h2 className="mb-6">Dubai vs. Deutschland: Lifestyle-Vergleich</h2>
             <p className="text-gray-600">
-              While both Dubai and Germany offer excellent living standards, there are key differences that might influence your decision to relocate.
+              Während sowohl Dubai als auch Deutschland einen ausgezeichneten Lebensstandard bieten, gibt es wichtige Unterschiede, die Ihre Entscheidung zur Umsiedlung beeinflussen könnten.
             </p>
           </div>
           
@@ -224,9 +224,9 @@ const WhyDubai = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="gold-gradient-bg text-white">
-                  <th className="py-3 px-4 text-left rounded-tl-lg">Category</th>
+                  <th className="py-3 px-4 text-left rounded-tl-lg">Kategorie</th>
                   <th className="py-3 px-4 text-left">Dubai</th>
-                  <th className="py-3 px-4 text-left rounded-tr-lg">Germany</th>
+                  <th className="py-3 px-4 text-left rounded-tr-lg">Deutschland</th>
                 </tr>
               </thead>
               <tbody>
@@ -250,9 +250,9 @@ const WhyDubai = () => {
       <section className="py-20 blue-gradient-bg text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">What Germans Say About Living in Dubai</h2>
+            <h2 className="mb-6">Was Deutsche über das Leben in Dubai sagen</h2>
             <p className="text-white/80">
-              Hear directly from fellow Germans who have made the move and are enjoying life in Dubai.
+              Hören Sie direkt von deutschen Landsleuten, die den Umzug gewagt haben und das Leben in Dubai genießen.
             </p>
           </div>
           
@@ -266,14 +266,14 @@ const WhyDubai = () => {
                 />
                 <div>
                   <h4 className="font-semibold">Katharina Becker</h4>
-                  <p className="text-white/70 text-sm">Moved from Munich in 2019</p>
+                  <p className="text-white/70 text-sm">Umgezogen aus München in 2019</p>
                 </div>
               </div>
               <p className="text-white/90 italic mb-4">
-                "Moving to Dubai has been transformative for my career and lifestyle. I save significantly more money thanks to the tax benefits, and I love the cosmopolitan environment. Yes, summers are hot, but modern air conditioning is everywhere, and the winters are absolutely perfect."
+                "Der Umzug nach Dubai hat meine Karriere und meinen Lebensstil verändert. Ich spare dank der Steuervorteile deutlich mehr Geld und liebe das kosmopolitische Umfeld. Ja, die Sommer sind heiß, aber moderne Klimaanlagen sind überall, und die Winter sind absolut perfekt."
               </p>
               <p className="text-white/90">
-                "The safety aspect cannot be overstated—I feel comfortable walking alone at any time of day or night, something I couldn't always say in Germany."
+                "Der Sicherheitsaspekt kann nicht genug betont werden — ich fühle mich wohl, zu jeder Tages- und Nachtzeit allein zu gehen, etwas, was ich in Deutschland nicht immer sagen konnte."
               </p>
             </div>
             
@@ -286,14 +286,14 @@ const WhyDubai = () => {
                 />
                 <div>
                   <h4 className="font-semibold">Stefan Hoffmann</h4>
-                  <p className="text-white/70 text-sm">Moved from Berlin in 2020</p>
+                  <p className="text-white/70 text-sm">Umgezogen aus Berlin in 2020</p>
                 </div>
               </div>
               <p className="text-white/90 italic mb-4">
-                "As an entrepreneur, Dubai offered me a business-friendly environment that was refreshing after the bureaucracy I faced in Germany. Setting up my company was straightforward, and the absence of income tax allowed me to reinvest more into my business."
+                "Als Unternehmer bot mir Dubai ein wirtschaftsfreundliches Umfeld, das nach der Bürokratie, mit der ich in Deutschland konfrontiert war, erfrischend war. Die Gründung meines Unternehmens war unkompliziert, und die Abwesenheit von Einkommensteuer ermöglichte es mir, mehr in mein Geschäft zu reinvestieren."
               </p>
               <p className="text-white/90">
-                "The international network I've built here has been invaluable. My family has also adapted well—my children attend an excellent international school, and we enjoy the outdoor lifestyle during the cooler months."
+                "Das internationale Netzwerk, das ich hier aufgebaut habe, war von unschätzbarem Wert. Meine Familie hat sich auch gut angepasst — meine Kinder besuchen eine hervorragende internationale Schule, und wir genießen den Outdoor-Lifestyle während der kühleren Monate."
               </p>
             </div>
           </div>
@@ -304,37 +304,37 @@ const WhyDubai = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">Frequently Asked Questions</h2>
+            <h2 className="mb-6">Häufig gestellte Fragen</h2>
             <p className="text-gray-600">
-              Get answers to common questions about relocating from Germany to Dubai.
+              Erhalten Sie Antworten auf häufige Fragen zur Umsiedlung von Deutschland nach Dubai.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                question: "Do I need to learn Arabic to live in Dubai?",
-                answer: "Not necessarily. English is widely spoken throughout Dubai in business, retail, and hospitality sectors. While learning basic Arabic phrases is appreciated and helpful, you can easily navigate daily life using English."
+                question: "Muss ich Arabisch lernen, um in Dubai zu leben?",
+                answer: "Nicht unbedingt. Englisch wird in Dubai im Geschäfts-, Einzelhandels- und Gastgewerbesektor weit verbreitet gesprochen. Während das Erlernen grundlegender arabischer Ausdrücke geschätzt wird und hilfreich ist, können Sie leicht mit Englisch durch den Alltag navigieren."
               },
               {
-                question: "How hot does it really get in Dubai?",
-                answer: "Summer temperatures (June to September) typically range from 38-42°C and can occasionally reach 48°C. However, nearly all indoor spaces are air-conditioned, and the weather from October to May is very pleasant, with temperatures between 20-30°C."
+                question: "Wie heiß wird es wirklich in Dubai?",
+                answer: "Die Sommertemperaturen (Juni bis September) liegen typischerweise zwischen 38-42°C und können gelegentlich 48°C erreichen. Allerdings sind fast alle Innenräume klimatisiert, und das Wetter von Oktober bis Mai ist sehr angenehm, mit Temperaturen zwischen 20-30°C."
               },
               {
-                question: "Can I continue to receive my German pension if I move to Dubai?",
-                answer: "Yes, Germans can continue receiving their pension while living in Dubai. Germany has a social security agreement with the UAE that allows for pension transfers. The pension is typically paid into your German bank account, which you can maintain."
+                question: "Kann ich weiterhin meine deutsche Rente beziehen, wenn ich nach Dubai ziehe?",
+                answer: "Ja, Deutsche können ihre Rente weiterhin beziehen, während sie in Dubai leben. Deutschland hat ein Sozialversicherungsabkommen mit den VAE, das Rentenüberweisungen ermöglicht. Die Rente wird typischerweise auf Ihr deutsches Bankkonto überwiesen, das Sie beibehalten können."
               },
               {
-                question: "What about healthcare in Dubai?",
-                answer: "Dubai has excellent private healthcare facilities with many German-speaking doctors. Health insurance is mandatory for residents. The quality of healthcare is high, often comparable to or exceeding European standards, especially in private hospitals."
+                question: "Wie steht es um die Gesundheitsversorgung in Dubai?",
+                answer: "Dubai verfügt über hervorragende private Gesundheitseinrichtungen mit vielen deutschsprachigen Ärzten. Krankenversicherung ist für Einwohner obligatorisch. Die Qualität der Gesundheitsversorgung ist hoch, oft vergleichbar mit oder besser als europäische Standards, besonders in privaten Krankenhäusern."
               },
               {
-                question: "Is it difficult to adjust to the cultural differences?",
-                answer: "Most Germans adapt well to life in Dubai. While there are cultural differences, Dubai is very international and accommodating. Respect for local customs regarding dress and behavior in public places is important, but the lifestyle is generally modern and cosmopolitan."
+                question: "Ist es schwierig, sich an die kulturellen Unterschiede anzupassen?",
+                answer: "Die meisten Deutschen passen sich gut an das Leben in Dubai an. Während es kulturelle Unterschiede gibt, ist Dubai sehr international und entgegenkommend. Respekt für lokale Bräuche bezüglich Kleidung und Verhalten an öffentlichen Orten ist wichtig, aber der Lebensstil ist im Allgemeinen modern und kosmopolitisch."
               },
               {
-                question: "Can I purchase alcohol in Dubai?",
-                answer: "Yes, alcohol is available in licensed restaurants, hotels, and bars. Residents can obtain an alcohol license to purchase alcohol from designated stores for home consumption. The rules have been relaxed in recent years, making the process easier."
+                question: "Kann ich in Dubai Alkohol kaufen?",
+                answer: "Ja, Alkohol ist in lizenzierten Restaurants, Hotels und Bars erhältlich. Einwohner können eine Alkohollizenz erhalten, um Alkohol von bestimmten Geschäften für den Hauskonsum zu kaufen. Die Regeln wurden in den letzten Jahren gelockert, was den Prozess einfacher macht."
               }
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-lg border border-dubai-dark-sand/30">
@@ -351,24 +351,24 @@ const WhyDubai = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             <div className="lg:col-span-3">
-              <h2 className="mb-6">Ready to Make the Move?</h2>
+              <h2 className="mb-6">Bereit für den Umzug?</h2>
               <p className="text-gray-600 mb-8">
-                Now that you understand the benefits of living in Dubai, the next step is to learn about the practical aspects of making the move. 
-                Our comprehensive step-by-step guide will walk you through the entire process, from obtaining the right visa to finding your dream home.
+                Nachdem Sie die Vorteile des Lebens in Dubai verstanden haben, ist der nächste Schritt, die praktischen Aspekte des Umzugs zu lernen. 
+                Unsere umfassende Schritt-für-Schritt-Anleitung führt Sie durch den gesamten Prozess, vom Erhalt des richtigen Visums bis zum Finden Ihres Traumhauses.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Link
-                  to="/step-by-step-guide"
+                  to="/schritt-fuer-schritt-anleitung"
                   className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex items-center justify-center"
                 >
-                  View Step-by-Step Guide <ArrowRight className="ml-2 h-5 w-5" />
+                  Schritt-für-Schritt-Anleitung <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
-                  to="/consulting"
+                  to="/beratung"
                   className="px-6 py-3 rounded-md border border-dubai-dark-sand text-gray-700 hover:bg-dubai-dark-sand/10 transition-colors font-medium flex items-center justify-center"
                 >
-                  Get Personalized Help
+                  Persönliche Hilfe erhalten
                 </Link>
               </div>
             </div>

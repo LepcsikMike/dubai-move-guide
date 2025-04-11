@@ -7,23 +7,23 @@ import NewsletterSignup from '@/components/NewsletterSignup';
 const HomePage = () => {
   const benefits = [
     {
-      title: 'Tax-Free Income',
-      description: 'Enjoy 0% income tax, helping you save more and build wealth faster.',
+      title: 'Steuerfreies Einkommen',
+      description: 'Genießen Sie 0% Einkommensteuer, was Ihnen hilft, mehr zu sparen und schneller Vermögen aufzubauen.',
       icon: <Landmark className="h-10 w-10 text-dubai-gold" />
     },
     {
-      title: 'High Safety Standards',
-      description: 'Experience one of the safest cities in the world with low crime rates.',
+      title: 'Hohe Sicherheitsstandards',
+      description: 'Erleben Sie eine der sichersten Städte der Welt mit niedrigen Kriminalitätsraten.',
       icon: <Shield className="h-10 w-10 text-dubai-gold" />
     },
     {
-      title: 'Exceptional Quality of Life',
-      description: 'World-class infrastructure, healthcare, and entertainment options.',
+      title: 'Außergewöhnliche Lebensqualität',
+      description: 'Weltklasse-Infrastruktur, Gesundheitsversorgung und Unterhaltungsmöglichkeiten.',
       icon: <Sun className="h-10 w-10 text-dubai-gold" />
     },
     {
-      title: 'Thriving Economy',
-      description: 'Access abundant career opportunities in a growing, diverse economy.',
+      title: 'Florierende Wirtschaft',
+      description: 'Zugang zu zahlreichen Karrieremöglichkeiten in einer wachsenden, vielfältigen Wirtschaft.',
       icon: <Building className="h-10 w-10 text-dubai-gold" />
     }
   ];
@@ -44,23 +44,23 @@ const HomePage = () => {
         <div className="section-container relative z-10 text-white">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-6 animate-fade-in">
-              Your Journey to a New Life in Dubai Starts Here
+              Ihr Weg zu einem neuen Leben in Dubai beginnt hier
             </h1>
             <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Comprehensive guidance for Germans looking to relocate to Dubai - from visa requirements to finding your dream home.
+              Umfassende Anleitung für Deutsche, die nach Dubai umziehen möchten - von Visaanforderungen bis zur Suche nach Ihrem Traumhaus.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up">
               <Link
-                to="/step-by-step-guide"
+                to="/schritt-fuer-schritt-anleitung"
                 className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex items-center justify-center"
               >
-                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+                Starten Sie Ihre Reise <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/why-dubai"
+                to="/warum-dubai"
                 className="px-6 py-3 rounded-md text-white bg-white/20 hover:bg-white/30 transition-colors font-medium"
               >
-                Why Choose Dubai?
+                Warum Dubai wählen?
               </Link>
             </div>
           </div>
@@ -71,10 +71,9 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6 gradient-text">Why Thousands of Germans Choose Dubai</h2>
+            <h2 className="mb-6 gradient-text">Warum Tausende Deutsche Dubai wählen</h2>
             <p className="text-gray-600">
-              Dubai offers an unparalleled combination of financial benefits, safety, and quality of life that makes it an 
-              increasingly popular destination for Germans looking to relocate.
+              Dubai bietet eine unvergleichliche Kombination aus finanziellen Vorteilen, Sicherheit und Lebensqualität, die es zu einem zunehmend beliebten Ziel für Deutsche macht, die umziehen möchten.
             </p>
           </div>
           
@@ -95,20 +94,20 @@ const HomePage = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6">Your Roadmap to Dubai</h2>
+              <h2 className="mb-6">Ihre Roadmap nach Dubai</h2>
               <p className="text-gray-600 mb-8">
-                Moving to Dubai might seem complex, but with our step-by-step guide, you'll navigate the process with ease. 
-                From obtaining the right visa to finding schools for your children, we've got you covered.
+                Der Umzug nach Dubai mag komplex erscheinen, aber mit unserer Schritt-für-Schritt-Anleitung werden Sie den Prozess mühelos navigieren. 
+                Von der Beschaffung des richtigen Visums bis zur Suche nach Schulen für Ihre Kinder - wir haben alles für Sie abgedeckt.
               </p>
               
               <div className="space-y-4">
                 {[
-                  'Understanding visa options and requirements',
-                  'Finding the perfect housing in the right neighborhood',
-                  'Navigating healthcare and insurance options',
-                  'Discovering the best schools and education paths',
-                  'Setting up banking and managing finances',
-                  'Learning about local customs and culture'
+                  'Verstehen der Visum-Optionen und -Anforderungen',
+                  'Die perfekte Unterkunft im richtigen Viertel finden',
+                  'Navigation durch Gesundheitsversorgung und Versicherungsoptionen',
+                  'Entdeckung der besten Schulen und Bildungswege',
+                  'Einrichtung von Bankgeschäften und Finanzverwaltung',
+                  'Kennenlernen der lokalen Bräuche und Kultur'
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-dubai-gold mr-3 mt-1 shrink-0" />
@@ -119,10 +118,10 @@ const HomePage = () => {
               
               <div className="mt-8">
                 <Link
-                  to="/step-by-step-guide"
+                  to="/schritt-fuer-schritt-anleitung"
                   className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium inline-flex items-center"
                 >
-                  View Complete Guide <ArrowRight className="ml-2 h-5 w-5" />
+                  Vollständige Anleitung ansehen <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
             </div>
@@ -134,8 +133,8 @@ const HomePage = () => {
                 className="rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg border border-dubai-dark-sand/30 w-64 hidden md:block">
-                <div className="text-dubai-gold font-bold text-xl">100,000+</div>
-                <div className="text-gray-600">Expatriates from Germany now call Dubai home</div>
+                <div className="text-dubai-gold font-bold text-xl">100.000+</div>
+                <div className="text-gray-600">Expatriates aus Deutschland nennen Dubai jetzt ihr Zuhause</div>
               </div>
             </div>
           </div>
@@ -146,9 +145,9 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">Valuable Resources for Your Move</h2>
+            <h2 className="mb-6">Wertvolle Ressourcen für Ihren Umzug</h2>
             <p className="text-gray-600">
-              Access our extensive collection of guides, checklists, and tools designed to make your relocation process smooth and stress-free.
+              Greifen Sie auf unsere umfangreiche Sammlung von Leitfäden, Checklisten und Tools zu, die entwickelt wurden, um Ihren Umzugsprozess reibungslos und stressfrei zu gestalten.
             </p>
           </div>
           
@@ -156,19 +155,19 @@ const HomePage = () => {
             <div className="bg-dubai-sand rounded-lg shadow-sm border border-dubai-dark-sand/30 overflow-hidden hover:shadow-md transition-shadow">
               <img 
                 src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-                alt="Checklist" 
+                alt="Checkliste" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Moving Checklists</h3>
+                <h3 className="text-xl font-semibold mb-2">Umzugschecklisten</h3>
                 <p className="text-gray-600 mb-4">
-                  Comprehensive checklists for before, during, and after your move to ensure nothing is forgotten.
+                  Umfassende Checklisten für vor, während und nach Ihrem Umzug, um sicherzustellen, dass nichts vergessen wird.
                 </p>
                 <Link
-                  to="/resources"
+                  to="/ressourcen"
                   className="text-dubai-gold font-medium inline-flex items-center hover:underline"
                 >
-                  Download Checklists <ArrowRight className="ml-2 h-4 w-4" />
+                  Checklisten herunterladen <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -176,19 +175,19 @@ const HomePage = () => {
             <div className="bg-dubai-sand rounded-lg shadow-sm border border-dubai-dark-sand/30 overflow-hidden hover:shadow-md transition-shadow">
               <img 
                 src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-                alt="Calculator" 
+                alt="Rechner" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Cost Calculator</h3>
+                <h3 className="text-xl font-semibold mb-2">Kostenrechner</h3>
                 <p className="text-gray-600 mb-4">
-                  Estimate your living costs in Dubai with our interactive calculator covering housing, utilities, education, and more.
+                  Schätzen Sie Ihre Lebenshaltungskosten in Dubai mit unserem interaktiven Rechner, der Wohnen, Nebenkosten, Bildung und mehr abdeckt.
                 </p>
                 <Link
-                  to="/resources#calculator"
+                  to="/ressourcen#calculator"
                   className="text-dubai-gold font-medium inline-flex items-center hover:underline"
                 >
-                  Try the Calculator <ArrowRight className="ml-2 h-4 w-4" />
+                  Probieren Sie den Rechner aus <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -196,19 +195,19 @@ const HomePage = () => {
             <div className="bg-dubai-sand rounded-lg shadow-sm border border-dubai-dark-sand/30 overflow-hidden hover:shadow-md transition-shadow">
               <img 
                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-                alt="Video guide" 
+                alt="Video-Leitfaden" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Video Guides</h3>
+                <h3 className="text-xl font-semibold mb-2">Video-Leitfäden</h3>
                 <p className="text-gray-600 mb-4">
-                  Watch our collection of video guides showcasing neighborhoods, explaining visa processes, and more.
+                  Sehen Sie sich unsere Sammlung von Videoleitfäden an, die Stadtteile präsentieren, Visa-Prozesse erklären und vieles mehr.
                 </p>
                 <Link
-                  to="/resources#videos"
+                  to="/ressourcen#videos"
                   className="text-dubai-gold font-medium inline-flex items-center hover:underline"
                 >
-                  Watch Videos <ArrowRight className="ml-2 h-4 w-4" />
+                  Videos ansehen <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -220,9 +219,9 @@ const HomePage = () => {
       <section className="py-20 bg-dubai-dark-sand/10">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-6">Success Stories</h2>
+            <h2 className="mb-6">Erfolgsgeschichten</h2>
             <p className="text-gray-600">
-              Hear from fellow Germans who have successfully made the move to Dubai and are now enjoying their new life.
+              Hören Sie von Deutschen, die erfolgreich nach Dubai umgezogen sind und jetzt ihr neues Leben genießen.
             </p>
           </div>
           
@@ -230,21 +229,21 @@ const HomePage = () => {
             {[
               {
                 name: 'Thomas Müller',
-                role: 'IT Consultant',
+                role: 'IT-Berater',
                 image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-                quote: 'Moving to Dubai was the best decision of my life. The resources from dubai-auswandern.com made the whole process so much easier than I expected.'
+                quote: 'Der Umzug nach Dubai war die beste Entscheidung meines Lebens. Die Ressourcen von dubai-auswandern.com haben den gesamten Prozess viel einfacher gemacht als ich erwartet hatte.'
               },
               {
                 name: 'Anna Schmidt',
-                role: 'Marketing Director',
+                role: 'Marketing Direktorin',
                 image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-                quote: 'The step-by-step guide really helped me navigate the visa process and find the perfect apartment. I now enjoy a tax-free income and amazing lifestyle.'
+                quote: 'Die Schritt-für-Schritt-Anleitung hat mir wirklich geholfen, den Visa-Prozess zu navigieren und die perfekte Wohnung zu finden. Ich genieße jetzt ein steuerfreies Einkommen und einen erstaunlichen Lebensstil.'
               },
               {
                 name: 'Markus Weber',
-                role: 'Restaurant Owner',
+                role: 'Restaurantbesitzer',
                 image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-                quote: 'Starting a business in Dubai was much simpler than I thought. The consulting service helped me with all the paperwork and finding the right location.'
+                quote: 'Ein Unternehmen in Dubai zu gründen war viel einfacher als ich dachte. Der Beratungsservice half mir mit allen Papierkram und bei der Suche nach dem richtigen Standort.'
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-dubai-dark-sand/30">
@@ -271,30 +270,30 @@ const HomePage = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             <div className="lg:col-span-3">
-              <h2 className="mb-6">Ready to Start Your Dubai Journey?</h2>
+              <h2 className="mb-6">Bereit, Ihre Dubai-Reise zu beginnen?</h2>
               <p className="text-gray-600 mb-8">
-                Whether you're just exploring the idea or ready to make the move, we're here to help every step of the way. 
-                Get personalized guidance, download our resources, or subscribe to our newsletter for regular updates.
+                Egal, ob Sie gerade erst die Idee erkunden oder bereit sind, den Umzug zu machen, wir sind da, um bei jedem Schritt zu helfen. 
+                Erhalten Sie personalisierte Beratung, laden Sie unsere Ressourcen herunter oder abonnieren Sie unseren Newsletter für regelmäßige Updates.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <Link
-                  to="/consulting"
+                  to="/beratung"
                   className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex items-center justify-center"
                 >
-                  Get Personalized Help
+                  Erhalten Sie persönliche Hilfe
                 </Link>
                 <Link
-                  to="/resources"
+                  to="/ressourcen"
                   className="px-6 py-3 rounded-md border border-dubai-dark-sand text-gray-700 hover:bg-dubai-dark-sand/10 transition-colors font-medium flex items-center justify-center"
                 >
-                  Access Free Resources
+                  Zugang zu kostenlosen Ressourcen
                 </Link>
               </div>
               
               <div className="flex items-center space-x-3 text-gray-600">
                 <Check className="h-5 w-5 text-dubai-gold" />
-                <span>Trusted by 10,000+ Germans who have successfully relocated to Dubai</span>
+                <span>Vertraut von über 10.000 Deutschen, die erfolgreich nach Dubai umgezogen sind</span>
               </div>
             </div>
             

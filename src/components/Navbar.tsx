@@ -11,11 +11,11 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Home', path: '/' },
-    { name: 'Why Dubai?', path: '/why-dubai' },
-    { name: 'Step-by-Step Guide', path: '/step-by-step-guide' },
+    { name: 'Warum Dubai?', path: '/warum-dubai' },
+    { name: 'Schritt-für-Schritt', path: '/schritt-fuer-schritt-anleitung' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'Consulting', path: '/consulting' },
+    { name: 'Ressourcen', path: '/ressourcen' },
+    { name: 'Beratung', path: '/beratung' },
   ];
 
   useEffect(() => {
@@ -69,10 +69,10 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link
-                to="/consulting"
+                to="/beratung"
                 className="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white gold-gradient-bg hover:opacity-90 transition-opacity"
               >
-                Get Started
+                Jetzt starten
               </Link>
             </div>
           </div>
@@ -107,10 +107,10 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              to="/consulting"
+              to="/beratung"
               className="block w-full mt-4 px-4 py-2 rounded-md text-base font-medium text-center text-white gold-gradient-bg hover:opacity-90 transition-opacity"
             >
-              Get Started
+              Jetzt starten
             </Link>
           </div>
         </div>

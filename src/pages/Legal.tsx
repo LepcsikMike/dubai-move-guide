@@ -7,123 +7,123 @@ const Legal = () => {
   const { page } = useParams<{ page: string }>();
   
   const legalContent = {
-    'privacy-policy': {
-      title: 'Privacy Policy',
+    'datenschutz': {
+      title: 'Datenschutzerklärung',
       content: `
-        <h2>1. Introduction</h2>
-        <p>At dubai-auswandern.com, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
+        <h2>1. Einleitung</h2>
+        <p>Bei dubai-auswandern.com respektieren wir Ihre Privatsphäre und sind bestrebt, Ihre persönlichen Daten zu schützen. Diese Datenschutzerklärung informiert Sie darüber, wie wir mit Ihren persönlichen Daten umgehen, wenn Sie unsere Website besuchen, und informiert Sie über Ihre Datenschutzrechte und wie das Gesetz Sie schützt.</p>
         
-        <h2>2. The Data We Collect About You</h2>
-        <p>Personal data, or personal information, means any information about an individual from which that person can be identified. We may collect, use, store and transfer different kinds of personal data about you, including:</p>
+        <h2>2. Die Daten, die wir über Sie sammeln</h2>
+        <p>Personenbezogene Daten oder persönliche Informationen bezeichnen alle Informationen über eine Person, durch die diese Person identifiziert werden kann. Wir können verschiedene Arten von personenbezogenen Daten über Sie sammeln, verwenden, speichern und übertragen, darunter:</p>
         <ul>
-          <li>Identity Data: including first name, last name, username or similar identifier</li>
-          <li>Contact Data: including email address and telephone numbers</li>
-          <li>Technical Data: including internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform</li>
-          <li>Usage Data: information about how you use our website and services</li>
+          <li>Identitätsdaten: einschließlich Vorname, Nachname, Benutzername oder ähnliche Kennungen</li>
+          <li>Kontaktdaten: einschließlich E-Mail-Adresse und Telefonnummern</li>
+          <li>Technische Daten: einschließlich Internet-Protokoll (IP)-Adresse, Browser-Typ und -Version, Zeitzoneneinstellung und Standort, Browser-Plugin-Typen und -Versionen, Betriebssystem und Plattform</li>
+          <li>Nutzungsdaten: Informationen darüber, wie Sie unsere Website und Dienste nutzen</li>
         </ul>
         
-        <h2>3. How We Use Your Personal Data</h2>
-        <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+        <h2>3. Wie wir Ihre personenbezogenen Daten verwenden</h2>
+        <p>Wir werden Ihre personenbezogenen Daten nur verwenden, wenn uns dies gesetzlich erlaubt ist. Am häufigsten werden wir Ihre personenbezogenen Daten unter folgenden Umständen verwenden:</p>
         <ul>
-          <li>Where we need to perform the contract we are about to enter into or have entered into with you</li>
-          <li>Where it is necessary for our legitimate interests and your interests and fundamental rights do not override those interests</li>
-          <li>Where we need to comply with a legal or regulatory obligation</li>
+          <li>Wenn wir den Vertrag erfüllen müssen, den wir mit Ihnen abschließen werden oder abgeschlossen haben</li>
+          <li>Wenn es für unsere berechtigten Interessen notwendig ist und Ihre Interessen und Grundrechte diese Interessen nicht überwiegen</li>
+          <li>Wenn wir einer rechtlichen oder behördlichen Verpflichtung nachkommen müssen</li>
         </ul>
         
-        <h2>4. Cookie Policy</h2>
-        <p>Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.</p>
+        <h2>4. Cookie-Richtlinie</h2>
+        <p>Unsere Website verwendet Cookies, um Sie von anderen Nutzern unserer Website zu unterscheiden. Dies hilft uns, Ihnen ein gutes Erlebnis zu bieten, wenn Sie unsere Website durchsuchen, und ermöglicht uns auch, unsere Website zu verbessern.</p>
         
-        <h2>5. Data Security</h2>
-        <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed.</p>
+        <h2>5. Datensicherheit</h2>
+        <p>Wir haben angemessene Sicherheitsmaßnahmen ergriffen, um zu verhindern, dass Ihre personenbezogenen Daten versehentlich verloren gehen, verwendet oder auf unbefugte Weise zugegriffen, verändert oder offengelegt werden.</p>
         
-        <h2>6. Your Legal Rights</h2>
-        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+        <h2>6. Ihre gesetzlichen Rechte</h2>
+        <p>Unter bestimmten Umständen haben Sie nach den Datenschutzgesetzen Rechte in Bezug auf Ihre personenbezogenen Daten, einschließlich des Rechts auf:</p>
         <ul>
-          <li>Request access to your personal data</li>
-          <li>Request correction of your personal data</li>
-          <li>Request erasure of your personal data</li>
-          <li>Object to processing of your personal data</li>
-          <li>Request restriction of processing your personal data</li>
-          <li>Request transfer of your personal data</li>
-          <li>Right to withdraw consent</li>
+          <li>Anforderung des Zugangs zu Ihren personenbezogenen Daten</li>
+          <li>Anforderung der Berichtigung Ihrer personenbezogenen Daten</li>
+          <li>Anforderung der Löschung Ihrer personenbezogenen Daten</li>
+          <li>Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten</li>
+          <li>Anforderung der Einschränkung der Verarbeitung Ihrer personenbezogenen Daten</li>
+          <li>Anforderung der Übertragung Ihrer personenbezogenen Daten</li>
+          <li>Recht auf Widerruf der Einwilligung</li>
         </ul>
         
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions about this privacy policy or our privacy practices, please contact us at: info@dubai-auswandern.com</p>
+        <h2>7. Kontaktieren Sie uns</h2>
+        <p>Wenn Sie Fragen zu dieser Datenschutzerklärung oder unseren Datenschutzpraktiken haben, kontaktieren Sie uns bitte unter: info@dubai-auswandern.com</p>
       `
     },
-    'terms-of-service': {
-      title: 'Terms of Service',
+    'nutzungsbedingungen': {
+      title: 'Nutzungsbedingungen',
       content: `
-        <h2>1. Introduction</h2>
-        <p>These terms and conditions govern your use of dubai-auswandern.com; by using our website, you accept these terms and conditions in full. If you disagree with these terms and conditions or any part of them, you must not use our website.</p>
+        <h2>1. Einleitung</h2>
+        <p>Diese Nutzungsbedingungen regeln Ihre Nutzung von dubai-auswandern.com; durch die Nutzung unserer Website akzeptieren Sie diese Bedingungen vollständig. Wenn Sie mit diesen Bedingungen oder einem Teil davon nicht einverstanden sind, dürfen Sie unsere Website nicht nutzen.</p>
         
-        <h2>2. License to Use Website</h2>
-        <p>Unless otherwise stated, we or our licensors own the intellectual property rights in the website and material on the website. Subject to the license below, all these intellectual property rights are reserved.</p>
-        <p>You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.</p>
+        <h2>2. Lizenz zur Nutzung der Website</h2>
+        <p>Sofern nicht anders angegeben, besitzen wir oder unsere Lizenzgeber die geistigen Eigentumsrechte an der Website und dem Material auf der Website. Vorbehaltlich der unten stehenden Lizenz sind alle diese geistigen Eigentumsrechte vorbehalten.</p>
+        <p>Sie dürfen Seiten von unserer Website für Ihren eigenen persönlichen Gebrauch ansehen, herunterladen (nur für Cachingzwecke) und drucken, vorbehaltlich der unten genannten Einschränkungen und an anderer Stelle in diesen Bedingungen.</p>
         
-        <h2>3. Acceptable Use</h2>
-        <p>You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website.</p>
-        <p>You must not use our website in any way that is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.</p>
+        <h2>3. Akzeptable Nutzung</h2>
+        <p>Sie dürfen unsere Website nicht in einer Weise nutzen, die Schäden an der Website verursacht oder verursachen könnte oder die Verfügbarkeit oder Zugänglichkeit der Website beeinträchtigt.</p>
+        <p>Sie dürfen unsere Website nicht in illegaler, rechtswidriger, betrügerischer oder schädlicher Weise oder in Verbindung mit illegalen, rechtswidrigen, betrügerischen oder schädlichen Zwecken oder Aktivitäten nutzen.</p>
         
-        <h2>4. Limitations of Liability</h2>
-        <p>We will not be liable to you in respect of any losses arising out of any event or events beyond our reasonable control.</p>
-        <p>We will not be liable to you in respect of any business losses, including (without limitation) loss of or damage to profits, income, revenue, use, production, anticipated savings, business, contracts, commercial opportunities or goodwill.</p>
+        <h2>4. Haftungsbeschränkungen</h2>
+        <p>Wir haften Ihnen gegenüber nicht für Verluste, die aus Ereignissen entstehen, die außerhalb unserer angemessenen Kontrolle liegen.</p>
+        <p>Wir haften Ihnen gegenüber nicht für geschäftliche Verluste, einschließlich (ohne Einschränkung) Verlust oder Beschädigung von Gewinnen, Einkommen, Einnahmen, Nutzung, Produktion, erwarteten Einsparungen, Geschäften, Verträgen, kommerziellen Chancen oder Goodwill.</p>
         
-        <h2>5. Variation</h2>
-        <p>We may revise these terms and conditions from time-to-time. Revised terms and conditions will apply to the use of our website from the date of their publication on our website.</p>
+        <h2>5. Änderungen</h2>
+        <p>Wir können diese Bedingungen von Zeit zu Zeit überarbeiten. Überarbeitete Bedingungen gelten für die Nutzung unserer Website ab dem Datum ihrer Veröffentlichung auf unserer Website.</p>
         
-        <h2>6. Entire Agreement</h2>
-        <p>These terms and conditions, together with our privacy policy, constitute the entire agreement between you and us in relation to your use of our website, and supersede all previous agreements in respect of your use of this website.</p>
+        <h2>6. Gesamte Vereinbarung</h2>
+        <p>Diese Bedingungen, zusammen mit unserer Datenschutzerklärung, stellen die gesamte Vereinbarung zwischen Ihnen und uns in Bezug auf Ihre Nutzung unserer Website dar und ersetzen alle früheren Vereinbarungen in Bezug auf Ihre Nutzung dieser Website.</p>
         
-        <h2>7. Law and Jurisdiction</h2>
-        <p>These terms and conditions will be governed by and construed in accordance with German law, and any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of Germany.</p>
+        <h2>7. Recht und Gerichtsstand</h2>
+        <p>Diese Bedingungen werden nach deutschem Recht ausgelegt und durchgesetzt, und alle Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte in Deutschland.</p>
       `
     },
-    'imprint': {
-      title: 'Imprint',
+    'impressum': {
+      title: 'Impressum',
       content: `
-        <h2>Information according to § 5 TMG</h2>
+        <h2>Angaben gemäß § 5 TMG</h2>
         <p>
           dubai-auswandern.com<br />
-          Sample Street 123<br />
+          Musterstraße 123<br />
           10115 Berlin<br />
-          Germany
+          Deutschland
         </p>
         
-        <h2>Contact</h2>
+        <h2>Kontakt</h2>
         <p>
-          Phone: +49 123 456789<br />
-          Email: info@dubai-auswandern.com
+          Telefon: +49 123 456789<br />
+          E-Mail: info@dubai-auswandern.com
         </p>
         
-        <h2>Responsible for content according to § 55 Abs. 2 RStV</h2>
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
         <p>
           Jane Doe<br />
-          Sample Street 123<br />
+          Musterstraße 123<br />
           10115 Berlin<br />
-          Germany
+          Deutschland
         </p>
         
-        <h2>EU Dispute Resolution</h2>
-        <p>The European Commission provides a platform for online dispute resolution (OS): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a></p>
-        <p>We are not willing or obligated to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        <h2>EU-Streitschlichtung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a></p>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
         
-        <h2>Liability for Content</h2>
-        <p>As a service provider, we are responsible for our own content on these pages according to § 7 paragraph 1 TMG under the general laws. According to §§ 8 to 10 TMG, however, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+        <h2>Haftung für Inhalte</h2>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
         
-        <h2>Liability for Links</h2>
-        <p>Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages.</p>
+        <h2>Haftung für Links</h2>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
         
-        <h2>Copyright</h2>
-        <p>The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.</p>
+        <h2>Urheberrecht</h2>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
       `
     }
   };
 
   const currentPage = page && page in legalContent 
     ? legalContent[page as keyof typeof legalContent] 
-    : { title: 'Page Not Found', content: 'The requested legal page was not found.' };
+    : { title: 'Seite nicht gefunden', content: 'Die angeforderte rechtliche Seite wurde nicht gefunden.' };
 
   return (
     <section className="py-20 mt-16">
@@ -131,7 +131,7 @@ const Legal = () => {
         <div className="max-w-3xl mx-auto">
           <Link to="/" className="inline-flex items-center text-dubai-gold hover:underline mb-8">
             <ArrowLeft size={16} className="mr-2" />
-            Back to Home
+            Zurück zur Startseite
           </Link>
           
           <h1 className="text-3xl font-bold mb-8">{currentPage.title}</h1>

@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold gradient-text">dubai-auswandern.com</h3>
             <p className="text-gray-600">
-              Your comprehensive guide to relocating and thriving in Dubai. We provide expert guidance and resources for a smooth transition.
+              Ihr umfassender Leitfaden für Umzug und erfolgreiche Etablierung in Dubai. Wir bieten Expertenberatung und Ressourcen für einen reibungslosen Übergang.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -62,19 +62,19 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Schnelllinks</h4>
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-600 hover:text-dubai-gold transition-colors">Home</Link></li>
-              <li><Link to="/why-dubai" className="text-gray-600 hover:text-dubai-gold transition-colors">Why Dubai?</Link></li>
-              <li><Link to="/step-by-step-guide" className="text-gray-600 hover:text-dubai-gold transition-colors">Step-by-Step Guide</Link></li>
+              <li><Link to="/warum-dubai" className="text-gray-600 hover:text-dubai-gold transition-colors">Warum Dubai?</Link></li>
+              <li><Link to="/schritt-fuer-schritt-anleitung" className="text-gray-600 hover:text-dubai-gold transition-colors">Schritt-für-Schritt Anleitung</Link></li>
               <li><Link to="/blog" className="text-gray-600 hover:text-dubai-gold transition-colors">Blog</Link></li>
-              <li><Link to="/resources" className="text-gray-600 hover:text-dubai-gold transition-colors">Resources</Link></li>
-              <li><Link to="/consulting" className="text-gray-600 hover:text-dubai-gold transition-colors">Consulting</Link></li>
+              <li><Link to="/ressourcen" className="text-gray-600 hover:text-dubai-gold transition-colors">Ressourcen</Link></li>
+              <li><Link to="/beratung" className="text-gray-600 hover:text-dubai-gold transition-colors">Beratung</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-lg font-semibold mb-4">Kontaktieren Sie uns</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="text-dubai-gold shrink-0 mt-1" />
@@ -92,22 +92,22 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h4>
-            <p className="text-gray-600 mb-4">Stay updated with our latest guides, tips, and resources about moving to Dubai.</p>
+            <h4 className="text-lg font-semibold mb-4">Abonnieren Sie unseren Newsletter</h4>
+            <p className="text-gray-600 mb-4">Bleiben Sie auf dem Laufenden mit unseren neuesten Guides, Tipps und Ressourcen zum Umzug nach Dubai.</p>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div className="relative">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
+                  placeholder="Ihre E-Mail-Adresse"
                   required
                   className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
                 />
                 <button 
                   type="submit" 
                   className="absolute right-1 top-1 p-2 text-white gold-gradient-bg rounded-md hover:opacity-90 transition-opacity"
-                  aria-label="Subscribe"
+                  aria-label="Abonnieren"
                 >
                   <ArrowRight size={18} />
                 </button>
@@ -121,12 +121,12 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-600 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} dubai-auswandern.com. All rights reserved.
+              © {new Date().getFullYear()} dubai-auswandern.com. Alle Rechte vorbehalten.
             </div>
             <div className="flex space-x-4 text-sm">
-              <Link to="/privacy-policy" className="text-gray-600 hover:text-dubai-gold transition-colors">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="text-gray-600 hover:text-dubai-gold transition-colors">Terms of Service</Link>
-              <Link to="/imprint" className="text-gray-600 hover:text-dubai-gold transition-colors">Imprint</Link>
+              <Link to="/datenschutz" className="text-gray-600 hover:text-dubai-gold transition-colors">Datenschutz</Link>
+              <Link to="/nutzungsbedingungen" className="text-gray-600 hover:text-dubai-gold transition-colors">Nutzungsbedingungen</Link>
+              <Link to="/impressum" className="text-gray-600 hover:text-dubai-gold transition-colors">Impressum</Link>
             </div>
           </div>
         </div>

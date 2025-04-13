@@ -39,7 +39,7 @@ const HomePage = () => {
             alt="Dubai skyline" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-brand-dark-purple/60"></div>
+          <div className="absolute inset-0 bg-brand-dark-purple/10"></div>
         </div>
         
         <div className="section-container relative z-10 text-white">

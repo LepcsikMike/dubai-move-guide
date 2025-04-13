@@ -46,7 +46,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
               <h1 className="mb-6 animate-fade-in font-heading text-white">
-                Ihr Weg zu einem neuen Leben in Dubai beginnt hier
+                Ihr Weg zu einem neuen Leben in Dubai beginnt hier!
               </h1>
               <p className="text-xl md:text-2xl mb-8 animate-slide-up">
                 Umfassende Anleitung für Deutsche, die nach Dubai umziehen möchten - von Visaanforderungen bis zur Suche nach Ihrem Traumhaus.

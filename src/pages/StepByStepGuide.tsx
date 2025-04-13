@@ -1,687 +1,443 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileDown, Check, Info, ArrowRight, ExternalLink } from 'lucide-react';
+import {
+  DescriptionOutlined, 
+  HomeOutlined, 
+  LocalHospitalOutlined, 
+  AccountBalanceOutlined, 
+  SchoolOutlined, 
+  TranslateOutlined, 
+  AirplanemodeActiveOutlined,
+  DirectionsCarOutlined,
+  SettingsOutlined
+} from '@material-ui/icons';
 
 const StepByStepGuide = () => {
-  const [activeTab, setActiveTab] = useState("visas");
-  
-  const tabs = [
-    { id: "visas", label: "Visum & Rechtliches", icon: "📝" },
-    { id: "housing", label: "Wohnen", icon: "🏠" },
-    { id: "jobs", label: "Arbeit finden", icon: "💼" },
-    { id: "healthcare", label: "Gesundheit", icon: "🏥" },
-    { id: "education", label: "Bildung", icon: "🎓" },
-    { id: "banking", label: "Banking & Finanzen", icon: "💰" },
-    { id: "culture", label: "Kultur & Lifestyle", icon: "🌴" }
+  // Header-Hintergrundbild mit absoluter URL, um Ladeprobleme zu vermeiden
+  const backgroundImageUrl = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80";
+
+  const steps = [
+    {
+      id: 'visa',
+      title: 'Visum & Aufenthaltsgenehmigung',
+      icon: <DescriptionOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Erfahren Sie alles über die verschiedenen Visakategorien für den Umzug nach Dubai: von Arbeitsvisa über Golden Visa bis hin zu Investorenvisa.',
+      content: `
+        <h3>Visum-Optionen für Deutsche in Dubai</h3>
+        <p>Dubai bietet verschiedene Visumsoptionen für Deutsche und andere Ausländer, die in das Emirat ziehen möchten. Die Auswahl des richtigen Visums hängt von Ihren Umständen und Zielen ab.</p>
+        
+        <h4>Arbeitsvisum</h4>
+        <p>Das häufigste Visum für Expatriates ist das Arbeitsvisum, das von Ihrem Arbeitgeber in Dubai gesponsert wird. Dieses Visum ist in der Regel 2 Jahre gültig und kann verlängert werden.</p>
+        
+        <h4>Investorenvisum</h4>
+        <p>Wenn Sie ein Unternehmen in Dubai gründen oder in Immobilien investieren möchten, können Sie ein Investorenvisum beantragen. Die Anforderungen variieren je nach Art und Umfang der Investition.</p>
+        
+        <h4>Golden Visa</h4>
+        <p>Das Dubai Golden Visa bietet eine langfristige Aufenthaltsgenehmigung (5-10 Jahre) für Investoren, Unternehmer, Wissenschaftler und andere qualifizierte Personen.</p>
+        
+        <h4>Rentnervisum</h4>
+        <p>Dubai bietet ein spezielles Visum für Rentner über 55 Jahre, die bestimmte finanzielle Anforderungen erfüllen.</p>
+        
+        <h4>Notwendige Dokumente</h4>
+        <ul>
+          <li>Gültiger deutscher Reisepass (mindestens 6 Monate gültig)</li>
+          <li>Passfoto nach VAE-Richtlinien</li>
+          <li>Beglaubigte Abschriften von Bildungsabschlüssen</li>
+          <li>Polizeiliches Führungszeugnis</li>
+          <li>Medizinisches Attest</li>
+        </ul>
+      `
+    },
+    {
+      id: 'housing',
+      title: 'Wohnungssuche & Umzug',
+      icon: <HomeOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Tipps zur Suche nach der perfekten Unterkunft, beliebte Viertel für Expatriates und wichtige Informationen zum Miet- oder Kaufprozess.',
+      content: `
+        <h3>Die richtige Wohngegend in Dubai finden</h3>
+        <p>Dubai bietet eine Vielzahl von Wohngegenden, die sich in Preis, Stil und Annehmlichkeiten unterscheiden. Hier sind einige der beliebtesten Gebiete bei deutschen Expatriates:</p>
+        
+        <h4>Dubai Marina</h4>
+        <p>Ein modernes Stadtviertel am Wasser mit Wolkenkratzern, Restaurants und einem belebten Nachtleben. Beliebt bei jungen Berufstätigen und Singles.</p>
+        
+        <h4>Palm Jumeirah</h4>
+        <p>Die künstliche Palmeninsel bietet luxuriöse Villen und Apartments mit Strandlage und ist bei wohlhabenden Familien beliebt.</p>
+        
+        <h4>Downtown Dubai</h4>
+        <p>Im Herzen der Stadt gelegen, mit dem Burj Khalifa und der Dubai Mall. Ein geschäftiges, urbanes Umfeld mit erstklassigen Annehmlichkeiten.</p>
+        
+        <h4>Arabian Ranches</h4>
+        <p>Eine gehobene Vorstadtgemeinde mit Villen, perfekt für Familien mit Kindern, mit internationalen Schulen in der Nähe.</p>
+        
+        <h4>Miet- vs. Kaufprozess</h4>
+        <p>In Dubai werden Mietverträge in der Regel jährlich abgeschlossen, wobei die Miete oft in mehreren Schecks im Voraus bezahlt wird. Beim Kauf fallen etwa 7% zusätzliche Kosten an, darunter die Übertragungsgebühr der Dubai Land Department (4%).</p>
+      `
+    },
+    {
+      id: 'healthcare',
+      title: 'Gesundheitsversorgung',
+      icon: <LocalHospitalOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Informationen über das Gesundheitssystem in Dubai, Versicherungsoptionen und empfohlene medizinische Einrichtungen für Expatriates.',
+      content: `
+        <h3>Gesundheitsversorgung in Dubai</h3>
+        <p>Dubai verfügt über ein erstklassiges Gesundheitssystem mit modernen Einrichtungen und international qualifizierten Ärzten. Als Expatriate müssen Sie jedoch für die medizinische Versorgung privat versichert sein.</p>
+        
+        <h4>Krankenversicherung</h4>
+        <p>Eine Krankenversicherung ist für alle Einwohner Dubais obligatorisch. Arbeitgeber sind gesetzlich verpflichtet, eine Grundversicherung für ihre Mitarbeiter abzuschließen, aber Sie sollten die Deckung überprüfen und ggf. eine Zusatzversicherung in Betracht ziehen.</p>
+        
+        <h4>Krankenhäuser und Kliniken</h4>
+        <ul>
+          <li>American Hospital Dubai</li>
+          <li>Mediclinic Hospitals</li>
+          <li>Saudi German Hospital</li>
+          <li>Rashid Hospital (öffentlich)</li>
+          <li>Deutsche Facharztpraxis</li>
+        </ul>
+        
+        <h4>Notfallversorgung</h4>
+        <p>Bei medizinischen Notfällen wählen Sie 998 oder 999. Die meisten großen Krankenhäuser haben 24-Stunden-Notaufnahmen.</p>
+        
+        <h4>Medikamente</h4>
+        <p>Apotheken sind in Dubai weit verbreitet. Einige verschreibungspflichtige Medikamente aus Deutschland können in den VAE eingeschränkt sein, daher sollten Sie im Voraus prüfen, ob Ihre Medikamente erlaubt sind.</p>
+      `
+    },
+    {
+      id: 'banking',
+      title: 'Banken & Finanzen',
+      icon: <AccountBalanceOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Hilfe bei der Eröffnung eines Bankkontos, Empfehlungen für Expat-freundliche Banken und wichtige Steuerinformationen.',
+      content: `
+        <h3>Das Bankwesen in Dubai verstehen</h3>
+        <p>Dubai hat ein gut entwickeltes Bankensystem mit lokalen und internationalen Banken. Die Eröffnung eines Bankkontos ist ein wichtiger erster Schritt nach Ihrer Ankunft.</p>
+        
+        <h4>Bankkonto eröffnen</h4>
+        <p>Um ein Bankkonto zu eröffnen, benötigen Sie in der Regel:</p>
+        <ul>
+          <li>Gültige Aufenthaltsgenehmigung (nicht für alle Banken erforderlich)</li>
+          <li>Reisepass</li>
+          <li>Emirates ID (sobald verfügbar)</li>
+          <li>Arbeitsbescheinigung oder Handelslizenzkopie</li>
+          <li>Adressnachweis (Mietvertrag oder Stromrechnung)</li>
+        </ul>
+        
+        <h4>Empfohlene Banken für Expatriates</h4>
+        <ul>
+          <li>Emirates NBD</li>
+          <li>HSBC</li>
+          <li>Abu Dhabi Commercial Bank (ADCB)</li>
+          <li>Mashreq Bank</li>
+          <li>Standard Chartered</li>
+        </ul>
+        
+        <h4>Steuerliche Überlegungen</h4>
+        <p>Obwohl die VAE keine Einkommenssteuer erheben, bleiben Sie möglicherweise in Deutschland steuerpflichtig, abhängig von Ihren Umständen. Es ist ratsam, einen auf internationales Steuerrecht spezialisierten Steuerberater zu konsultieren.</p>
+        
+        <h4>Überweisungen und Rücküberweisungen</h4>
+        <p>Dubai verfügt über zahlreiche Dienste für internationale Geldüberweisungen. Vergleichen Sie die Gebühren und Wechselkurse von Banken mit spezialisierten Überweisungsdiensten wie Wise (ehemals TransferWise), Western Union oder UAE Exchange.</p>
+      `
+    },
+    {
+      id: 'education',
+      title: 'Schulen & Bildung',
+      icon: <SchoolOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Übersicht über internationale Schulen, deutsche Bildungseinrichtungen und Anmeldeverfahren für Kinder von Expatriates.',
+      content: `
+        <h3>Bildungsoptionen für Expat-Kinder in Dubai</h3>
+        <p>Dubai bietet eine Vielzahl von Bildungseinrichtungen mit verschiedenen Lehrplänen und pädagogischen Ansätzen.</p>
+        
+        <h4>Deutsche Schule Dubai (DISD)</h4>
+        <p>Die Deutsche Internationale Schule Dubai folgt dem deutschen Lehrplan und bietet Bildung von der Vorschule bis zum Abitur. Sie ist eine beliebte Wahl für deutsche Familien, die ihre Kinder im deutschen Bildungssystem halten möchten.</p>
+        
+        <h4>Andere internationale Schulen</h4>
+        <ul>
+          <li>Dubai American Academy (amerikanischer Lehrplan)</li>
+          <li>GEMS Wellington International School (britischer Lehrplan)</li>
+          <li>Dubai College (britischer Lehrplan)</li>
+          <li>Swiss International Scientific School (IB-Programm)</li>
+          <li>Repton School (britischer Lehrplan)</li>
+        </ul>
+        
+        <h4>Anmeldeverfahren</h4>
+        <p>Internationale Schulen in Dubai sind sehr gefragt, und die Plätze sind oft begrenzt. Es wird empfohlen, sich so früh wie möglich zu bewerben. Das Anmeldeverfahren umfasst in der Regel:</p>
+        <ul>
+          <li>Anmeldeformular und Gebühr</li>
+          <li>Frühere Schulzeugnisse</li>
+          <li>Referenzschreiben</li>
+          <li>Bewertungstests</li>
+          <li>Interview</li>
+        </ul>
+        
+        <h4>Hochschulbildung</h4>
+        <p>Dubai beherbergt auch Zweigstellen internationaler Universitäten und eigene Hochschuleinrichtungen, darunter:</p>
+        <ul>
+          <li>Heriot-Watt University Dubai</li>
+          <li>American University in Dubai</li>
+          <li>Middlesex University Dubai</li>
+          <li>University of Wollongong Dubai</li>
+        </ul>
+      `
+    },
+    {
+      id: 'culture',
+      title: 'Kultur & Etikette',
+      icon: <TranslateOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Wichtige kulturelle Unterschiede, Verhaltensregeln und Tipps zur Integration in die lokale Gemeinschaft.',
+      content: `
+        <h3>Kulturelles Verständnis für das Leben in Dubai</h3>
+        <p>Dubai ist eine kulturell vielfältige Stadt, in der Toleranz großgeschrieben wird. Dennoch ist es wichtig, die lokalen Bräuche und Erwartungen zu verstehen und zu respektieren.</p>
+        
+        <h4>Dresscode</h4>
+        <p>Obwohl Dubai kosmopolitisch ist, wird angemessene Kleidung erwartet, besonders an öffentlichen Orten:</p>
+        <ul>
+          <li>Schultern und Knie sollten in Einkaufszentren und öffentlichen Einrichtungen bedeckt sein</li>
+          <li>Badebekleidung ist nur an Stränden und Pools akzeptabel</li>
+          <li>Für den Besuch von Moscheen ist eine noch konservativere Kleidung erforderlich</li>
+        </ul>
+        
+        <h4>Verhaltensregeln</h4>
+        <ul>
+          <li>Öffentliche Zuneigungsbekundungen sollten minimiert werden</li>
+          <li>Alkohol sollte nur in lizenzierten Einrichtungen konsumiert werden</li>
+          <li>Der Ramadan erfordert besondere Rücksichtnahme (kein Essen, Trinken oder Rauchen in der Öffentlichkeit während der Fastenzeit)</li>
+          <li>Respektieren Sie religiöse Praktiken und Orte</li>
+        </ul>
+        
+        <h4>Geschäftsetikette</h4>
+        <p>Im Geschäftsleben in Dubai ist der Aufbau von Beziehungen wichtig:</p>
+        <ul>
+          <li>Begrüßung mit rechter Hand (die linke Hand gilt als unrein)</li>
+          <li>Visitenkarten werden mit beiden Händen überreicht</li>
+          <li>Pünktlichkeit wird geschätzt, aber Flexibilität ist wichtig</li>
+          <li>Geschäftsgespräche beginnen oft mit Small Talk</li>
+        </ul>
+        
+        <h4>Sprache</h4>
+        <p>Arabisch ist die offizielle Sprache, aber Englisch wird weithin gesprochen und verstanden. Dennoch wird das Erlernen einiger grundlegender arabischer Phrasen geschätzt.</p>
+      `
+    },
+    {
+      id: 'transportation',
+      title: 'Transport & Mobilität',
+      icon: <DirectionsCarOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Informationen über öffentliche Verkehrsmittel, das Führen eines Fahrzeugs in Dubai und Tipps zur Navigation in der Stadt.',
+      content: `
+        <h3>Fortbewegung in Dubai</h3>
+        <p>Dubai verfügt über ein gut ausgebautes Verkehrsnetz, das es einfach macht, sich in der Stadt fortzubewegen.</p>
+        
+        <h4>Öffentliche Verkehrsmittel</h4>
+        <ul>
+          <li>Dubai Metro: Ein modernes, automatisiertes Bahnsystem mit zwei Hauptlinien (Rot und Grün)</li>
+          <li>Dubai Tram: Verbindet Dubai Marina mit anderen beliebten Gegenden</li>
+          <li>Busse: Umfangreiches Busnetz, das die gesamte Stadt abdeckt</li>
+          <li>Wassertaxis (Abras): Traditionelle Boote, die den Dubai Creek überqueren</li>
+        </ul>
+        
+        <h4>Nol Card</h4>
+        <p>Die Nol Card ist eine wiederaufladbare Smartcard für die Nutzung aller öffentlichen Verkehrsmittel in Dubai. Es gibt verschiedene Kartentypen je nach Ihren Bedürfnissen.</p>
+        
+        <h4>Autofahren in Dubai</h4>
+        <p>Viele Expatriates entscheiden sich für den Kauf oder das Leasing eines Autos:</p>
+        <ul>
+          <li>Deutscher Führerschein kann in einen VAE-Führerschein umgetauscht werden (mit gültiger Aufenthaltsgenehmigung)</li>
+          <li>Fahren auf der rechten Straßenseite wie in Deutschland</li>
+          <li>Strenge Verkehrsregeln mit hohen Strafen für Verstöße</li>
+          <li>Benzin ist relativ günstig</li>
+        </ul>
+        
+        <h4>Taxis und Fahrdienste</h4>
+        <p>Taxis sind in Dubai weit verbreitet und vergleichsweise günstig. Ride-Hailing-Apps wie Uber und Careem sind ebenfalls verfügbar.</p>
+        
+        <h4>Navigation</h4>
+        <p>Apps wie Google Maps und Waze funktionieren gut in Dubai, aber beachten Sie, dass sich die Stadt schnell entwickelt und einige neuere Gebiete möglicherweise nicht vollständig kartiert sind.</p>
+      `
+    },
+    {
+      id: 'arrival',
+      title: 'Ankunft & erste Schritte',
+      icon: <AirplanemodeActiveOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Checkliste für die ersten Tage und Wochen in Dubai, wichtige Behördengänge und Einrichtungen für Neuankömmlinge.',
+      content: `
+        <h3>Ihre ersten Tage in Dubai: Eine Checkliste</h3>
+        <p>Die ersten Wochen nach Ihrer Ankunft in Dubai können geschäftig sein. Hier ist eine Checkliste, die Ihnen hilft, sich schnell einzuleben:</p>
+        
+        <h4>Unmittelbar nach der Ankunft</h4>
+        <ul>
+          <li>SIM-Karte kaufen (am Flughafen erhältlich)</li>
+          <li>Transport zur Unterkunft organisieren</li>
+          <li>Grundlegende Besorgungen für den täglichen Bedarf machen</li>
+          <li>Mit der neuen Umgebung vertraut machen</li>
+        </ul>
+        
+        <h4>Erste Woche</h4>
+        <ul>
+          <li>Medizinische Untersuchung für die Aufenthaltsgenehmigung absolvieren</li>
+          <li>Emirates ID beantragen</li>
+          <li>Bankkonto eröffnen</li>
+          <li>Unterkunft einrichten (Möbel, Haushaltsgeräte, Internet)</li>
+          <li>DEWA-Anschluss (Strom und Wasser) auf Ihren Namen registrieren</li>
+        </ul>
+        
+        <h4>Erste Monat</h4>
+        <ul>
+          <li>Krankenversicherung abschließen oder überprüfen</li>
+          <li>Führerschein umschreiben lassen</li>
+          <li>Schulen/Kindergärten für Kinder besuchen</li>
+          <li>Lokale Supermärkte, Apotheken und Gesundheitseinrichtungen erkunden</li>
+          <li>Mit der deutschen Community in Kontakt treten</li>
+        </ul>
+        
+        <h4>Nützliche Kontakte für Neuankömmlinge</h4>
+        <ul>
+          <li>Deutsches Generalkonsulat in Dubai</li>
+          <li>German Business Council</li>
+          <li>Deutsche Industrie- und Handelskammer</li>
+          <li>AMER Center für Visa- und Aufenthaltsangelegenheiten</li>
+          <li>Deutsche Community-Gruppen in sozialen Netzwerken</li>
+        </ul>
+      `
+    },
+    {
+      id: 'business',
+      title: 'Unternehmen gründen',
+      icon: <SettingsOutlined style={{ fontSize: 40, color: '#D4AF37' }} />,
+      description: 'Informationen zur Gründung eines Unternehmens in Dubai, einschließlich Freizonen, Lizenzen und rechtlicher Anforderungen.',
+      content: `
+        <h3>Geschäftsmöglichkeiten in Dubai</h3>
+        <p>Dubai bietet günstige Bedingungen für Unternehmer und Investoren, mit verschiedenen Optionen für die Geschäftsgründung.</p>
+        
+        <h4>Unternehmensformen</h4>
+        <ul>
+          <li>Mainland Company (LLC): Erfordert einen lokalen Sponsor mit 51% Anteil, es sei denn, Sie qualifizieren sich für eine Ausnahme</li>
+          <li>Free Zone Company: 100% ausländisches Eigentum möglich, aber mit Einschränkungen für Geschäfte außerhalb der Freizone</li>
+          <li>Offshore Company: Für Investitionen und Vermögensverwaltung außerhalb der VAE</li>
+        </ul>
+        
+        <h4>Beliebte Freizonen</h4>
+        <ul>
+          <li>Dubai Multi Commodities Centre (DMCC)</li>
+          <li>Dubai International Financial Centre (DIFC)</li>
+          <li>Dubai Media City</li>
+          <li>Dubai Internet City</li>
+          <li>Jebel Ali Free Zone (JAFZA)</li>
+        </ul>
+        
+        <h4>Gründungsschritte</h4>
+        <ol>
+          <li>Geschäftsaktivität und passende Lizenz bestimmen</li>
+          <li>Geeigneten Standort wählen (Mainland oder Freizone)</li>
+          <li>Handelsname reservieren</li>
+          <li>Gesellschaftsvertrag erstellen</li>
+          <li>Unternehmensregistrierung durchführen</li>
+          <li>Handelslizenz beantragen</li>
+          <li>Visum- und Arbeitsgenehmigungen für Mitarbeiter beschaffen</li>
+          <li>Bankkonto eröffnen</li>
+        </ol>
+        
+        <h4>Wichtige Überlegungen</h4>
+        <ul>
+          <li>Kosten: Lizenzen, Büroraum, Visa, Registrierungsgebühren</li>
+          <li>Steuern: Keine Einkommenssteuer, aber 5% Mehrwertsteuer und mögliche Körperschaftssteuer in der Zukunft</li>
+          <li>Rechtliche Beratung: Empfohlen, um die komplexen Vorschriften zu navigieren</li>
+          <li>Bankwesen: Eröffnung eines Geschäftskontos kann zeitaufwändig sein</li>
+        </ul>
+      `
+    },
   ];
 
-  const tabContent = {
-    visas: {
-      title: "Visa & rechtliche Anforderungen navigieren",
-      intro: "Die Beschaffung des richtigen Visums ist der erste und wichtigste Schritt Ihrer Dubai-Umzugsreise. Es gibt verschiedene Visumoptionen für Deutsche, die nach Dubai ziehen, jede mit spezifischen Anforderungen und Vorteilen.",
-      steps: [
-        {
-          title: "Wählen Sie den richtigen Visumtyp",
-          content: "Als deutscher Staatsbürger haben Sie mehrere Visumoptionen für Dubai:",
-          list: [
-            "Arbeitsvisum: Gesponsert von Ihrem Arbeitgeber in Dubai",
-            "Investorenvisum: Für diejenigen, die ein Unternehmen gründen oder in ein Unternehmen investieren",
-            "Immobilieneigentümervisum: Verfügbar beim Kauf einer Immobilie im Wert von mehr als 1 Million AED",
-            "Rentenvisum: Für Personen ab 55 Jahren mit bestimmten finanziellen Anforderungen",
-            "Remote-Work-Visum: Für digitale Nomaden und Remote-Arbeiter",
-            "Golden Visa: Langzeitaufenthalt (5-10 Jahre) für Investoren, Unternehmer und Spezialisten"
-          ]
-        },
-        {
-          title: "Sammeln Sie die erforderlichen Dokumente",
-          content: "Unabhängig vom Visumtyp benötigen Sie in der Regel:",
-          list: [
-            "Gültiger deutscher Reisepass mit mindestens 6 Monaten Gültigkeit",
-            "Passfotos mit weißem Hintergrund",
-            "Ausgefülltes Visumantragsformular",
-            "Krankenversicherungsbescheinigung gültig in den VAE",
-            "Zusätzliche Dokumente je nach Visumtyp (Arbeitsvertrag, Immobilienurkunde usw.)",
-            "Polizeiliches Führungszeugnis aus Deutschland (für einige Visumtypen)"
-          ]
-        },
-        {
-          title: "Medizinische Untersuchung durchführen",
-          content: "Die meisten Aufenthaltsvisa erfordern einen medizinischen Eignungstest in Dubai, der Folgendes umfasst:",
-          list: [
-            "Bluttests auf Infektionskrankheiten",
-            "Röntgenaufnahme der Brust",
-            "Allgemeine Gesundheitsuntersuchung"
-          ]
-        },
-        {
-          title: "Emirates ID beantragen",
-          content: "Nach Genehmigung des Visums müssen Sie eine Emirates ID-Karte beantragen, die für alle Einwohner der VAE obligatorisch ist. Der Prozess umfasst:",
-          list: [
-            "Ausfüllen eines Antragsformulars",
-            "Bereitstellung biometrischer Daten (Fingerabdrücke und Foto)",
-            "Zahlung der entsprechenden Gebühr",
-            "Abholung Ihrer ID-Karte nach der Bearbeitung"
-          ]
-        }
-      ],
-      tips: [
-        "Beginnen Sie den Visumsprozess mindestens 2-3 Monate vor Ihrem geplanten Umzug",
-        "Erwägen Sie die Nutzung eines seriösen Rechtsdienstes zur Navigation durch den Visumsprozess",
-        "Bewahren Sie digitale Kopien aller Ihrer Dokumente an einem sicheren Ort auf",
-        "Prüfen Sie die neuesten Visabestimmungen, da sich diese ändern können"
-      ],
-      resources: [
-        {
-          title: "Visum-Antrags-Checkliste",
-          link: "/ressourcen#visa-checklist",
-          type: "checklist"
-        },
-        {
-          title: "Offizielles VAE-Regierungsportal",
-          link: "https://u.ae/en/information-and-services/visa-and-emirates-id",
-          type: "external"
-        }
-      ]
-    },
-    housing: {
-      title: "Ihr ideales Zuhause in Dubai finden",
-      intro: "Dubai bietet vielfältige Wohnmöglichkeiten, von luxuriösen Apartments am Wasser bis hin zu familienfreundlichen Villenanlagen. Das Verständnis des Immobilienmarktes und der Nachbarschaften wird Ihnen helfen, das perfekte Zuhause für Ihre Bedürfnisse und Ihr Budget zu finden.",
-      steps: [
-        {
-          title: "Verstehen Sie Dubais Nachbarschaften",
-          content: "Dubais Viertel variieren stark in Charakter, Annehmlichkeiten und Preis:",
-          list: [
-            "Downtown Dubai: Zentrale Lage, Luxusapartments, in der Nähe des Burj Khalifa",
-            "Dubai Marina: Wohnen am Wasser mit europäischem Flair, beliebt bei Expats",
-            "Palm Jumeirah: Ikonischer Standort, Luxusvillen und Apartments",
-            "Jumeirah: Traditionelles gehobenes Viertel mit Villen und Stränden",
-            "Arabian Ranches: Familienfreundliche Villengemeinschaft mit Grünflächen",
-            "Dubai Hills: Neuere Entwicklung mit modernen Villen und Apartments",
-            "JLT/JVC: Erschwinglichere Apartmentoptionen, beliebt bei jungen Berufstätigen"
-          ]
-        },
-        {
-          title: "Entscheiden Sie zwischen Mieten und Kaufen",
-          content: "Beide Optionen haben Vorteile in Dubai:",
-          list: [
-            "Mieten: Mehr Flexibilität, keine Wartungsverantwortung, geringere Anfangskosten",
-            "Kaufen: Langfristige Investition, Potenzial für Kapitalwachstum, Berechtigung für das Immobilieneigentümervisum",
-            "Die meisten Mietverträge erfordern Zahlung in 1-4 Schecks jährlich (weniger Schecks bedeuten typischerweise niedrigere Miete)",
-            "5% Anzahlung für Erstkäufer (25% für Nicht-Einwohner)",
-            "4% Immobilienregistrierungsgebühr plus Maklergebühren (typischerweise 2%) beim Kauf"
-          ]
-        },
-        {
-          title: "Arbeiten Sie mit einem seriösen Makler",
-          content: "Ein guter Immobilienmakler in Dubai ist unerlässlich:",
-          list: [
-            "Überprüfen Sie, ob der Makler eine RERA-Nummer (Real Estate Regulatory Agency) hat",
-            "Bitten Sie andere Auswanderer um Empfehlungen",
-            "Führen Sie Gespräche mit mehreren Maklern, um einen zu finden, der Ihre Bedürfnisse versteht",
-            "Klären Sie die Gebührenstruktur im Voraus (typischerweise 5% der Jahresmiete oder 2% des Kaufpreises)"
-          ]
-        },
-        {
-          title: "Verstehen Sie den Miet-/Kaufprozess",
-          content: "Seien Sie auf Dubais einzigartige Immobilienprozesse vorbereitet:",
-          list: [
-            "Für Mieten: Mietvertrag unterschreiben, Kaution hinterlegen (5-10%), Maklergebühr zahlen",
-            "Für den Kauf: Angebot abgeben, MOU unterzeichnen, Anzahlung leisten, Immobilienregistrierung abschließen",
-            "DEWA-Konto (Dubai Electricity and Water Authority) einrichten",
-            "Bei Ihrer Gebäudeverwaltung für Zugangskarten und Annehmlichkeiten registrieren",
-            "Erwägen Sie die Beauftragung professioneller Reinigungsdienste vor dem Einzug"
-          ]
-        }
-      ],
-      tips: [
-        "Besichtigen Sie mehrere Immobilien und Nachbarschaften, bevor Sie sich entscheiden",
-        "Berücksichtigen Sie die Pendelzeiten zur Arbeit oder zu Schulen",
-        "Überprüfen Sie die Annehmlichkeiten des Gebäudes (Pool, Fitnessstudio, Parkplatz) und die Wartungsqualität",
-        "Verhandeln Sie! Preise sind oft verhandelbar in Dubais wettbewerbsintensivem Markt",
-        "Lesen Sie Online-Bewertungen von Gebäuden und Gemeinschaften, bevor Sie sich festlegen"
-      ],
-      resources: [
-        {
-          title: "Dubai Nachbarschaftsführer",
-          link: "/ressourcen#neighborhood-guide",
-          type: "checklist"
-        },
-        {
-          title: "Mietprozess-Erklärer",
-          link: "/ressourcen#rental-guide",
-          type: "checklist"
-        }
-      ]
-    },
-    jobs: {
-      title: "Beschäftigungsmöglichkeiten in Dubai finden",
-      intro: "Dubai bietet hervorragende Karriereaussichten für qualifizierte Deutsche in verschiedenen Branchen. Das Verständnis des Arbeitsmarktes und des Bewerbungsprozesses wird Ihnen helfen, eine lohnende Position mit wettbewerbsfähiger Vergütung zu sichern.",
-      steps: [
-        {
-          title: "Verstehen Sie den Arbeitsmarkt für Deutsche",
-          content: "Deutsche Fachkräfte sind in Dubai besonders in diesen Sektoren sehr geschätzt:",
-          list: [
-            "Ingenieurwesen und Fertigung (besonders Automobil und Bau)",
-            "Finanzen und Bankwesen",
-            "Informationstechnologie und digitale Transformation",
-            "Erneuerbare Energien und Nachhaltigkeit",
-            "Gesundheitswesen und Medizintechnik",
-            "Gastgewerbe und Tourismus",
-            "Bildung (besonders für Deutschsprachspezialisten)"
-          ]
-        },
-        {
-          title: "Bereiten Sie Ihre Bewerbungsunterlagen vor",
-          content: "Passen Sie Ihre Bewerbung an den Dubai-Markt an:",
-          list: [
-            "Aktualisieren Sie Ihren Lebenslauf auf Englisch und heben Sie internationale Erfahrungen hervor",
-            "Fügen Sie ein professionelles Foto auf Ihrem Lebenslauf hinzu (übliche Praxis in den VAE)",
-            "Beschaffen Sie übersetzte und beglaubigte Kopien Ihrer Qualifikationen",
-            "Bereiten Sie ein überzeugendes Anschreiben vor, das Ihre einzigartigen Fähigkeiten hervorhebt",
-            "Erstellen Sie ein starkes LinkedIn-Profil, da viele Personalvermittler die Plattform nutzen",
-            "Sammeln Sie Referenzschreiben von früheren Arbeitgebern"
-          ]
-        },
-        {
-          title: "Erkunden Sie Jobsuchkanäle",
-          content: "Nutzen Sie mehrere Kanäle, um Ihre Möglichkeiten zu maximieren:",
-          list: [
-            "Spezialisierte Jobportale wie GulfTalent, Bayt und Indeed UAE",
-            "LinkedIn-Jobs-Bereich mit Dubai-Standortfilter",
-            "Deutscher Wirtschaftsrat und Deutsch-Emiratischer Gemeinsamer Rat für Industrie und Handel",
-            "Branchenspezifische Networking-Events und Ausstellungen",
-            "Direktbewerbungen auf Unternehmenskarrieresseiten",
-            "Seriöse Personalvermittlungen, die auf Ihr Fachgebiet spezialisiert sind"
-          ]
-        },
-        {
-          title: "Verstehen Sie Beschäftigungspakete",
-          content: "Dubai-Vergütungspakete beinhalten oft:",
-          list: [
-            "Grundgehalt (steuerfrei in den VAE)",
-            "Wohnzulage oder bereitgestellte Unterkunft",
-            "Transportzulage oder Firmenwagen",
-            "Krankenversicherung (obligatorisch für alle Mitarbeiter)",
-            "Jährliche Flugtickets in Ihr Heimatland",
-            "Bildungszulage für Kinder (in höheren Positionen)",
-            "Dienstzeitabschlussvergütung (Abfindungszahlung basierend auf Dienstjahren)"
-          ]
-        }
-      ],
-      tips: [
-        "Networking ist entscheidend—viele Positionen werden über Kontakte besetzt",
-        "Erwägen Sie die Anreise mit einem Besuchsvisum für persönliche Vorstellungsgespräche, wenn möglich",
-        "Seien Sie auf Videointerviews vorbereitet aufgrund der Entfernung",
-        "Recherchieren Sie typische Gehaltsspannen für Ihre Position, um effektiv zu verhandeln",
-        "Bedenken Sie, dass Arbeitsverträge in den VAE rechtlich bindende Dokumente sind"
-      ],
-      resources: [
-        {
-          title: "Dubai Gehaltsführer",
-          link: "/ressourcen#salary-guide",
-          type: "checklist"
-        },
-        {
-          title: "Vorstellungsgespräch-Vorbereitung",
-          link: "/ressourcen#interview-prep",
-          type: "checklist"
-        }
-      ]
-    },
-    healthcare: {
-      title: "Das Gesundheitssystem in Dubai navigieren",
-      intro: "Dubai bietet erstklassige Gesundheitseinrichtungen mit vielen internationalen und deutschsprachigen medizinischen Fachkräften. Das Verständnis des Gesundheitssystems und der Versicherungsoptionen ist wesentlich für die Erhaltung Ihres Wohlbefindens in Ihrer neuen Heimat.",
-      steps: [
-        {
-          title: "Verstehen Sie das Gesundheitssystem",
-          content: "Dubais Gesundheitssystem kombiniert öffentliche und private Einrichtungen:",
-          list: [
-            "Öffentliche Gesundheitsversorgung durch Dubai Health Authority (DHA) Einrichtungen",
-            "Zahlreiche private Krankenhäuser und Kliniken, viele mit internationaler Akkreditierung",
-            "Krankenversicherung ist für alle Einwohner obligatorisch",
-            "Notdienste sind unter 998 oder 999 erreichbar",
-            "Apotheken sind weit verbreitet, viele haben rund um die Uhr geöffnet",
-            "Elektronisches Patientenaktensystem verbindet viele Einrichtungen"
-          ]
-        },
-        {
-          title: "Krankenversicherung abschließen",
-          content: "Krankenversicherungsanforderungen in Dubai:",
-          list: [
-            "Arbeitgeber müssen eine Grundversicherung für Mitarbeiter bereitstellen",
-            "Sponsoren müssen Versicherung für Abhängige bereitstellen",
-            "Basispläne decken wesentliche Behandlungen und Notfallversorgung ab",
-            "Premium-Pläne bieten umfassendere Deckung und niedrigere Zuzahlungen",
-            "Erwägen Sie zusätzliche Deckung für spezifische Bedürfnisse (Zahnbehandlung, Mutterschaft, etc.)",
-            "Prüfen Sie, ob Ihr Plan medizinische Evakuierung oder Behandlung im Ausland einschließt"
-          ]
-        },
-        {
-          title: "Finden Sie Gesundheitsdienstleister",
-          content: "Ressourcen zum Finden der richtigen Gesundheitsdienstleister:",
-          list: [
-            "Fragen Sie Ihre Versicherungsgesellschaft nach ihrem Netzwerk von Anbietern",
-            "Suchen Sie Empfehlungen von anderen Deutschen in Dubai",
-            "Recherchieren Sie Krankenhäuser mit deutschsprachigem Personal",
-            "Berücksichtigen Sie medizinische Einrichtungen in der Nähe Ihres Wohnorts oder Arbeitsplatzes",
-            "Überprüfen Sie Bewertungen und Akkreditierungen von Anbietern",
-            "Vereinbaren Sie Kennenlerngespräche mit potenziellen Hausärzten"
-          ]
-        },
-        {
-          title: "Bringen Sie medizinische Unterlagen und Medikamente mit",
-          content: "Bereiten Sie Ihre medizinischen Informationen vor:",
-          list: [
-            "Besorgen Sie Kopien wichtiger medizinischer Unterlagen, übersetzt ins Englische",
-            "Bringen Sie einen ausreichenden Vorrat Ihrer aktuellen Medikamente mit",
-            "Überprüfen Sie, ob Ihre Medikamente in den VAE erhältlich sind (einige Medikamente mit Betäubungsmitteln könnten eingeschränkt sein)",
-            "Holen Sie Rezepte für chronische Erkrankungen von Ihrem deutschen Arzt",
-            "Bringen Sie Impfnachweise mit, besonders für Kinder",
-            "Erwägen Sie eine medizinische Vorabreise-Untersuchung in Deutschland"
-          ]
-        }
-      ],
-      tips: [
-        "Registrieren Sie sich kurz nach der Ankunft bei einem Hausarzt",
-        "Bewahren Sie digitale Kopien Ihrer Versicherungskarte und wichtiger medizinischer Dokumente auf",
-        "Lernen Sie grundlegende medizinische Begriffe auf Englisch, wenn Sie nicht fließend sind",
-        "Verstehen Sie die Zuzahlungs- und Erstattungsverfahren Ihrer Versicherungspolice",
-        "Erwägen Sie Telemedizin-Optionen für die Verbindung mit deutschen Ärzten"
-      ],
-      resources: [
-        {
-          title: "Gesundheitseinrichtungsführer",
-          link: "/ressourcen#healthcare-guide",
-          type: "checklist"
-        },
-        {
-          title: "Versicherungsvergleichstool",
-          link: "/ressourcen#insurance-tool",
-          type: "checklist"
-        }
-      ]
-    },
-    education: {
-      title: "Bildungsoptionen für Familien in Dubai",
-      intro: "Dubai bietet eine breite Palette an Bildungsmöglichkeiten für Familien, von internationalen Schulen, die verschiedenen Lehrplänen folgen, bis hin zu deutschspezifischer Bildung. Die richtige Schule für Ihre Kinder zu finden, ist ein wichtiger Teil einer erfolgreichen Umsiedelung.",
-      steps: [
-        {
-          title: "Verstehen Sie die Schuloptionen",
-          content: "Dubai bietet vielfältige Bildungsmöglichkeiten:",
-          list: [
-            "Internationale Schulen, die britischen, amerikanischen, IB und anderen Lehrplänen folgen",
-            "Deutsche Internationale Schule Dubai",
-            "Schweizer Internationale Wissenschaftsschule (bietet deutschen Zweig)",
-            "Öffentliche Schulen (hauptsächlich für VAE-Staatsangehörige, können aber Expats aufnehmen)",
-            "Kinderkrippen und Kindergärten für frühkindliche Bildung",
-            "Einrichtungen für sonderpädagogische Förderung",
-            "Universitäten und Hochschuleinrichtungen"
-          ]
-        },
-        {
-          title: "Recherchieren und Schulen auswählen",
-          content: "Die richtige Schule zu finden erfordert Recherche:",
-          list: [
-            "Berücksichtigen Sie den Bildungshintergrund und die Zukunftspläne Ihres Kindes",
-            "Recherchieren Sie Schulstandorte in Bezug auf Ihr Zuhause und Ihren Arbeitsplatz",
-            "Überprüfen Sie KHDA-Bewertungen (Knowledge and Human Development Authority)",
-            "Vergleichen Sie Gebührenstrukturen und zusätzliche Kosten",
-            "Besuchen Sie Schulen und treffen Sie sich mit Aufnahmeteams",
-            "Sprechen Sie mit aktuellen Eltern über ihre Erfahrungen",
-            "Berücksichtigen Sie Wartelisten für beliebte Schulen"
-          ]
-        },
-        {
-          title: "Verstehen Sie den Aufnahmeprozess",
-          content: "Schulanmeldungen in Dubai erfordern typischerweise:",
-          list: [
-            "Anmeldeformulare und Registrierungsgebühren",
-            "Frühere Schulberichte und Zeugnisse",
-            "Bewertungstests für die meisten Schulen",
-            "Gespräche mit Schülern und manchmal Eltern",
-            "Medizinische Unterlagen und Impfbescheinigungen",
-            "Passkopien und Aufenthaltsvisum-Informationen",
-            "Einschreibungsdepot zur Sicherung eines Platzes"
-          ]
-        },
-        {
-          title: "Bereiten Sie sich auf den Übergang vor",
-          content: "Helfen Sie Ihrem Kind, sich an die neue Schule anzupassen:",
-          list: [
-            "Besprechen Sie den Umzug offen und positiv mit Ihren Kindern",
-            "Nehmen Sie Kontakt mit anderen Familien derselben Schule auf",
-            "Nehmen Sie an Orientierungsprogrammen und Willkommensveranstaltungen teil",
-            "Bereiten Sie sich auf einen anderen akademischen Kalender vor (typischerweise August-Juni)",
-            "Beachten Sie Uniformanforderungen und Kleiderordnungen",
-            "Verstehen Sie Transportmöglichkeiten (Schulbus oder privat)",
-            "Richten Sie außerschulische Aktivitäten ein, um die Integration zu unterstützen"
-          ]
-        }
-      ],
-      tips: [
-        "Bewerben Sie sich frühzeitig an Schulen, da beliebte Schulen schnell ausgebucht sind",
-        "Planen Sie für Bildungskosten, die in Dubai erheblich sind",
-        "Berücksichtigen Sie die Unterrichtssprache und verfügbare Sprachunterstützung",
-        "Prüfen Sie, ob der Lehrplan einen einfachen Übergang zurück zu deutschen Schulen ermöglicht, falls nötig",
-        "Informieren Sie sich über außerschulische Aktivitäten und Gemeinschaftsbeteiligung"
-      ],
-      resources: [
-        {
-          title: "Schulvergleich-Checkliste",
-          link: "/ressourcen#school-checklist",
-          type: "checklist"
-        },
-        {
-          title: "Bildungsübergangsführer",
-          link: "/ressourcen#education-transition",
-          type: "checklist"
-        }
-      ]
-    },
-    banking: {
-      title: "Ihre Finanzen in Dubai einrichten",
-      intro: "Das Verständnis des Bankensystems in Dubai und die effiziente Verwaltung Ihrer Finanzen ist entscheidend für einen reibungslosen Übergang. Von der Eröffnung von Bankkonten bis zur Verwaltung internationaler Überweisungen - hier ist alles, was Sie wissen müssen.",
-      steps: [
-        {
-          title: "Wählen Sie die richtige Bank",
-          content: "Dubai bietet viele Bankoptionen, darunter:",
-          list: [
-            "Lokale Banken: Emirates NBD, Dubai Islamic Bank, ADCB",
-            "Internationale Banken mit deutschen Verbindungen: Deutsche Bank, Commerzbank",
-            "Andere internationale Banken: HSBC, Citibank, Standard Chartered",
-            "Digitalbanken: Neo, Mashreq Neo, CBD NOW",
-            "Berücksichtigen Sie Faktoren wie Filial-/Geldautomatenstandorte, Online-Banking-Qualität, Gebührenstruktur und Expat-Services"
-          ]
-        },
-        {
-          title: "Bankkonten eröffnen",
-          content: "Anforderungen für die Kontoeröffnung umfassen typischerweise:",
-          list: [
-            "Emirates ID und Aufenthaltsvisum",
-            "Reisepass mit Aufenthaltsvisumseite",
-            "Adressnachweis (Mietvertrag oder Stromrechnung)",
-            "Gehaltsbestätigung oder Arbeitsvertrag",
-            "Erwägen Sie sowohl Giro- als auch Sparkonten",
-            "Besorgen Sie Debitkarten und Scheckbücher nach Bedarf",
-            "Richten Sie Online- und Mobile-Banking-Zugang ein"
-          ]
-        },
-        {
-          title: "Internationale Finanzen verwalten",
-          content: "Strategien für die Handhabung von Finanzen über Länder hinweg:",
-          list: [
-            "Behalten Sie Ihr deutsches Bankkonto für laufende Verpflichtungen",
-            "Richten Sie internationale Transfermethoden ein (Banküberweisung, TransferWise, etc.)",
-            "Verstehen Sie Wechselkurse und Überweisungsgebühren",
-            "Berücksichtigen Sie steuerliche Auswirkungen für Investitionen in beiden Ländern",
-            "Erkunden Sie bei Bedarf Multiwährungskonten",
-            "Aktualisieren Sie Adressdetails bei deutschen Finanzinstituten",
-            "Richten Sie Lastschriften für regelmäßige Zahlungen in beiden Ländern ein"
-          ]
-        },
-        {
-          title: "Verstehen Sie lokale Finanzpraktiken",
-          content: "Dubai hat einige einzigartige finanzielle Gepflogenheiten:",
-          list: [
-            "Nachterminierte Schecks werden häufig für Mietzahlungen verwendet",
-            "Ungedeckte Schecks können ernsthafte rechtliche Konsequenzen haben",
-            "Kreditkarten werden häufig verwendet und bieten oft erhebliche Vorteile",
-            "Gehaltsüberweisung ist typischerweise für Kredite und Kreditkarten erforderlich",
-            "Islamische Bankoptionen sind mit spezifischen Bedingungen verfügbar",
-            "Die Mehrwertsteuer beträgt derzeit 5% auf die meisten Waren und Dienstleistungen",
-            "Keine Vermögens- oder Kapitalertragssteuern in den VAE"
-          ]
-        }
-      ],
-      tips: [
-        "Pflegen Sie eine gute Kredithistorie in den VAE für zukünftige Finanzierungsbedürfnisse",
-        "Halten Sie Gelder in beiden Währungen basierend auf Ihren Ausgabebedürfnissen",
-        "Nutzen Sie Banking-Apps für eine einfachere Kontoverwaltung",
-        "Erwägen Sie Offshore-Banking für bestimmte Anlagebedürfnisse",
-        "Achten Sie auf Mindestguthabenanforderungen, um Gebühren zu vermeiden"
-      ],
-      resources: [
-        {
-          title: "Banking-Einrichtungs-Checkliste",
-          link: "/ressourcen#banking-checklist",
-          type: "checklist"
-        },
-        {
-          title: "Internationaler Geldtransfer-Leitfaden",
-          link: "/ressourcen#transfer-guide",
-          type: "checklist"
-        }
-      ]
-    },
-    culture: {
-      title: "Anpassung an Dubais Kultur und Lifestyle",
-      intro: "Das Verständnis und die Respektierung der kulturellen Normen Dubais, während Sie Ihre eigene Gemeinschaft finden, wird Ihnen helfen, sich schnell anzupassen und alles zu genießen, was diese dynamische Stadt zu bieten hat.",
-      steps: [
-        {
-          title: "Verstehen Sie lokale Bräuche und Etikette",
-          content: "Wichtige kulturelle Aspekte, die zu beachten sind:",
-          list: [
-            "Kleiden Sie sich bescheiden an öffentlichen Orten, besonders in religiösen und Regierungsgebäuden",
-            "Öffentliche Zuneigungsbekundungen sollten begrenzt sein",
-            "Ramadan-Observanzen erfordern besondere Rücksicht (kein Essen/Trinken in der Öffentlichkeit während der Fastenzeiten)",
-            "Alkoholkonsum ist in lizenzierten Lokalen und mit persönlicher Lizenz erlaubt",
-            "Fotografiebeschränkungen bestehen für bestimmte Regierungsgebäude",
-            "Die rechte Hand wird bevorzugt zum Essen, Händeschütteln und Übergeben von Gegenständen",
-            "Bitten Sie um Erlaubnis, bevor Sie Einheimische fotografieren, besonders Frauen"
-          ]
-        },
-        {
-          title: "Finden Sie Ihre Gemeinschaft",
-          content: "Knüpfen Sie Kontakte, um Ihr soziales Netzwerk aufzubauen:",
-          list: [
-            "Treten Sie der Deutschen Gesellschaft in den VAE und dem Deutschen Wirtschaftsrat bei",
-            "Besuchen Sie Veranstaltungen im Goethe-Institut Dubai",
-            "Vernetzen Sie sich mit deutschsprachigen Gruppen auf Facebook und Meetup",
-            "Nehmen Sie an Expat-Networking-Events und Clubs teil",
-            "Treten Sie Sportclubs, Fitnesszentren oder Interessengruppen bei",
-            "Werden Sie Teil Ihrer Wohngemeinschaft durch Nachbarschaftsveranstaltungen",
-            "Engagieren Sie sich ehrenamtlich bei karitativen Organisationen"
-          ]
-        },
-        {
-          title: "Navigieren Sie durch den Alltag",
-          content: "Praktische Aspekte des Lebens in Dubai:",
-          list: [
-            "Arbeitszeiten typischerweise Sonntag-Donnerstag mit Freitag-Samstag Wochenende",
-            "Sommermonate (Juni-September) sind extrem heiß—planen Sie Aktivitäten im Innenbereich",
-            "Wintermonate (Oktober-Mai) bieten perfektes Wetter für Aktivitäten im Freien",
-            "Transportmöglichkeiten umfassen Metro, Taxis, Fahrdienste und Busse",
-            "Essenslieferung ist weit verbreitet und bequem",
-            "Einkaufszentren sind soziale und Freizeitzentren über das reine Einkaufen hinaus",
-            "Viele Dienstleistungen können über Regierungs-Apps genutzt werden"
-          ]
-        },
-        {
-          title: "Verbindung zur Heimat aufrechterhalten",
-          content: "Bleiben Sie mit Deutschland verbunden:",
-          list: [
-            "Richten Sie zuverlässiges Internet für Videoanrufe mit Familie und Freunden ein",
-            "Abonnieren Sie deutsche TV-Streaming-Dienste (viele funktionieren mit VPN)",
-            "Nehmen Sie an deutschen kulturellen Veranstaltungen in Dubai teil",
-            "Finden Sie deutsche Lebensmittelprodukte in spezialisierten Geschäften",
-            "Planen Sie regelmäßige Besuche in der Heimat, besonders während der extremen Sommerhitze",
-            "Bleiben Sie über deutsche Nachrichten und Entwicklungen informiert",
-            "Behalten Sie wichtige deutsche Mitgliedschaften und Abonnements bei"
-          ]
-        }
-      ],
-      tips: [
-        "Seien Sie offen für kulturelle Unterschiede und begegnen Sie ihnen mit Respekt",
-        "Lernen Sie ein paar arabische Phrasen als Zeichen des Respekts für die lokale Kultur",
-        "Vermeiden Sie die Diskussion sensibler politischer Themen in der Öffentlichkeit",
-        "Nutzen Sie die kühleren Monate, um Outdoor-Attraktionen und Aktivitäten zu erkunden",
-        "Erwägen Sie eine Wüstensafari, um die traditionelle Beduinenkultur zu erleben"
-      ],
-      resources: [
-        {
-          title: "Kultureller Anpassungsleitfaden",
-          link: "/ressourcen#cultural-guide",
-          type: "checklist"
-        },
-        {
-          title: "Deutsches Gemeinschaftsverzeichnis",
-          link: "/ressourcen#german-community",
-          type: "checklist"
-        }
-      ]
-    }
-  };
-
-  const currentTab = tabContent[activeTab as keyof typeof tabContent];
-
   return (
-    <>
+    <div className="bg-brand-light-gray">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
-            alt="Dubai Stadtbild" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative pt-32 pb-20">
+        <div 
+          className="absolute inset-0 bg-center bg-cover z-0"
+          style={{ 
+            backgroundImage: `url(${backgroundImageUrl})`,
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="absolute inset-0 bg-brand-dark-brown/70"></div>
         </div>
         
-        <div className="section-container relative z-10 text-white">
-          <div className="max-w-3xl">
-            <h1 className="mb-6 animate-fade-in">Schritt-für-Schritt-Anleitung für den Umzug nach Dubai</h1>
-            <p className="text-xl md:text-2xl mb-8 animate-slide-up">
-              Folgen Sie unserem umfassenden Leitfaden, um jeden Aspekt der Auswanderung von Deutschland nach Dubai zu navigieren, von Visa bis hin zu Wohnen und darüber hinaus.
+        <div className="section-container relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h1 className="mb-6 font-heading">Schritt-für-Schritt Anleitung für Ihren Umzug nach Dubai</h1>
+            <p className="text-xl">
+              Unser umfassender Leitfaden führt Sie durch jeden Aspekt des Umzugs nach Dubai - von der Visumbeantragung bis zur kulturellen Integration.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Tabs Navigation */}
-      <section className="sticky top-16 z-40 bg-white border-b border-dubai-dark-sand/30 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-1 overflow-x-auto">
-          <div className="flex min-w-max">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-3 text-sm md:text-base font-medium flex items-center whitespace-nowrap transition-colors ${
-                  activeTab === tab.id
-                    ? "text-dubai-gold border-b-2 border-dubai-gold"
-                    : "text-gray-600 hover:text-dubai-gold"
-                }`}
-              >
-                <span className="mr-2">{tab.icon}</span>
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tab Content */}
-      <section className="py-16 bg-white">
+      {/* Navigation und Content Section */}
+      <section className="py-16">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 gradient-text">{currentTab.title}</h2>
-            <p className="text-gray-600 mb-12 text-lg">{currentTab.intro}</p>
-            
-            <div className="space-y-12">
-              {currentTab.steps.map((step, index) => (
-                <div key={index} className="bg-dubai-sand/30 rounded-lg p-8">
-                  <div className="flex items-start">
-                    <div className="bg-dubai-gold text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 shrink-0">
-                      {index + 1}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Navigation Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                <h3 className="text-xl font-bold mb-4 text-brand-dark-brown">In dieser Anleitung</h3>
+                <nav className="space-y-2">
+                  {steps.map((step) => (
+                    <a 
+                      key={step.id}
+                      href={`#${step.id}`}
+                      className="flex items-center p-2 text-gray-700 hover:bg-brand-cream rounded-md transition-colors"
+                    >
+                      <div className="mr-3 text-brand-gold">{React.cloneElement(step.icon, { style: { fontSize: 24, color: '#D4AF37' } })}</div>
+                      <span>{step.title}</span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </div>
+
+            {/* Content Area */}
+            <div className="lg:col-span-3 space-y-16">
+              {steps.map((step) => (
+                <div 
+                  key={step.id} 
+                  id={step.id} 
+                  className="scroll-mt-24 bg-white rounded-lg shadow-md overflow-hidden"
+                >
+                  <div className="p-8">
+                    <div className="flex items-center mb-6">
+                      <div className="mr-4 bg-brand-cream p-3 rounded-full">
+                        {step.icon}
+                      </div>
+                      <h2 className="text-2xl font-bold text-brand-dark-brown">{step.title}</h2>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                      <p className="text-gray-700 mb-4">{step.content}</p>
-                      <ul className="space-y-2">
-                        {step.list.map((item, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <Check className="h-5 w-5 text-dubai-gold mr-3 mt-1 shrink-0" />
-                            <span className="text-gray-600">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <p className="text-gray-700 mb-8">{step.description}</p>
+                    <div 
+                      className="prose prose-lg max-w-none text-gray-700"
+                      dangerouslySetInnerHTML={{ __html: step.content }}
+                    />
                   </div>
                 </div>
               ))}
 
-              {/* Tips Section */}
-              <div className="bg-white border border-dubai-dark-sand/30 rounded-lg p-8">
-                <div className="flex items-start">
-                  <Info className="h-6 w-6 text-dubai-gold mr-4 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-4">Profi-Tipps</h3>
-                    <ul className="space-y-2">
-                      {currentTab.tips.map((tip, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <ArrowRight className="h-5 w-5 text-dubai-gold mr-3 mt-1 shrink-0" />
-                          <span className="text-gray-600">{tip}</span>
-                        </li>
-                      ))}
-                    </ul>
+              {/* CTA Section */}
+              <div className="bg-gradient-to-r from-brand-gold to-brand-brown text-white rounded-lg shadow-lg p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div className="mb-6 md:mb-0 md:mr-8">
+                    <h3 className="text-2xl font-bold mb-2">Bereit für Ihren Umzug nach Dubai?</h3>
+                    <p>
+                      Vereinbaren Sie eine kostenlose Beratung, um Ihre spezifischen Fragen zu besprechen und personalisierte Unterstützung zu erhalten.
+                    </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Resources Section */}
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Hilfreiche Ressourcen</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {currentTab.resources.map((resource, idx) => (
-                    <a
-                      key={idx}
-                      href={resource.link}
-                      target={resource.type === "external" ? "_blank" : "_self"}
-                      rel={resource.type === "external" ? "noopener noreferrer" : ""}
-                      className="flex items-center p-4 border border-dubai-dark-sand/30 rounded-lg hover:bg-dubai-sand/20 transition-colors"
-                    >
-                      {resource.type === "checklist" ? (
-                        <FileDown className="h-5 w-5 text-dubai-gold mr-3 shrink-0" />
-                      ) : (
-                        <ExternalLink className="h-5 w-5 text-dubai-gold mr-3 shrink-0" />
-                      )}
-                      <span className="text-gray-700">{resource.title}</span>
-                    </a>
-                  ))}
+                  <Link
+                    to="/beratung"
+                    className="px-6 py-3 bg-white text-brand-dark-brown font-medium rounded-md hover:bg-brand-cream transition-colors whitespace-nowrap"
+                  >
+                    Beratung vereinbaren
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Next Steps */}
-      <section className="py-16 bg-dubai-dark-sand/10">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Benötigen Sie detailliertere Beratung?</h2>
-            <p className="text-gray-600 mb-8">
-              Dieser Leitfaden bietet einen Überblick über den Umzugsprozess, aber jede Situation ist einzigartig. 
-              Entdecken Sie unsere detaillierten Ressourcen oder erhalten Sie persönliche Unterstützung für Ihre spezifischen Bedürfnisse.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="/ressourcen"
-                className="px-6 py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex items-center justify-center"
-              >
-                Zugriff auf detaillierte Ressourcen <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/beratung"
-                className="px-6 py-3 rounded-md border border-dubai-dark-sand text-gray-700 hover:bg-dubai-dark-sand/10 transition-colors font-medium flex items-center justify-center"
-              >
-                Persönliche Beratung erhalten
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 };
 

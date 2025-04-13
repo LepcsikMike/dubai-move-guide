@@ -26,9 +26,9 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
 
   return (
     <div className={className}>
-      <div className="bg-white rounded-lg shadow-lg p-8 border border-brand-light-purple/10">
+      <div className="bg-white rounded-lg shadow-lg p-8 border border-brand-light-gold/10">
         <h3 className="text-2xl font-bold mb-4 gradient-text">Bleiben Sie auf dem Laufenden</h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-700 mb-6">
           Abonnieren Sie unseren Newsletter für die neuesten Anleitungen, Tipps und Ressourcen zum Umzug nach Dubai.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -43,7 +43,7 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="ihre.email@beispiel.de"
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-gold"
             />
           </div>
           <button
@@ -60,9 +60,9 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
               </>
             )}
           </button>
-          <p className="text-xs text-gray-500 mt-2">
+          <p className="text-xs text-gray-700 mt-2">
             Mit der Anmeldung stimmen Sie unserer{' '}
-            <a href="/datenschutz" className="text-brand-light-purple hover:underline">
+            <a href="/datenschutz" className="text-brand-gold hover:underline">
               Datenschutzerklärung
             </a>
             {' '}zu. Sie können sich jederzeit abmelden.

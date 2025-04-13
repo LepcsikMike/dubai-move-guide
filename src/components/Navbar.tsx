@@ -41,14 +41,14 @@ const Navbar = () => {
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        scrolled ? 'bg-brand-dark-brown shadow-md py-2' : 'bg-transparent py-4'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <div className="text-2xl font-heading font-bold gradient-text">dubai-auswandern.com</div>
+              <div className="text-2xl font-heading font-bold text-white">dubai-auswandern.com</div>
             </Link>
           </div>
           
@@ -61,8 +61,8 @@ const Navbar = () => {
                   className={cn(
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     location.pathname === item.path
-                      ? 'text-brand-light-purple'
-                      : 'text-gray-700 hover:text-brand-light-purple'
+                      ? 'text-brand-light-gold'
+                      : 'text-white hover:text-brand-light-gold'
                   )}
                 >
                   {item.name}
@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-brand-light-purple focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-brand-light-gold focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg animate-fade-in">
+        <div className="md:hidden bg-brand-dark-brown shadow-lg animate-fade-in">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navigation.map((item) => (
               <Link
@@ -99,8 +99,8 @@ const Navbar = () => {
                 className={cn(
                   'block px-3 py-2 rounded-md text-base font-medium',
                   location.pathname === item.path
-                    ? 'text-brand-light-purple'
-                    : 'text-gray-700 hover:text-brand-light-purple'
+                    ? 'text-brand-light-gold'
+                    : 'text-white hover:text-brand-light-gold'
                 )}
               >
                 {item.name}

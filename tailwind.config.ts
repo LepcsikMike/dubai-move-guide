@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Montserrat', 'sans-serif'],
 				heading: ['Playfair Display', 'serif'],
 			},
 			colors: {
@@ -68,12 +68,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					'purple': '#8E69AB',
-					'light-purple': '#9b87f5',
-					'dark-purple': '#1A1F2C',
-					'gray': '#8E9196',
-					'light-gray': '#F1F0FB',
+					'gold': '#D4AF37',
+					'light-gold': '#F2D675',
+					'dark-brown': '#5D4037',
+					'brown': '#8B5A2B',
+					'light-brown': '#A67C52',
+					'cream': '#FEF7CD',
 					'peach': '#FDE1D3',
+					'gray': '#8E9196',
+					'light-gray': '#F5F5F0',
 					'orange': '#F97316'
 				}
 			},

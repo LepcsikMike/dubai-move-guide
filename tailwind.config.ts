@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,13 +67,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				dubai: {
-					sand: '#F5EFE0',
-					gold: '#D4AF37',
-					"light-gold": '#FFC72C',
-					blue: '#4F97C3',
-					"light-blue": '#87CEEB',
-					"dark-sand": '#E8D9B5'
+				brand: {
+					'purple': '#8E69AB',
+					'light-purple': '#9b87f5',
+					'dark-purple': '#1A1F2C',
+					'gray': '#8E9196',
+					'light-gray': '#F1F0FB',
+					'peach': '#FDE1D3',
+					'orange': '#F97316'
 				}
 			},
 			borderRadius: {

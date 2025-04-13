@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { toast } from '@/components/ui/use-toast';
+import { ArrowRight } from 'lucide-react';
 
 const NewsletterSignup = ({ className }: { className?: string }) => {
   const [email, setEmail] = useState('');
@@ -25,8 +26,8 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
 
   return (
     <div className={className}>
-      <div className="bg-white rounded-lg shadow-lg p-8 border border-dubai-dark-sand/30">
-        <h3 className="text-2xl font-bold mb-4">Bleiben Sie auf dem Laufenden</h3>
+      <div className="bg-white rounded-lg shadow-lg p-8 border border-brand-light-purple/10">
+        <h3 className="text-2xl font-bold mb-4 gradient-text">Bleiben Sie auf dem Laufenden</h3>
         <p className="text-gray-600 mb-6">
           Abonnieren Sie unseren Newsletter für die neuesten Anleitungen, Tipps und Ressourcen zum Umzug nach Dubai.
         </p>
@@ -42,22 +43,26 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="ihre.email@beispiel.de"
               required
-              className="w-full px-4 py-3 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 px-4 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity disabled:opacity-70 flex justify-center items-center"
+            className="w-full py-3 px-4 rounded-md text-white primary-gradient-bg hover:opacity-90 transition-opacity disabled:opacity-70 flex justify-center items-center"
           >
             {loading ? (
               <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
             ) : null}
-            {loading ? 'Anmeldung läuft...' : 'Jetzt abonnieren'}
+            {loading ? 'Anmeldung läuft...' : (
+              <>
+                Jetzt abonnieren <ArrowRight className="ml-2 h-4 w-4" />
+              </>
+            )}
           </button>
           <p className="text-xs text-gray-500 mt-2">
             Mit der Anmeldung stimmen Sie unserer{' '}
-            <a href="/datenschutz" className="text-dubai-gold hover:underline">
+            <a href="/datenschutz" className="text-brand-light-purple hover:underline">
               Datenschutzerklärung
             </a>
             {' '}zu. Sie können sich jederzeit abmelden.

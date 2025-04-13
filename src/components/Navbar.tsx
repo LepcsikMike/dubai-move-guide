@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <div className="text-2xl font-bold gradient-text">dubai-auswandern.com</div>
+              <div className="text-2xl font-heading font-bold gradient-text">dubai-auswandern.com</div>
             </Link>
           </div>
           
@@ -61,8 +61,8 @@ const Navbar = () => {
                   className={cn(
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     location.pathname === item.path
-                      ? 'text-dubai-gold'
-                      : 'text-gray-700 hover:text-dubai-gold'
+                      ? 'text-brand-light-purple'
+                      : 'text-gray-700 hover:text-brand-light-purple'
                   )}
                 >
                   {item.name}
@@ -70,7 +70,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/beratung"
-                className="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white gold-gradient-bg hover:opacity-90 transition-opacity"
+                className="ml-4 px-4 py-2 rounded-md text-sm font-medium text-white primary-gradient-bg hover:opacity-90 transition-opacity"
               >
                 Jetzt starten
               </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-dubai-gold focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-brand-light-purple focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -99,8 +99,8 @@ const Navbar = () => {
                 className={cn(
                   'block px-3 py-2 rounded-md text-base font-medium',
                   location.pathname === item.path
-                    ? 'text-dubai-gold'
-                    : 'text-gray-700 hover:text-dubai-gold'
+                    ? 'text-brand-light-purple'
+                    : 'text-gray-700 hover:text-brand-light-purple'
                 )}
               >
                 {item.name}
@@ -108,7 +108,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/beratung"
-              className="block w-full mt-4 px-4 py-2 rounded-md text-base font-medium text-center text-white gold-gradient-bg hover:opacity-90 transition-opacity"
+              className="block w-full mt-4 px-4 py-2 rounded-md text-base font-medium text-center text-white primary-gradient-bg hover:opacity-90 transition-opacity"
             >
               Jetzt starten
             </Link>

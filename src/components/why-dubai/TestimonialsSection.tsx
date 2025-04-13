@@ -3,11 +3,11 @@ import React from 'react';
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 blue-gradient-bg text-white">
+    <section className="py-20 blue-gradient-bg text-brand-gold">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-6">Was Deutsche über das Leben in Dubai sagen</h2>
-          <p className="text-white/80">
+          <h2 className="mb-6 text-brand-gold">Was Deutsche über das Leben in Dubai sagen</h2>
+          <p className="text-brand-gold/80">
             Hören Sie direkt von deutschen Landsleuten, die den Umzug gewagt haben und das Leben in Dubai genießen.
           </p>
         </div>
@@ -21,14 +21,14 @@ const TestimonialsSection = () => {
                 className="w-16 h-16 rounded-full object-cover mr-4"
               />
               <div>
-                <h4 className="font-semibold">Katharina Becker</h4>
-                <p className="text-white/70 text-sm">Umgezogen aus München in 2019</p>
+                <h4 className="font-semibold text-brand-gold">Katharina Becker</h4>
+                <p className="text-brand-gold/70 text-sm">Umgezogen aus München in 2019</p>
               </div>
             </div>
-            <p className="text-white/90 italic mb-4">
+            <p className="text-brand-gold/90 italic mb-4">
               "Der Umzug nach Dubai hat meine Karriere und meinen Lebensstil verändert. Ich spare dank der Steuervorteile deutlich mehr Geld und liebe das kosmopolitische Umfeld. Ja, die Sommer sind heiß, aber moderne Klimaanlagen sind überall, und die Winter sind absolut perfekt."
             </p>
-            <p className="text-white/90">
+            <p className="text-brand-gold/90">
               "Der Sicherheitsaspekt kann nicht genug betont werden — ich fühle mich wohl, zu jeder Tages- und Nachtzeit allein zu gehen, etwas, was ich in Deutschland nicht immer sagen konnte."
             </p>
           </div>
@@ -41,14 +41,14 @@ const TestimonialsSection = () => {
                 className="w-16 h-16 rounded-full object-cover mr-4"
               />
               <div>
-                <h4 className="font-semibold">Stefan Hoffmann</h4>
-                <p className="text-white/70 text-sm">Umgezogen aus Berlin in 2020</p>
+                <h4 className="font-semibold text-brand-gold">Stefan Hoffmann</h4>
+                <p className="text-brand-gold/70 text-sm">Umgezogen aus Berlin in 2020</p>
               </div>
             </div>
-            <p className="text-white/90 italic mb-4">
+            <p className="text-brand-gold/90 italic mb-4">
               "Als Unternehmer bot mir Dubai ein wirtschaftsfreundliches Umfeld, das nach der Bürokratie, mit der ich in Deutschland konfrontiert war, erfrischend war. Die Gründung meines Unternehmens war unkompliziert, und die Abwesenheit von Einkommensteuer ermöglichte es mir, mehr in mein Geschäft zu reinvestieren."
             </p>
-            <p className="text-white/90">
+            <p className="text-brand-gold/90">
               "Das internationale Netzwerk, das ich hier aufgebaut habe, war von unschätzbarem Wert. Meine Familie hat sich auch gut angepasst — meine Kinder besuchen eine hervorragende internationale Schule, und wir genießen den Outdoor-Lifestyle während der kühleren Monate."
             </p>
           </div>

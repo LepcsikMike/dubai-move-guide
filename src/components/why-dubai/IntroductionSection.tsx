@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Sun } from 'lucide-react';
 
 const IntroductionSection = () => {
   return (

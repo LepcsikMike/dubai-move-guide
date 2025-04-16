@@ -267,8 +267,8 @@ const Resources = () => {
                         onClick={() => setFamilySize(size)}
                         className={`w-10 h-10 rounded-full ${
                           familySize === size
-                            ? "gold-gradient-bg text-white"
-                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
+                            ? "gold-gradient-bg text-white shadow-md"
+                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
                         } flex items-center justify-center font-medium transition-colors`}
                       >
                         {size}
@@ -288,8 +288,8 @@ const Resources = () => {
                         onClick={() => setSchoolAge(num)}
                         className={`w-10 h-10 rounded-full ${
                           schoolAge === num
-                            ? "gold-gradient-bg text-white"
-                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
+                            ? "gold-gradient-bg text-white shadow-md"
+                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
                         } flex items-center justify-center font-medium transition-colors`}
                       >
                         {num}
@@ -314,8 +314,8 @@ const Resources = () => {
                         onClick={() => setLifestyle(option.id)}
                         className={`py-2 px-4 rounded-md text-sm font-medium ${
                           lifestyle === option.id
-                            ? "gold-gradient-bg text-white"
-                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
+                            ? "gold-gradient-bg text-white shadow-md"
+                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
                         } transition-colors`}
                       >
                         {option.label}
@@ -357,6 +357,15 @@ const Resources = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-8 text-center">
+              <Link
+                to="/beratung"
+                className="px-8 py-3 rounded-md text-white primary-gradient-bg hover:opacity-90 transition-opacity font-medium inline-flex items-center shadow-md"
+              >
+                Persönliche Kostenberatung erhalten <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -397,11 +406,11 @@ const Resources = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 blue-gradient-bg text-white">
+      <section className="py-16 blue-gradient-bg">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Benötigen Sie persönliche Unterstützung?</h2>
-            <p className="text-white/80 mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-[#D4AF37]">Benötigen Sie persönliche Unterstützung?</h2>
+            <p className="text-[#D4AF37] mb-8">
               Unsere Ressourcen bieten allgemeine Anleitungen, aber jede Situation ist einzigartig. Erhalten Sie persönliche Beratung 
               zu Ihren spezifischen Fragen und Herausforderungen beim Umzug nach Dubai.
             </p>

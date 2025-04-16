@@ -31,7 +31,7 @@ const CookieBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="cookie-banner">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#bab6b4] border-t border-brand-light-gray z-50 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex-1 pr-4 mb-4 sm:mb-0">

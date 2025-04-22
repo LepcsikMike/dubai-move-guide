@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Accordion,
@@ -38,7 +39,7 @@ const FAQSection = () => {
     <section className="py-20 bg-white">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-6 text-[25px] no-underline">Häufig gestellte Fragen</h2>
+          <h4 className="mb-6 text-[25px] no-underline">Häufig gestellte Fragen</h4>
           <p className="text-gray-600">
             Erhalten Sie Antworten auf häufige Fragen zu unseren Beratungsleistungen.
           </p>

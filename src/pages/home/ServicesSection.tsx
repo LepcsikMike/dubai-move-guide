@@ -2,25 +2,26 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Description, Home, BusinessCenter } from '@material-ui/icons';
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Visum & Aufenthaltsgenehmigung",
       description: "Wir helfen Ihnen bei der Auswahl und Beantragung des für Sie optimalen Visums - vom Arbeitnehmervisum bis zum Golden Visa.",
-      icon: "📝",
+      icon: <Description className="text-4xl text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#visa"
     },
     {
       title: "Immobilien & Wohnungssuche",
       description: "Lassen Sie sich bei der Suche nach der perfekten Wohnung oder Haus in der passenden Nachbarschaft unterstützen.",
-      icon: "🏠",
+      icon: <Home className="text-4xl text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#housing"
     },
     {
       title: "Firmengründung & Business Setup",
       description: "Erfahren Sie, wie Sie ein Unternehmen in Dubai gründen, welche Freizonen in Frage kommen und welche Lizenzen Sie benötigen.",
-      icon: "💼",
+      icon: <BusinessCenter className="text-4xl text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#business"
     }
   ];
@@ -39,7 +40,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               <div className="p-6">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <Link

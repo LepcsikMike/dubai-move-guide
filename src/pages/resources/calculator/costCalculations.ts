@@ -1,4 +1,23 @@
 
+export interface CostBreakdown {
+  housing: number;
+  utilities: number;
+  groceries: number;
+  transport: number;
+  education: number;
+  entertainment: number;
+  healthcare: number;
+  misc: number;
+  total: number;
+}
+
+export interface CalculatorInputs {
+  housingBudget: number;
+  familySize: number;
+  schoolAge: number;
+  lifestyle: 'budget' | 'moderate' | 'premium' | 'luxury';
+}
+
 export const calculateMonthlyCost = ({
   housingBudget,
   familySize,

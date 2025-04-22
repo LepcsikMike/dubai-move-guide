@@ -10,8 +10,8 @@ import PrivacyNotice from './form/PrivacyNotice';
 import { validateForm } from '@/utils/formValidation';
 
 // Update the Formspree endpoint to a valid one
-// Using a working endpoint as a fallback in case the original one is no longer valid
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqkvnrpw';
+// Using a new endpoint that has been properly configured
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrgegoko';
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({

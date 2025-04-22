@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CalculatorInputs } from './costCalculations';
 
@@ -23,7 +22,7 @@ const InputSection: React.FC<InputSectionProps> = ({ inputs, onInputChange }) =>
           step="1000"
           value={inputs.housingBudget}
           onChange={(e) => onInputChange('housingBudget', parseInt(e.target.value))}
-          className="w-full h-2 bg-dubai-dark-sand/30 rounded-lg appearance-none cursor-pointer"
+          className="w-full h-2 bg-gradient-to-r from-brand-light-gold to-brand-gold rounded-lg appearance-none cursor-pointer"
         />
         <div className="flex justify-between text-sm text-gray-600 mt-1">
           <span>5.000</span>

@@ -1,7 +1,13 @@
 
 import React, { useState } from 'react';
 import { toast } from '@/components/ui/use-toast';
-import { Mail, Phone, User, ArrowRight } from 'lucide-react';
+import { Mail, Phone, User } from 'lucide-react';
+import FormField from './form/FormField';
+import InterestSelect from './form/InterestSelect';
+import MessageArea from './form/MessageArea';
+import SubmitButton from './form/SubmitButton';
+import PrivacyNotice from './form/PrivacyNotice';
+import { validateForm } from '@/utils/formValidation';
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
@@ -17,24 +23,17 @@ const LeadForm = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [name]: value
-    });
-  };
-
-  const validateForm = () => {
-    // Basic validation
-    return formData.name.trim() !== '' && 
-           formData.email.trim() !== '' && 
-           /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitAttempted(true);
     
-    if (!validateForm()) {
+    if (!validateForm(formData.name, formData.email)) {
       toast({
         title: "Validation Error",
         description: "Bitte füllen Sie alle erforderlichen Felder korrekt aus.",
@@ -47,22 +46,15 @@ const LeadForm = () => {
     setLoading(true);
     
     try {
-      // Replace with your actual Formspree form ID - you need to create a form at formspree.io
-      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xayrprbw'; // Example ID - replace with your own
-      
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch('https://formspree.io/f/xayrprbw', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          interesse: formData.interesse,
-          message: formData.message,
-          _replyto: formData.email, // This helps formspree know who to reply to
+          ...formData,
+          _replyto: formData.email,
           _subject: `Neue Anfrage: ${formData.interesse} von ${formData.name}`
         })
       });
@@ -76,7 +68,6 @@ const LeadForm = () => {
           duration: 5000,
         });
         
-        // Reset form and state after successful submission
         setFormData({
           name: '',
           email: '',
@@ -107,135 +98,74 @@ const LeadForm = () => {
     }
   };
 
+  const getFieldError = (fieldName: string, value: string) => {
+    if (submitAttempted) {
+      if (fieldName === 'name' && !value.trim()) {
+        return 'Name ist erforderlich';
+      }
+      if (fieldName === 'email') {
+        if (!value.trim()) {
+          return 'E-Mail-Adresse ist erforderlich';
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          return 'Gültige E-Mail-Adresse ist erforderlich';
+        }
+      }
+    }
+    return '';
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-          Ihr Name *
-        </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <User className="h-5 w-5 text-gray-400" />
-          </div>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            value={formData.name}
-            onChange={handleInputChange}
-            placeholder="Max Mustermann"
-            className={`pl-10 w-full px-4 py-2 border ${submitAttempted && !formData.name.trim() ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple`}
-          />
-        </div>
-        {submitAttempted && !formData.name.trim() && (
-          <p className="mt-1 text-sm text-red-500">Name ist erforderlich</p>
-        )}
-      </div>
+      <FormField
+        id="name"
+        name="name"
+        label="Ihr Name"
+        required
+        value={formData.name}
+        onChange={handleInputChange}
+        placeholder="Max Mustermann"
+        Icon={User}
+        error={getFieldError('name', formData.name)}
+      />
       
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-          E-Mail *
-        </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Mail className="h-5 w-5 text-gray-400" />
-          </div>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="ihre.email@beispiel.de"
-            className={`pl-10 w-full px-4 py-2 border ${submitAttempted && (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple`}
-          />
-        </div>
-        {submitAttempted && (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) && (
-          <p className="mt-1 text-sm text-red-500">Gültige E-Mail-Adresse ist erforderlich</p>
-        )}
-      </div>
+      <FormField
+        id="email"
+        name="email"
+        type="email"
+        label="E-Mail"
+        required
+        value={formData.email}
+        onChange={handleInputChange}
+        placeholder="ihre.email@beispiel.de"
+        Icon={Mail}
+        error={getFieldError('email', formData.email)}
+      />
       
-      <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-          Telefon
-        </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Phone className="h-5 w-5 text-gray-400" />
-          </div>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            value={formData.phone}
-            onChange={handleInputChange}
-            placeholder="+49 123 45678"
-            className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
-          />
-        </div>
-      </div>
+      <FormField
+        id="phone"
+        name="phone"
+        type="tel"
+        label="Telefon"
+        value={formData.phone}
+        onChange={handleInputChange}
+        placeholder="+49 123 45678"
+        Icon={Phone}
+      />
       
-      <div>
-        <label htmlFor="interesse" className="block text-sm font-medium text-gray-700 mb-1">
-          Ich interessiere mich für *
-        </label>
-        <select
-          id="interesse"
-          name="interesse"
-          required
-          value={formData.interesse}
-          onChange={handleInputChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
-        >
-          <option value="visum">Visum & Aufenthaltsgenehmigung</option>
-          <option value="immobilien">Immobilien & Wohnungssuche</option>
-          <option value="business">Firmengründung & Business Setup</option>
-          <option value="komplett">Komplettpaket für meinen Umzug</option>
-          <option value="sonstiges">Sonstiges</option>
-        </select>
-      </div>
+      <InterestSelect
+        value={formData.interesse}
+        onChange={handleInputChange}
+      />
       
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-          Ihre Nachricht
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={3}
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder="Haben Sie spezifische Fragen oder Anliegen? Teilen Sie uns mit, wie wir Ihnen helfen können."
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
-        ></textarea>
-      </div>
+      <MessageArea
+        value={formData.message}
+        onChange={handleInputChange}
+      />
       
       <div className="pt-2">
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-medium py-2 px-4 rounded-md transition-colors flex justify-center items-center"
-        >
-          {loading ? (
-            <>
-              <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-              Wird gesendet...
-            </>
-          ) : (
-            <>
-              Kostenlose Beratung anfordern <ArrowRight className="ml-2 h-5 w-5" />
-            </>
-          )}
-        </button>
-        <p className="text-xs text-gray-500 mt-2 text-center">
-          Ihre Daten werden gemäß unserer{' '}
-          <a href="/datenschutz" className="text-brand-light-purple hover:underline">
-            Datenschutzerklärung
-          </a>{' '}
-          verarbeitet.
-        </p>
+        <SubmitButton loading={loading} />
+        <PrivacyNotice />
       </div>
     </form>
   );

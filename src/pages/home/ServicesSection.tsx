@@ -9,19 +9,19 @@ const ServicesSection = () => {
     {
       title: "Visum & Aufenthaltsgenehmigung",
       description: "Wir helfen Ihnen bei der Auswahl und Beantragung des für Sie optimalen Visums - vom Arbeitnehmervisum bis zum Golden Visa.",
-      icon: <Description className="text-[2.5rem] text-brand-gold" />,
+      icon: <Description className="text-[3rem] text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#visa"
     },
     {
       title: "Immobilien & Wohnungssuche",
       description: "Lassen Sie sich bei der Suche nach der perfekten Wohnung oder Haus in der passenden Nachbarschaft unterstützen.",
-      icon: <Home className="text-[2.5rem] text-brand-gold" />,
+      icon: <Home className="text-[3rem] text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#housing"
     },
     {
       title: "Firmengründung & Business Setup",
       description: "Erfahren Sie, wie Sie ein Unternehmen in Dubai gründen, welche Freizonen in Frage kommen und welche Lizenzen Sie benötigen.",
-      icon: <BusinessCenter className="text-[2.5rem] text-brand-gold" />,
+      icon: <BusinessCenter className="text-[3rem] text-brand-gold" />,
       link: "/schritt-fuer-schritt-anleitung#business"
     }
   ];

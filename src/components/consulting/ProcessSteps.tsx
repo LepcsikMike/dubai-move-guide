@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Description, Event, Chat } from '@material-ui/icons';
 
@@ -6,19 +7,19 @@ const steps = [
     step: "1",
     title: "Anfrage einreichen",
     description: "Füllen Sie unser Beratungsanfrageformular mit Details zu Ihrer Situation und Ihren Bedürfnissen aus.",
-    icon: <Description className="text-[2.5rem] text-brand-gold" />
+    icon: <Description className="text-[3rem] text-brand-gold" />
   },
   {
     step: "2",
     title: "Termin vereinbaren",
     description: "Unser Team wird Sie innerhalb von 24 Stunden kontaktieren, um Ihre Beratung zu einem für Sie passenden Zeitpunkt zu planen.",
-    icon: <Event className="text-[2.5rem] text-brand-gold" />
+    icon: <Event className="text-[3rem] text-brand-gold" />
   },
   {
     step: "3",
     title: "Expertenberatung erhalten",
     description: "Treffen Sie unsere Spezialisten per Videoanruf, um Ihre spezifischen Bedürfnisse zu besprechen und persönliche Beratung zu erhalten.",
-    icon: <Chat className="text-[2.5rem] text-brand-gold" />
+    icon: <Chat className="text-[3rem] text-brand-gold" />
   }
 ];
 

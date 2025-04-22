@@ -43,7 +43,7 @@ const InputSection: React.FC<InputSectionProps> = ({ inputs, onInputChange }) =>
               onClick={() => onInputChange('familySize', size)}
               className={`w-10 h-10 rounded-full ${
                 inputs.familySize === size
-                  ? "bg-dubai-gold text-brand-light-gold shadow-md"
+                  ? "bg-dubai-gold text-brand-light-gold border-2 border-brand-light-gold shadow-md"
                   : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
               } flex items-center justify-center font-medium transition-colors`}
             >
@@ -64,7 +64,7 @@ const InputSection: React.FC<InputSectionProps> = ({ inputs, onInputChange }) =>
               onClick={() => onInputChange('schoolAge', num)}
               className={`w-10 h-10 rounded-full ${
                 inputs.schoolAge === num
-                  ? "bg-dubai-gold text-brand-light-gold shadow-md"
+                  ? "bg-dubai-gold text-brand-light-gold border-2 border-brand-light-gold shadow-md"
                   : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
               } flex items-center justify-center font-medium transition-colors`}
             >
@@ -90,7 +90,7 @@ const InputSection: React.FC<InputSectionProps> = ({ inputs, onInputChange }) =>
               onClick={() => onInputChange('lifestyle', option.id)}
               className={`py-2 px-4 rounded-md text-sm font-medium ${
                 inputs.lifestyle === option.id
-                  ? "bg-dubai-gold text-brand-light-gold hover:bg-dubai-gold/90"
+                  ? "bg-dubai-gold text-brand-light-gold border-2 border-brand-light-gold hover:bg-dubai-gold/90"
                   : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
               } transition-colors`}
             >

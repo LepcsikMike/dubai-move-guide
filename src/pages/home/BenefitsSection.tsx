@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Shield, Landmark, Building } from 'lucide-react';
+import { Check, Shield, Landmark, Building, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BenefitsSection = () => {

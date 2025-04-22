@@ -1,7 +1,11 @@
+
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
-import { Button } from '@/components/ui/button';
+import FormTextField from './form/FormTextField';
+import ServiceTypeSelect from './form/ServiceTypeSelect';
+import MessageField from './form/MessageField';
+import PrivacyCheckbox from './form/PrivacyCheckbox';
+import SubmitButton from './form/SubmitButton';
 
 interface FormData {
   firstName: string;
@@ -26,10 +30,10 @@ const ConsultingForm = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [name]: value
-    });
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -69,132 +73,63 @@ const ConsultingForm = () => {
         <div className="max-w-3xl mx-auto">
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-8 border border-dubai-dark-sand/20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                  Vorname *
-                </label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  required
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                />
-              </div>
+              <FormTextField
+                id="firstName"
+                name="firstName"
+                label="Vorname"
+                required
+                value={formData.firstName}
+                onChange={handleInputChange}
+              />
               
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                  Nachname *
-                </label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  required
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                />
-              </div>
+              <FormTextField
+                id="lastName"
+                name="lastName"
+                label="Nachname"
+                required
+                value={formData.lastName}
+                onChange={handleInputChange}
+              />
               
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  E-Mail-Adresse *
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                />
-              </div>
+              <FormTextField
+                id="email"
+                name="email"
+                type="email"
+                label="E-Mail-Adresse"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+              />
               
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Telefonnummer
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                />
-              </div>
+              <FormTextField
+                id="phone"
+                name="phone"
+                type="tel"
+                label="Telefonnummer"
+                value={formData.phone}
+                onChange={handleInputChange}
+              />
             </div>
             
             <div className="mb-6">
-              <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-1">
-                Beratungstyp *
-              </label>
-              <select
-                id="serviceType"
-                name="serviceType"
-                required
+              <ServiceTypeSelect 
                 value={formData.serviceType}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-              >
-                <option value="">Beratungstyp auswählen</option>
-                <option value="visa">Visum & Umzug Beratung</option>
-                <option value="housing">Immobilien & Wohnungssuche</option>
-                <option value="business">Unternehmensaufbau Beratung</option>
-                <option value="comprehensive">Umfassendes Umzugspaket</option>
-              </select>
+              />
             </div>
             
             <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Ihre Situation & Fragen
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
+              <MessageField
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-dubai-dark-sand rounded-md focus:outline-none focus:ring-2 focus:ring-dubai-gold"
-                placeholder="Bitte beschreiben Sie kurz Ihre Situation und spezifische Fragen, die Sie haben."
-              ></textarea>
+              />
             </div>
             
             <div className="mb-6">
-              <div className="flex items-start">
-                <input
-                  id="privacy"
-                  name="privacy"
-                  type="checkbox"
-                  required
-                  className="h-4 w-4 text-dubai-gold border-dubai-dark-sand rounded mt-1"
-                />
-                <label htmlFor="privacy" className="ml-2 block text-sm text-gray-600">
-                  Ich stimme der <a href="/datenschutz" className="text-dubai-gold hover:underline">Datenschutzerklärung</a> zu und bin damit einverstanden, bezüglich meiner Beratungsanfrage kontaktiert zu werden.
-                </label>
-              </div>
+              <PrivacyCheckbox />
             </div>
             
-            <Button 
-              type="submit" 
-              disabled={loading} 
-              className="w-full primary-gradient-bg hover:opacity-90 flex justify-center items-center"
-            >
-              {loading ? (
-                <>
-                  <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                  Wird gesendet...
-                </>
-              ) : (
-                <>
-                  Beratung buchen <ArrowRight className="ml-2 h-5 w-5" />
-                </>
-              )}
-            </Button>
+            <SubmitButton loading={loading} />
           </form>
         </div>
       </div>

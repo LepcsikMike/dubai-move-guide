@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, ArrowRight } from 'lucide-react';
@@ -120,7 +119,7 @@ const CostCalculator = () => {
                       onClick={() => setFamilySize(size)}
                       className={`w-10 h-10 rounded-full ${
                         familySize === size
-                          ? "gold-gradient-bg text-white shadow-md"
+                          ? "bg-dubai-gold text-brand-light-gold shadow-md"
                           : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
                       } flex items-center justify-center font-medium transition-colors`}
                     >
@@ -141,7 +140,7 @@ const CostCalculator = () => {
                       onClick={() => setSchoolAge(num)}
                       className={`w-10 h-10 rounded-full ${
                         schoolAge === num
-                          ? "gold-gradient-bg text-white shadow-md"
+                          ? "bg-dubai-gold text-brand-light-gold shadow-md"
                           : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
                       } flex items-center justify-center font-medium transition-colors`}
                     >

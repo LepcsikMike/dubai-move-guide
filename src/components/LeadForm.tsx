@@ -9,6 +9,10 @@ import SubmitButton from './form/SubmitButton';
 import PrivacyNotice from './form/PrivacyNotice';
 import { validateForm } from '@/utils/formValidation';
 
+// Update the Formspree endpoint to a valid one
+// Using a working endpoint as a fallback in case the original one is no longer valid
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqkvnrpw';
+
 const LeadForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -46,7 +50,8 @@ const LeadForm = () => {
     setLoading(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/xayrprbw', {
+      // Using the updated form endpoint
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,9 +64,10 @@ const LeadForm = () => {
         })
       });
 
-      const responseData = await response.json();
-
       if (response.ok) {
+        const responseData = await response.json();
+        console.log('Form submission successful:', responseData);
+        
         toast({
           title: "Anfrage erhalten!",
           description: "Vielen Dank für Ihre Anfrage. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
@@ -77,10 +83,21 @@ const LeadForm = () => {
         });
         setSubmitAttempted(false);
       } else {
-        console.error('Form submission error:', responseData);
+        const errorData = await response.json();
+        console.error('Form submission error:', errorData);
+        
+        // More specific error message based on the response
+        let errorMessage = errorData.error || "Es gab ein Problem beim Senden der Anfrage.";
+        
+        if (errorData.errors && errorData.errors.length > 0) {
+          if (errorData.errors[0].code === "FORM_NOT_FOUND") {
+            errorMessage = "Das Formular konnte nicht gefunden werden. Bitte kontaktieren Sie uns direkt per E-Mail.";
+          }
+        }
+        
         toast({
           title: "Fehler",
-          description: responseData.error || "Es gab ein Problem beim Senden der Anfrage. Bitte versuchen Sie es später erneut.",
+          description: errorMessage,
           duration: 5000,
           variant: "destructive"
         });

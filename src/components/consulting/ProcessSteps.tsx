@@ -1,24 +1,24 @@
-
 import React from 'react';
+import { Description, Event, Chat } from '@material-ui/icons';
 
 const steps = [
   {
     step: "1",
     title: "Anfrage einreichen",
     description: "Füllen Sie unser Beratungsanfrageformular mit Details zu Ihrer Situation und Ihren Bedürfnissen aus.",
-    icon: "📝"
+    icon: <Description className="text-[2.5rem] text-brand-gold" />
   },
   {
     step: "2",
     title: "Termin vereinbaren",
     description: "Unser Team wird Sie innerhalb von 24 Stunden kontaktieren, um Ihre Beratung zu einem für Sie passenden Zeitpunkt zu planen.",
-    icon: "📅"
+    icon: <Event className="text-[2.5rem] text-brand-gold" />
   },
   {
     step: "3",
     title: "Expertenberatung erhalten",
     description: "Treffen Sie unsere Spezialisten per Videoanruf, um Ihre spezifischen Bedürfnisse zu besprechen und persönliche Beratung zu erhalten.",
-    icon: "💬"
+    icon: <Chat className="text-[2.5rem] text-brand-gold" />
   }
 ];
 
@@ -39,7 +39,7 @@ const ProcessSteps = () => {
               <div className="w-16 h-16 rounded-full gold-gradient-bg text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 {step.step}
               </div>
-              <div className="text-4xl mb-4">{step.icon}</div>
+              <div className="text-[2.5rem] mb-4">{step.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
             </div>

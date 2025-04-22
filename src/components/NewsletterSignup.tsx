@@ -12,11 +12,18 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
     setLoading(true);
     
     try {
-      // In a real application, this would be an API call to your newsletter service
-      // For now, we'll just simulate a successful signup
+      console.log('Newsletter signup:', email);
+      
+      // In a real app, we'd submit to a newsletter service API
+      // For now, we'll simulate success after a delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      console.log('Newsletter signup:', email);
+      // Create a local storage record to remember this signup
+      localStorage.setItem('newsletter_signup', JSON.stringify({
+        email,
+        date: new Date().toISOString()
+      }));
+      
       toast({
         title: "Erfolg!",
         description: "Vielen Dank für Ihre Anmeldung zu unserem Newsletter.",

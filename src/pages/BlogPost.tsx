@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowLeft, Tag } from 'lucide-react';
@@ -214,22 +213,35 @@ const BlogPost = () => {
               {/* Post Navigation */}
               <div className="mt-12">
                 <Pagination>
-                  <PaginationContent>
+                  <PaginationContent className="flex justify-between items-center w-full">
                     {prevPost && (
                       <PaginationItem>
-                        <PaginationPrevious href={`/blog/${prevPost.id}`} />
+                        <PaginationPrevious 
+                          href={`/blog/${prevPost.id}`} 
+                          className="mr-auto" 
+                        >
+                          Vorheriger Artikel
+                        </PaginationPrevious>
                       </PaginationItem>
                     )}
 
                     <PaginationItem>
-                      <PaginationLink href="/blog">
-                        Übersicht
+                      <PaginationLink 
+                        href="/blog" 
+                        className="mx-4"
+                      >
+                        Artikelübersicht
                       </PaginationLink>
                     </PaginationItem>
 
                     {nextPost && (
                       <PaginationItem>
-                        <PaginationNext href={`/blog/${nextPost.id}`} />
+                        <PaginationNext 
+                          href={`/blog/${nextPost.id}`} 
+                          className="ml-auto"
+                        >
+                          Nächster Artikel
+                        </PaginationNext>
                       </PaginationItem>
                     )}
                   </PaginationContent>

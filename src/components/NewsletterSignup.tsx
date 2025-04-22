@@ -12,13 +12,19 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
     setLoading(true);
     
     try {
-      console.log('Newsletter signup:', email);
+      const response = await fetch('https://formspree.io/f/xyzwygrj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+          email,
+          _subject: 'Newsletter Anmeldung'
+        })
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
       
-      // In a real app, we'd submit to a newsletter service API
-      // For now, we'll simulate success after a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Create a local storage record to remember this signup
       localStorage.setItem('newsletter_signup', JSON.stringify({
         email,
         date: new Date().toISOString()

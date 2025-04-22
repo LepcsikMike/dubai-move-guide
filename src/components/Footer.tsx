@@ -2,15 +2,51 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Newsletter signup:', email);
-    setEmail('');
-    // Add newsletter signup logic here
+    setLoading(true);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xyzwygrj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+          email,
+          _subject: 'Newsletter Anmeldung (Footer)'
+        })
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
+      
+      localStorage.setItem('newsletter_signup', JSON.stringify({
+        email,
+        date: new Date().toISOString()
+      }));
+      
+      toast({
+        title: "Erfolg!",
+        description: "Vielen Dank für Ihre Anmeldung zu unserem Newsletter.",
+        duration: 5000,
+      });
+      setEmail('');
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem bei der Anmeldung. Bitte versuchen Sie es später erneut.",
+        duration: 5000,
+        variant: "destructive"
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

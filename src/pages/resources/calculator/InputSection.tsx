@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CalculatorInputs } from './costCalculations';
 
@@ -87,10 +88,10 @@ const InputSection: React.FC<InputSectionProps> = ({ inputs, onInputChange }) =>
             <button
               key={option.id}
               onClick={() => onInputChange('lifestyle', option.id)}
-              className={`py-2 px-4 rounded-md text-sm font-medium ${
+              className={`py-2 px-4 rounded-md text-sm font-medium border ${
                 inputs.lifestyle === option.id
-                  ? "bg-dubai-gold text-brand-light-gold border-2 border-brand-light-gold hover:bg-dubai-gold/90"
-                  : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
+                  ? "bg-dubai-gold text-brand-light-gold border-brand-light-gold hover:bg-dubai-gold/90"
+                  : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border-brand-gray/30"
               } transition-colors`}
             >
               {option.label}

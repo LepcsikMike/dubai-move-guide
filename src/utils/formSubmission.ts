@@ -7,7 +7,7 @@ interface FormData {
   message: string;
 }
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/moqgyebp';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyzwygrj';
 const EMAIL_BACKUP = 'mailto:kontakt@example.com';
 
 export const submitForm = async (formData: FormData): Promise<void> => {

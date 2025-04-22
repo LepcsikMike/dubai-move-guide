@@ -7,12 +7,15 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // In a real application, this would be an API call to your newsletter service
+      // For now, we'll just simulate a successful signup
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       console.log('Newsletter signup:', email);
       toast({
         title: "Erfolg!",
@@ -20,8 +23,17 @@ const NewsletterSignup = ({ className }: { className?: string }) => {
         duration: 5000,
       });
       setEmail('');
+    } catch (error) {
+      console.error('Newsletter signup error:', error);
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem bei der Anmeldung. Bitte versuchen Sie es später erneut.",
+        duration: 5000,
+        variant: "destructive"
+      });
+    } finally {
       setLoading(false);
-    }, 1000);
+    }
   };
 
   return (

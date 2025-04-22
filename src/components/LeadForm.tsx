@@ -9,9 +9,12 @@ import SubmitButton from './form/SubmitButton';
 import PrivacyNotice from './form/PrivacyNotice';
 import { validateForm } from '@/utils/formValidation';
 
-// Update the Formspree endpoint to a valid one
-// Using a new endpoint that has been properly configured
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrgegoko';
+// Create a new Formspree form and use its endpoint here
+// Make sure to verify and activate the form in your Formspree account
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meqgjjbk';
+
+// Backup endpoint for local testing
+const EMAIL_BACKUP = 'mailto:kontakt@example.com';
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +27,7 @@ const LeadForm = () => {
   
   const [loading, setLoading] = useState(false);
   const [submitAttempted, setSubmitAttempted] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -50,7 +54,7 @@ const LeadForm = () => {
     setLoading(true);
     
     try {
-      // Using the updated form endpoint
+      // Attempt to use Formspree
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -64,9 +68,11 @@ const LeadForm = () => {
         })
       });
 
+      console.log('Form submission response status:', response.status);
+      
       if (response.ok) {
-        const responseData = await response.json();
-        console.log('Form submission successful:', responseData);
+        // Formspree submission succeeded
+        setFormSubmitted(true);
         
         toast({
           title: "Anfrage erhalten!",
@@ -83,33 +89,46 @@ const LeadForm = () => {
         });
         setSubmitAttempted(false);
       } else {
+        // Formspree submission failed
         const errorData = await response.json();
         console.error('Form submission error:', errorData);
         
-        // More specific error message based on the response
-        let errorMessage = errorData.error || "Es gab ein Problem beim Senden der Anfrage.";
-        
-        if (errorData.errors && errorData.errors.length > 0) {
-          if (errorData.errors[0].code === "FORM_NOT_FOUND") {
-            errorMessage = "Das Formular konnte nicht gefunden werden. Bitte kontaktieren Sie uns direkt per E-Mail.";
-          }
-        }
-        
+        // Show error message and fallback option
         toast({
-          title: "Fehler",
-          description: errorMessage,
-          duration: 5000,
+          title: "Sendefehler",
+          description: "Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.",
+          duration: 7000,
           variant: "destructive"
         });
+        
+        // Open mailto link as fallback
+        const mailtoLink = `${EMAIL_BACKUP}?subject=Anfrage: ${formData.interesse}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0AInteresse: ${formData.interesse}%0D%0ANachricht: ${formData.message}`;
+        
+        // We'll open this in 1 second to allow the toast to show first
+        setTimeout(() => {
+          if (!formSubmitted) {
+            window.open(mailtoLink);
+          }
+        }, 1000);
       }
     } catch (error) {
       console.error('Network error:', error);
+      
       toast({
         title: "Netzwerkfehler",
-        description: "Es gab ein Netzwerkproblem. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+        description: "Es gab ein Netzwerkproblem. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.",
         duration: 5000,
         variant: "destructive"
       });
+      
+      // Open mailto link as fallback here too
+      const mailtoLink = `${EMAIL_BACKUP}?subject=Anfrage: ${formData.interesse}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0AInteresse: ${formData.interesse}%0D%0ANachricht: ${formData.message}`;
+      
+      setTimeout(() => {
+        if (!formSubmitted) {
+          window.open(mailtoLink);
+        }
+      }, 1000);
     } finally {
       setLoading(false);
     }

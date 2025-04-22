@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { toast } from '@/components/ui/use-toast';
 import { Mail, Phone, User, ArrowRight } from 'lucide-react';
@@ -22,27 +21,58 @@ const LeadForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simuliere API-Aufruf
-    setTimeout(() => {
-      console.log('Lead-Formular abgeschickt:', formData);
+    try {
+      const response = await fetch('https://formspree.io/f/mike@elci.ai', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          interesse: formData.interesse,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Anfrage erhalten!",
+          description: "Vielen Dank für Ihre Anfrage. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+          duration: 5000,
+        });
+        
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          interesse: 'visum',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Fehler",
+          description: "Es gab ein Problem beim Senden der Anfrage. Bitte versuchen Sie es später erneut.",
+          duration: 5000,
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
       toast({
-        title: "Anfrage erhalten!",
-        description: "Vielen Dank für Ihre Anfrage. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+        title: "Fehler",
+        description: "Es gab ein Netzwerkproblem. Bitte überprüfen Sie Ihre Internetverbindung.",
         duration: 5000,
+        variant: "destructive"
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        interesse: 'visum',
-        message: ''
-      });
+    } finally {
       setLoading(false);
-    }, 1000);
+    }
   };
 
   return (

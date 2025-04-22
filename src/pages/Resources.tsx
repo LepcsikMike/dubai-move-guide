@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FileDown, Calculator, FileText, Video, ArrowRight, Check, FileQuestion } from 'lucide-react';
@@ -314,8 +313,8 @@ const Resources = () => {
                         onClick={() => setLifestyle(option.id)}
                         className={`py-2 px-4 rounded-md text-sm font-medium ${
                           lifestyle === option.id
-                            ? "gold-gradient-bg text-white shadow-md"
-                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30 border border-dubai-dark-sand/30"
+                            ? "bg-dubai-gold text-brand-light-gold hover:bg-dubai-gold/90"
+                            : "bg-dubai-sand/50 text-gray-700 hover:bg-dubai-dark-sand/30"
                         } transition-colors`}
                       >
                         {option.label}

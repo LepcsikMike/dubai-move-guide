@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Check, ArrowRight } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
+import { Button } from '@/components/ui/button';
 
 const Consulting = () => {
   const [formData, setFormData] = useState({
@@ -160,12 +160,12 @@ const Consulting = () => {
                   <div className="text-sm text-gray-600 mb-6">
                     Dauer: {service.duration}
                   </div>
-                  <a 
-                    href="#booking-form" 
-                    className="block w-full py-2 text-center rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium"
+                  <Button 
+                    className="w-full primary-gradient-bg hover:opacity-90"
+                    asChild
                   >
-                    Beratung buchen
-                  </a>
+                    <a href="#booking-form">Beratung buchen</a>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -382,10 +382,10 @@ const Consulting = () => {
                 </div>
               </div>
               
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full py-3 rounded-md text-white gold-gradient-bg hover:opacity-90 transition-opacity font-medium flex justify-center items-center"
+              <Button 
+                type="submit" 
+                disabled={loading} 
+                className="w-full primary-gradient-bg hover:opacity-90 flex justify-center items-center"
               >
                 {loading ? (
                   <>
@@ -397,7 +397,7 @@ const Consulting = () => {
                     Beratung buchen <ArrowRight className="ml-2 h-5 w-5" />
                   </>
                 )}
-              </button>
+              </Button>
             </form>
           </div>
         </div>

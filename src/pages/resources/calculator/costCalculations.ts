@@ -1,4 +1,3 @@
-
 export interface CostBreakdown {
   housing: number;
   utilities: number;
@@ -9,6 +8,15 @@ export interface CostBreakdown {
   healthcare: number;
   misc: number;
   total: number;
+  housingEUR: number;
+  utilitiesEUR: number;
+  groceriesEUR: number;
+  transportEUR: number;
+  educationEUR: number;
+  entertainmentEUR: number;
+  healthcareEUR: number;
+  miscEUR: number;
+  totalEUR: number;
 }
 
 export interface CalculatorInputs {
@@ -17,6 +25,8 @@ export interface CalculatorInputs {
   schoolAge: number;
   lifestyle: 'budget' | 'moderate' | 'premium' | 'luxury';
 }
+
+const AED_TO_EUR = 0.25; // Umrechnungskurs: 1 AED = 0.25 EUR
 
 export const calculateMonthlyCost = ({
   housingBudget,
@@ -69,7 +79,7 @@ export const calculateMonthlyCost = ({
   const totalCost = (housingCost + utilitiesCost + groceriesCost + transportCost + 
                      educationCost + entertainmentCost + healthcareCost + miscCost);
   
-  return {
+  const costs = {
     housing: housingCost,
     utilities: utilitiesCost,
     groceries: groceriesCost,
@@ -78,6 +88,18 @@ export const calculateMonthlyCost = ({
     entertainment: entertainmentCost,
     healthcare: healthcareCost,
     misc: miscCost,
-    total: totalCost
+    total: totalCost,
+    // Euro conversions
+    housingEUR: Math.round(housingCost * AED_TO_EUR),
+    utilitiesEUR: Math.round(utilitiesCost * AED_TO_EUR),
+    groceriesEUR: Math.round(groceriesCost * AED_TO_EUR),
+    transportEUR: Math.round(transportCost * AED_TO_EUR),
+    educationEUR: Math.round(educationCost * AED_TO_EUR),
+    entertainmentEUR: Math.round(entertainmentCost * AED_TO_EUR),
+    healthcareEUR: Math.round(healthcareCost * AED_TO_EUR),
+    miscEUR: Math.round(miscCost * AED_TO_EUR),
+    totalEUR: Math.round(totalCost * AED_TO_EUR)
   };
+
+  return costs;
 };

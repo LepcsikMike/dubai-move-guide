@@ -8,14 +8,14 @@ interface ResultsSectionProps {
 
 const ResultsSection: React.FC<ResultsSectionProps> = ({ costs }) => {
   const costItems = [
-    { label: 'Wohnen', value: costs.housing },
-    { label: 'Nebenkosten', value: costs.utilities },
-    { label: 'Lebensmittel', value: costs.groceries },
-    { label: 'Transport', value: costs.transport },
-    { label: 'Bildung', value: costs.education },
-    { label: 'Unterhaltung', value: costs.entertainment },
-    { label: 'Gesundheitswesen', value: costs.healthcare },
-    { label: 'Sonstiges', value: costs.misc }
+    { label: 'Wohnen', valueAED: costs.housing, valueEUR: costs.housingEUR },
+    { label: 'Nebenkosten', valueAED: costs.utilities, valueEUR: costs.utilitiesEUR },
+    { label: 'Lebensmittel', valueAED: costs.groceries, valueEUR: costs.groceriesEUR },
+    { label: 'Transport', valueAED: costs.transport, valueEUR: costs.transportEUR },
+    { label: 'Bildung', valueAED: costs.education, valueEUR: costs.educationEUR },
+    { label: 'Unterhaltung', valueAED: costs.entertainment, valueEUR: costs.entertainmentEUR },
+    { label: 'Gesundheitswesen', valueAED: costs.healthcare, valueEUR: costs.healthcareEUR },
+    { label: 'Sonstiges', valueAED: costs.misc, valueEUR: costs.miscEUR }
   ];
 
   return (
@@ -26,14 +26,20 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ costs }) => {
         {costItems.map((item, index) => (
           <div key={index} className="flex justify-between items-center py-2 border-b border-dubai-dark-sand/20">
             <span className="text-gray-700">{item.label}</span>
-            <span className="font-medium">{item.value.toLocaleString()} AED</span>
+            <div className="flex gap-4">
+              <span className="font-medium">{item.valueAED.toLocaleString()} AED</span>
+              <span className="font-medium text-dubai-gold">{item.valueEUR.toLocaleString()} €</span>
+            </div>
           </div>
         ))}
       </div>
       
       <div className="flex justify-between items-center py-3 border-t-2 border-dubai-gold">
         <span className="text-lg font-bold">Monatliche Gesamtkosten</span>
-        <span className="text-xl font-bold text-dubai-gold">{costs.total.toLocaleString()} AED</span>
+        <div className="flex gap-4">
+          <span className="text-xl font-bold">{costs.total.toLocaleString()} AED</span>
+          <span className="text-xl font-bold text-dubai-gold">{costs.totalEUR.toLocaleString()} €</span>
+        </div>
       </div>
       
       <div className="mt-4 text-sm text-gray-600">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { User } from 'lucide-react';
 import type { BlogPost } from '@/types/blog';
@@ -16,7 +15,7 @@ const BlogPostContent = ({ post, prevPost, nextPost }: BlogPostContentProps) => 
       <div className="prose prose-lg max-w-none">
         <p className="text-xl font-medium mb-6">{post.excerpt}</p>
         
-        <h2>Einleitung</h2>
+        <h4>Einleitung</h4>
         <p>
           Als Deutscher, der eine Auswanderung nach Dubai in Betracht zieht, gibt es viele Aspekte zu beachten. 
           {post.category === 'visa' && "Die Visumsbestimmungen und rechtlichen Rahmenbedingungen sind entscheidend für einen erfolgreichen Umzug."}
@@ -26,16 +25,7 @@ const BlogPostContent = ({ post, prevPost, nextPost }: BlogPostContentProps) => 
           {post.category === 'lifestyle' && "Der Lebensstil in Dubai unterscheidet sich in vielen Aspekten von dem in Deutschland."}
         </p>
 
-        <p>
-          In diesem umfassenden Leitfaden werden wir alle wichtigen Aspekte betrachten, die Sie bei 
-          {post.category === 'visa' && " der Beantragung des richtigen Visums für Ihren Aufenthalt in Dubai beachten sollten."}
-          {post.category === 'housing' && " der Wahl Ihres neuen Zuhauses in Dubai berücksichtigen sollten."}
-          {post.category === 'business' && " der Gründung und Führung eines erfolgreichen Unternehmens in Dubai beachten sollten."}
-          {post.category === 'education' && " der Auswahl der richtigen Bildungseinrichtung für Ihre Kinder in Dubai berücksichtigen sollten."}
-          {post.category === 'lifestyle' && " der Anpassung an den neuen Lebensstil in Dubai beachten sollten."}
-        </p>
-        
-        <h2>Was Sie wissen müssen</h2>
+        <h4>Was Sie wissen müssen</h4>
         <p>
           Dubai hat sich in den letzten Jahren zu einem beliebten Ziel für deutsche Auswanderer entwickelt. Die Stadt bietet eine 
           {post.category === 'visa' && " Vielzahl von Visumoptionen, darunter Arbeitsvisa, Investorenvisa und das prestigeträchtige Golden Visa."}
@@ -45,7 +35,7 @@ const BlogPostContent = ({ post, prevPost, nextPost }: BlogPostContentProps) => 
           {post.category === 'lifestyle' && " Kombination aus westlichem Komfort und arabischer Kultur, die einen einzigartigen Lebensstil ermöglicht."}
         </p>
 
-        <h2>Wichtige Überlegungen</h2>
+        <h4>Wichtige Überlegungen</h4>
         <ul>
           {post.category === 'visa' && (
             <>
@@ -89,7 +79,7 @@ const BlogPostContent = ({ post, prevPost, nextPost }: BlogPostContentProps) => 
           )}
         </ul>
 
-        <h2>Fazit</h2>
+        <h4>Fazit</h4>
         <p>
           {post.category === 'visa' && "Die Beantragung des richtigen Visums ist ein entscheidender Schritt für Ihren erfolgreichen Umzug nach Dubai. Mit der richtigen Vorbereitung und Unterstützung kann dieser Prozess jedoch reibungslos verlaufen."}
           {post.category === 'housing' && "Die Wahl des richtigen Wohnorts in Dubai kann einen erheblichen Einfluss auf Ihre Lebensqualität haben. Nehmen Sie sich Zeit, verschiedene Gegenden zu erkunden, bevor Sie eine Entscheidung treffen."}

@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import WhyDubai from "./pages/WhyDubai";
 import StepByStepGuide from "./pages/StepByStepGuide";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Resources from "./pages/Resources";
 import Consulting from "./pages/Consulting";
 import Legal from "./pages/Legal";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/warum-dubai" element={<WhyDubai />} />
             <Route path="/schritt-fuer-schritt-anleitung" element={<StepByStepGuide />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
             <Route path="/ressourcen" element={<Resources />} />
             <Route path="/beratung" element={<Consulting />} />
             <Route path="/:page" element={<Legal />} />

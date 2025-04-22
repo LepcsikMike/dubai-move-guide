@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { toast } from '@/components/ui/use-toast';
 import { Mail, Phone, User, ArrowRight } from 'lucide-react';
@@ -12,6 +13,7 @@ const LeadForm = () => {
   });
   
   const [loading, setLoading] = useState(false);
+  const [submitAttempted, setSubmitAttempted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -21,24 +23,51 @@ const LeadForm = () => {
     });
   };
 
+  const validateForm = () => {
+    // Basic validation
+    return formData.name.trim() !== '' && 
+           formData.email.trim() !== '' && 
+           /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitAttempted(true);
+    
+    if (!validateForm()) {
+      toast({
+        title: "Validation Error",
+        description: "Bitte füllen Sie alle erforderlichen Felder korrekt aus.",
+        duration: 5000,
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setLoading(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/mike@elci.ai', {
+      // Replace with your actual Formspree form ID - you need to create a form at formspree.io
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xayrprbw'; // Example ID - replace with your own
+      
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           interesse: formData.interesse,
-          message: formData.message
+          message: formData.message,
+          _replyto: formData.email, // This helps formspree know who to reply to
+          _subject: `Neue Anfrage: ${formData.interesse} von ${formData.name}`
         })
       });
+
+      const responseData = await response.json();
 
       if (response.ok) {
         toast({
@@ -47,7 +76,7 @@ const LeadForm = () => {
           duration: 5000,
         });
         
-        // Reset form after successful submission
+        // Reset form and state after successful submission
         setFormData({
           name: '',
           email: '',
@@ -55,18 +84,21 @@ const LeadForm = () => {
           interesse: 'visum',
           message: ''
         });
+        setSubmitAttempted(false);
       } else {
+        console.error('Form submission error:', responseData);
         toast({
           title: "Fehler",
-          description: "Es gab ein Problem beim Senden der Anfrage. Bitte versuchen Sie es später erneut.",
+          description: responseData.error || "Es gab ein Problem beim Senden der Anfrage. Bitte versuchen Sie es später erneut.",
           duration: 5000,
           variant: "destructive"
         });
       }
     } catch (error) {
+      console.error('Network error:', error);
       toast({
-        title: "Fehler",
-        description: "Es gab ein Netzwerkproblem. Bitte überprüfen Sie Ihre Internetverbindung.",
+        title: "Netzwerkfehler",
+        description: "Es gab ein Netzwerkproblem. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
         duration: 5000,
         variant: "destructive"
       });
@@ -93,9 +125,12 @@ const LeadForm = () => {
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Max Mustermann"
-            className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
+            className={`pl-10 w-full px-4 py-2 border ${submitAttempted && !formData.name.trim() ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple`}
           />
         </div>
+        {submitAttempted && !formData.name.trim() && (
+          <p className="mt-1 text-sm text-red-500">Name ist erforderlich</p>
+        )}
       </div>
       
       <div>
@@ -114,9 +149,12 @@ const LeadForm = () => {
             value={formData.email}
             onChange={handleInputChange}
             placeholder="ihre.email@beispiel.de"
-            className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple"
+            className={`pl-10 w-full px-4 py-2 border ${submitAttempted && (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-brand-light-purple`}
           />
         </div>
+        {submitAttempted && (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) && (
+          <p className="mt-1 text-sm text-red-500">Gültige E-Mail-Adresse ist erforderlich</p>
+        )}
       </div>
       
       <div>

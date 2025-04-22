@@ -163,7 +163,7 @@ const Blog = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeCategory === category.id
-                      ? "bg-dubai-gold text-white"
+                      ? "bg-dubai-gold text-brand-light-gold hover:bg-dubai-gold/90"
                       : "bg-dubai-sand text-gray-700 hover:bg-dubai-dark-sand/30"
                   }`}
                 >
